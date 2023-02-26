@@ -6,7 +6,7 @@
   <link href="https://weishida01.github.io/atom.xml" rel="self"/>
   
   <link href="https://weishida01.github.io/"/>
-  <updated>2023-02-26T10:15:16.002Z</updated>
+  <updated>2023-02-26T09:05:35.252Z</updated>
   <id>https://weishida01.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="https://weishida01.github.io/2023/02/26/my-new-post/"/>
-    <id>https://weishida01.github.io/2023/02/26/my-new-post/</id>
-    <published>2023-02-26T10:09:32.000Z</published>
-    <updated>2023-02-26T10:15:16.002Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
