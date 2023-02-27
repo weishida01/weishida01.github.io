@@ -607,27 +607,6 @@
                             <div class="card frind-card2">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="https://blinkfox.github.io/medias/avatar.jpg" alt="img">
-                                        <div>
-                                            <h1 class="friend-name">闪烁之狐</h1>
-                                            <p style="position: relative;top: -35px;">本blog使用的就是大佬做的hexo Matery主题</p>
-                                        </div>
-                                    </div>
-                                    <div class="friend-button">
-                                        <a href="https://blinkfox.github.io/" target="_blank"
-                                            class="button button-glow button-rounded button-caution">
-                                            前去学习
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card3">
-                                <div class="frind-ship">
-                                    <div class="title">
                                         <img src="https://ai.googleblog.com/favicon.ico" alt="img">
                                         <div>
                                             <h1 class="friend-name">Google AI Blog</h1>
@@ -646,7 +625,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card4">
+                            <div class="card frind-card3">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="http://www.arxiv-sanity.com/static/favicon.png" alt="img">
@@ -667,7 +646,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card5">
+                            <div class="card frind-card4">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://tool.yovisun.com/favicon.ico" alt="img">
@@ -688,7 +667,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card6">
+                            <div class="card frind-card5">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://originalfileserver.aminer.cn/sys/aminer/favicon.ico" alt="img">
@@ -709,7 +688,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card7">
+                            <div class="card frind-card6">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="http://pss-system.cnipa.gov.cn/sipopublicsearch/common-ui/images/logo-bg.png" alt="img">
@@ -730,7 +709,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card8">
+                            <div class="card frind-card7">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://www.gstatic.cn/devrel-devsite/prod/v236200e9f3bdf34d077efc081c4ecb460c88128ff369ccbfc69028c3ea4bf423/developers/images/favicon.png" alt="img">
@@ -751,7 +730,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card9">
+                            <div class="card frind-card8">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://ai-studio-static-online.cdn.bcebos.com/aistudio/dist/1616662031124/favicon-32.ico" alt="img">
@@ -772,7 +751,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card10">
+                            <div class="card frind-card9">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://kexue.fm/usr/themes/geekg/favicon.ico" alt="img">
@@ -836,7 +815,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2023</span>
+                <span id="year">2021-2023</span>
             
             <a href="/about" target="_blank">Shida Wei</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -878,12 +857,12 @@
                         var days = hours * 24;
                         var years = days * 365;
                         var today = new Date();
-                        var startYear = "2023";
-                        var startMonth = "2";
+                        var startYear = "2021";
+                        var startMonth = "8";
                         var startDate = "20";
-                        var startHour = "0";
-                        var startMinute = "0";
-                        var startSecond = "0";
+                        var startHour = "1";
+                        var startMinute = "1";
+                        var startSecond = "1";
                         var todayYear = today.getFullYear();
                         var todayMonth = today.getMonth() + 1;
                         var todayDate = today.getDate();
@@ -895,6 +874,11 @@
                         var diff = t2 - t1;
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                            minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                            diffMinutes * minutes) / seconds);
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
@@ -909,10 +893,10 @@
                             document.getElementById("sitetime").innerHTML = daysTip;
                         } else {
                             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
-                                + diffDays + ' days';
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and ' + diffDays + ' days';
                             if (language === 'zh-CN') {
-                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                                yearsAndDaysTip = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                             } else if (language === 'zh-HK') {
                                 yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
                             }
