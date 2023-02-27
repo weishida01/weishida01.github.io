@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="t1, WSD">
-    <meta name="description" content="123456789101112131415161718# 本文中主要使用cv2处理图片，但不利于在notebook中展示，所以使用plt输出前做简单处理def img_convert(cv2_img):    &#34;&#34;&#34;    cv2使用BGR">
+    <meta name="description" content="# 本文中主要使用cv2处理图片，但不利于在notebook中展示，所以使用plt输出前做简单处理
+def img_convert(cv2_img):
+    &#34;&#34;&#34;
+    cv2使用BGR，plt使用RGB
+    包含灰度，3通道，4">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -400,7 +404,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    122
+                    125
                 </div>
                 
 
@@ -422,12 +426,34 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本文中主要使用cv2处理图片，但不利于在notebook中展示，所以使用plt输出前做简单处理</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">img_convert</span>(<span class="params">cv2_img</span>):</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    cv2使用BGR，plt使用RGB</span></span><br><span class="line"><span class="string">    包含灰度，3通道，4通道</span></span><br><span class="line"><span class="string">    下面这个不好使</span></span><br><span class="line"><span class="string">    ret_img = cv2.cvtColor(ret_img, cv2.COLOR_BGR2RGB)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(cv2_img.shape) == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> cv2_img</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">len</span>(cv2_img.shape) == <span class="number">3</span> <span class="keyword">and</span> cv2_img.shape[<span class="number">2</span>] == <span class="number">3</span>:</span><br><span class="line">        b, g, r = cv2.split(cv2_img)</span><br><span class="line">        <span class="keyword">return</span> cv2.merge((r, g, b))</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">len</span>(cv2_img.shape) == <span class="number">3</span> <span class="keyword">and</span> cv2_img.shape[<span class="number">2</span>] == <span class="number">4</span>:</span><br><span class="line">        b, g, r, a = cv2.split(cv2_img)</span><br><span class="line">        <span class="keyword">return</span> cv2.merge((r, g, b, a))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> cv2_img</span><br></pre></td></tr></tbody></table></figure>
+                <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 本文中主要使用cv2处理图片，但不利于在notebook中展示，所以使用plt输出前做简单处理</span>
+<span class="token keyword">def</span> <span class="token function">img_convert</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    cv2使用BGR，plt使用RGB
+    包含灰度，3通道，4通道
+    下面这个不好使
+    ret_img = cv2.cvtColor(ret_img, cv2.COLOR_BGR2RGB)
+    """</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> cv2_img
+    <span class="token keyword">elif</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token keyword">and</span> cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        b<span class="token punctuation">,</span> g<span class="token punctuation">,</span> r <span class="token operator">=</span> cv2<span class="token punctuation">.</span>split<span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> cv2<span class="token punctuation">.</span>merge<span class="token punctuation">(</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token keyword">and</span> cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+        b<span class="token punctuation">,</span> g<span class="token punctuation">,</span> r<span class="token punctuation">,</span> a <span class="token operator">=</span> cv2<span class="token punctuation">.</span>split<span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> cv2<span class="token punctuation">.</span>merge<span class="token punctuation">(</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> cv2_img<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">img_convert</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span><span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
                 
@@ -670,6 +696,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -846,7 +875,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">195</span>
+                        class="white-color">198</span>
             
             
             
