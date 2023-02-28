@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html lang="en">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于, WSD">
+    <meta name="keywords" content="About, WSD">
     <meta name="description" content="Emotion defines life, data quantifies the world, and models predict the future.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于 | WSD</title>
+    <title>About | WSD</title>
     <link rel="icon" type="image/png" href="/wsd.png">
     
 
@@ -81,7 +81,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>首页</span>
+      <span>Index</span>
     </a>
     
   </li>
@@ -92,7 +92,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>标签</span>
+      <span>Tags</span>
     </a>
     
   </li>
@@ -103,7 +103,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>分类</span>
+      <span>Categories</span>
     </a>
     
   </li>
@@ -114,7 +114,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>Archives</span>
     </a>
     
   </li>
@@ -125,7 +125,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>关于</span>
+      <span>About</span>
     </a>
     
   </li>
@@ -136,7 +136,7 @@
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>留言板</span>
+      <span>Contact</span>
     </a>
     
   </li>
@@ -147,14 +147,14 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>友情链接</span>
+      <span>Friends</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -187,7 +187,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			首页
+			Index
 		</a>
           
         </li>
@@ -198,7 +198,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			标签
+			Tags
 		</a>
           
         </li>
@@ -209,7 +209,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			分类
+			Categories
 		</a>
           
         </li>
@@ -220,7 +220,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			归档
+			Archives
 		</a>
           
         </li>
@@ -231,7 +231,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			关于
+			About
 		</a>
           
         </li>
@@ -242,7 +242,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			留言板
+			Contact
 		</a>
           
         </li>
@@ -253,7 +253,7 @@
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			友情链接
+			Friends
 		</a>
           
         </li>
@@ -398,21 +398,21 @@
                         
 <div class="statis">
     <span class="count"><a href="/">2</a></span>
-    <span class="name">文章</span>
+    <span class="name">Posts</span>
 </div>
 
 
 
 <div class="statis">
     <span class="count"><a href="/categories">1</a></span>
-    <span class="name">分类</span>
+    <span class="name">Categories</span>
 </div>
 
 
 
 <div class="statis">
     <span class="count"><a href="/tags">1</a></span>
-    <span class="name">标签</span>
+    <span class="name">Tags</span>
 </div>
 
 
@@ -428,21 +428,21 @@
                                     
 <div class="statis">
     <span class="count"><a href="/">2</a></span>
-    <span class="name">文章</span>
+    <span class="name">Posts</span>
 </div>
 
 
 
 <div class="statis">
     <span class="count"><a href="/categories">1</a></span>
-    <span class="name">分类</span>
+    <span class="name">Categories</span>
 </div>
 
 
 
 <div class="statis">
     <span class="count"><a href="/tags">1</a></span>
-    <span class="name">标签</span>
+    <span class="name">Tags</span>
 </div>
 
 
@@ -531,7 +531,7 @@
 
 <div id="postCharts" class="post-charts">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-bar-chart"></i>&nbsp;&nbsp;文章统计图
+        <i class="far fa-bar-chart"></i>&nbsp;&nbsp;Post Charts
     </div>
     <div class="row">
         <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
@@ -558,7 +558,7 @@
 
     let postsOption = {
         title: {
-            text: '文章发布统计图',
+            text: 'Post Publish Chart',
             top: -5,
             x: 'center'
         },
@@ -574,7 +574,7 @@
         },
         series: [
             {
-                name: '文章篇数',
+                name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
                 data: [0,0,0,0,0,0,0,0,0,0,0,0,2],
@@ -584,17 +584,17 @@
                     data: [{
                         type: 'max',
                         itemStyle: {color: ['#3ecf8e']},
-                        name: '最大值'
+                        name: 'Maximum'
                     }, {
                         type: 'min',
                         itemStyle: {color: ['#fa755a']},
-                        name: '最小值'
+                        name: 'Minimum'
                     }]
                 },
                 markLine: {
                     itemStyle: {color: ['#ab47bc']},
                     data: [
-                        {type: 'average', name: '平均值'}
+                        {type: 'average', name: 'Average'}
                     ]
                 }
             }
@@ -605,7 +605,7 @@
 
     let categoriesOption = {
         title: {
-            text: '文章分类统计图',
+            text: 'Categories Chart',
             top: -4,
             x: 'center'
         },
@@ -615,7 +615,7 @@
         },
         series: [
             {
-                name: '分类',
+                name: 'Categories',
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
@@ -635,7 +635,7 @@
 
     let tagsOption = {
         title: {
-            text: 'TOP10 标签统计图',
+            text: 'TOP10 Tags Chart',
             top: -5,
             x: 'center'
         },
@@ -662,17 +662,17 @@
                     data: [{
                         type: 'max',
                         itemStyle: {color: ['#3ecf8e']},
-                        name: '最大值'
+                        name: 'Maximum'
                     }, {
                         type: 'min',
                         itemStyle: {color: ['#fa755a']},
-                        name: '最小值'
+                        name: 'Minimum'
                     }],
                 },
                 markLine: {
                     itemStyle: {color: ['#ab47bc']},
                     data: [
-                        {type: 'average', name: '平均值'}
+                        {type: 'average', name: 'Average'}
                     ]
                 }
             }
@@ -692,7 +692,7 @@
                 
 <div class="my-skills">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
+        <i class="fas fa-wrench"></i>&nbsp;&nbsp;My Skills
     </div>
     <div class="row">
         
@@ -770,7 +770,7 @@
 
     
     <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
+        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;Other Skills</div>
         <div class="tag-chips center-align">
             
             
@@ -791,7 +791,7 @@
                 
 <div id="myGallery" class="my-gallery">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-image"></i>&nbsp;&nbsp;相册
+        <i class="far fa-image"></i>&nbsp;&nbsp;Gallery
     </div>
     <div class="row">
         
@@ -853,11 +853,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
-                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
-            
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
                         class="white-color">198</span>
             
             
@@ -866,13 +864,13 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -913,13 +911,22 @@
                         diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffDays + " day " + diffHours +
+                            " hour " + diffMinutes + " minute " + diffSeconds + " second";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffYears + " year " + diffDays +
+                            " day " + diffHours + " hour " + diffMinutes + " minute " + diffSeconds + " second";
                     }
+                    // if (startYear == todayYear) {
+                    //     document.getElementById("year").innerHTML = todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                    //         " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // } else {
+                    //     document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                    //         " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // }
                 }
                 setInterval(siteTime, 1000);
                 </script>
@@ -965,8 +972,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
@@ -1107,17 +1114,6 @@ $(function () {
     
 
     
-        <script type="text/javascript" src="/js/tw_cn.js"></script>
-        <script type="text/javascript">
-          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
-          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
-          var cookieDomain = "https://weishida01.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
-          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
-          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
-          var translateButtonId = "translateLink"; //默认互换id
-          translateInitilization();
-        </script>
-    
     
     
 
@@ -1127,10 +1123,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->
