@@ -1,0 +1,3346 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="4-机房预约系统, WSD">
+    <meta name="description" content="C++ 机房预约系统">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>4-机房预约系统 | WSD</title>
+    <link rel="icon" type="image/png" href="/wsd.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WSD" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">WSD</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">WSD</div>
+        <div class="logo-desc">
+            
+            Emotion defines life, data quantifies the world, and models predict the future.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/weishida01" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/weishida01" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%B0%81%E9%9D%A2.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">4-机房预约系统</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="/tags/C-%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">C++ 机房预约系统</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C-%E6%A1%88%E4%BE%8B/" class="post-category">
+                                C++案例
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-03-03
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-03-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    9.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    41 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1、机房预约系统需求"><a href="#1、机房预约系统需求" class="headerlink" title="1、机房预约系统需求"></a>1、机房预约系统需求</h2><h3 id="1-1-系统简介"><a href="#1-1-系统简介" class="headerlink" title="1.1 系统简介"></a>1.1 系统简介</h3><ul>
+<li>学校现有几个规格不同的机房，由于使用时经常出现”撞车”现象,现开发一套机房预约系统，解决这一问题。</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682783885.png"></p>
+<h3 id="1-2-身份简介"><a href="#1-2-身份简介" class="headerlink" title="1.2 身份简介"></a>1.2 身份简介</h3><p>分别有三种身份使用该程序</p>
+<ul>
+<li><strong>学生代表</strong>：申请使用机房</li>
+<li><strong>教师</strong>：审核学生的预约申请</li>
+<li><strong>管理员</strong>：给学生、教师创建账号</li>
+</ul>
+<h3 id="1-3-机房简介"><a href="#1-3-机房简介" class="headerlink" title="1.3 机房简介"></a>1.3 机房简介</h3><p>机房总共有3间</p>
+<ul>
+<li>1号机房   — 最大容量20人</li>
+<li>2号机房   — 最多容量50人</li>
+<li>3号机房   — 最多容量100人</li>
+</ul>
+<h3 id="1-4-申请简介"><a href="#1-4-申请简介" class="headerlink" title="1.4 申请简介"></a>1.4 申请简介</h3><ul>
+<li>申请的订单每周由管理员负责清空。</li>
+<li>学生可以预约未来一周内的机房使用，预约的日期为周一至周五，预约时需要选择预约时段（上午、下午）</li>
+<li>教师来审核预约，依据实际情况审核预约通过或者不通过</li>
+</ul>
+<h3 id="1-5-系统具体需求"><a href="#1-5-系统具体需求" class="headerlink" title="1.5 系统具体需求"></a>1.5 系统具体需求</h3><ul>
+<li>首先进入登录界面，可选登录身份有：<ul>
+<li>学生代表</li>
+<li>老师</li>
+<li>管理员</li>
+<li>退出</li>
+</ul>
+</li>
+<li>每个身份都需要进行验证后，进入子菜单<ul>
+<li>学生需要输入 ：学号、姓名、登录密码</li>
+<li>老师需要输入：职工号、姓名、登录密码</li>
+<li>管理员需要输入：管理员姓名、登录密码</li>
+</ul>
+</li>
+<li>学生具体功能<ul>
+<li>申请预约    —   预约机房</li>
+<li>查看自身的预约    —  查看自己的预约状态</li>
+<li>查看所有预约   —   查看全部预约信息以及预约状态</li>
+<li>取消预约    —   取消自身的预约，预约成功或审核中的预约均可取消</li>
+<li>注销登录    —   退出登录</li>
+</ul>
+</li>
+<li>教师具体功能<ul>
+<li>查看所有预约   —   查看全部预约信息以及预约状态</li>
+<li>审核预约    —   对学生的预约进行审核</li>
+<li>注销登录    —   退出登录</li>
+</ul>
+</li>
+<li>管理员具体功能<ul>
+<li>添加账号    —   添加学生或教师的账号，需要检测学生编号或教师职工号是否重复</li>
+<li>查看账号    —   可以选择查看学生或教师的全部信息</li>
+<li>查看机房    —   查看所有机房的信息</li>
+<li>清空预约    —   清空所有预约记录</li>
+<li>注销登录    —   退出登录</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682206670.png"></p>
+<h2 id="2、创建项目"><a href="#2、创建项目" class="headerlink" title="2、创建项目"></a>2、创建项目</h2><p>创建项目步骤如下：</p>
+<ul>
+<li>创建新项目</li>
+<li>添加文件</li>
+</ul>
+<h3 id="2-1-创建项目"><a href="#2-1-创建项目" class="headerlink" title="2.1 创建项目"></a>2.1 创建项目</h3><ul>
+<li>打开vs2017后，点击创建新项目，创建新的C++项目</li>
+</ul>
+<p>如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682413343.png"></p>
+<ul>
+<li>填写项目名称以及选取项目路径，点击确定生成项目</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682522544.png"></p>
+<h3 id="2-2-添加文件"><a href="#2-2-添加文件" class="headerlink" title="2.2 添加文件"></a>2.2 添加文件</h3><ul>
+<li>右键源文件，进行添加文件操作</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682597721.png"></p>
+<ul>
+<li>填写文件名称，点击添加</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682679989.png"></p>
+<ul>
+<li>生成文件成功，效果如下图</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548682733912.png"></p>
+<h2 id="3、创建主菜单"><a href="#3、创建主菜单" class="headerlink" title="3、创建主菜单"></a>3、创建主菜单</h2><p><strong>功能描述：</strong></p>
+<ul>
+<li>设计主菜单，与用户进行交互</li>
+</ul>
+<h3 id="3-1-菜单实现"><a href="#3-1-菜单实现" class="headerlink" title="3.1 菜单实现"></a>3.1 菜单实现</h3><ul>
+<li>在主函数main中添加菜单提示，代码如下：</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int main() {
+
+	cout &lt;&lt; "======================  欢迎来到传智播客机房预约系统  =====================" 
+         &lt;&lt; endl;
+	cout &lt;&lt; endl &lt;&lt; "请输入您的身份" &lt;&lt; endl;
+	cout &lt;&lt; "\t\t -------------------------------\n";
+	cout &lt;&lt; "\t\t|                               |\n";
+	cout &lt;&lt; "\t\t|          1.学生代表           |\n";
+	cout &lt;&lt; "\t\t|                               |\n";
+	cout &lt;&lt; "\t\t|          2.老    师           |\n";
+	cout &lt;&lt; "\t\t|                               |\n";
+	cout &lt;&lt; "\t\t|          3.管 理 员           |\n";
+	cout &lt;&lt; "\t\t|                               |\n";
+	cout &lt;&lt; "\t\t|          0.退    出           |\n";
+	cout &lt;&lt; "\t\t|                               |\n";
+	cout &lt;&lt; "\t\t -------------------------------\n";
+	cout &lt;&lt; "输入您的选择: ";
+
+	system("pause");
+
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>运行效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548557945611.png"></p>
+<h3 id="3-2-搭建接口"><a href="#3-2-搭建接口" class="headerlink" title="3.2 搭建接口"></a>3.2 搭建接口</h3><ul>
+<li>接受用户的选择，搭建接口</li>
+<li>在main中添加代码</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int main() {
+
+	int select = 0;
+
+	while (true)
+	{
+
+		cout &lt;&lt; "======================  欢迎来到传智播客机房预约系统  =====================" &lt;&lt; endl;
+		cout &lt;&lt; endl &lt;&lt; "请输入您的身份" &lt;&lt; endl;
+		cout &lt;&lt; "\t\t -------------------------------\n";
+		cout &lt;&lt; "\t\t|                               |\n";
+		cout &lt;&lt; "\t\t|          1.学生代表           |\n";
+		cout &lt;&lt; "\t\t|                               |\n";
+		cout &lt;&lt; "\t\t|          2.老    师           |\n";
+		cout &lt;&lt; "\t\t|                               |\n";
+		cout &lt;&lt; "\t\t|          3.管 理 员           |\n";
+		cout &lt;&lt; "\t\t|                               |\n";
+		cout &lt;&lt; "\t\t|          0.退    出           |\n";
+		cout &lt;&lt; "\t\t|                               |\n";
+		cout &lt;&lt; "\t\t -------------------------------\n";
+		cout &lt;&lt; "输入您的选择: ";
+
+		cin &gt;&gt; select; //接受用户选择
+
+		switch (select)
+		{
+		case 1:  //学生身份
+			break;
+		case 2:  //老师身份
+			break;
+		case 3:  //管理员身份
+			break;
+		case 0:  //退出系统
+			break;
+		default:
+             cout &lt;&lt; "输入有误，请重新选择！" &lt;&lt; endl;
+		    system("pause");
+			system("cls");
+			break;
+		}
+
+	}
+	system("pause");
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试，输入0、1、2、3会重新回到界面，输入其他提示输入有误，清屏后重新选择</p>
+<p>效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548558694230.png"></p>
+<p>至此，界面搭建完毕</p>
+<h2 id="4、-退出功能实现"><a href="#4、-退出功能实现" class="headerlink" title="4、 退出功能实现"></a>4、 退出功能实现</h2><h3 id="4-1-退出功能实现"><a href="#4-1-退出功能实现" class="headerlink" title="4.1 退出功能实现"></a>4.1 退出功能实现</h3><p>在main函数分支 0 选项中，添加退出程序的代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">cout &lt;&lt; "欢迎下一次使用"&lt;&lt;endl;
+system("pause");
+return 0;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548558992754.png"></p>
+<h3 id="4-2-测试退出功能"><a href="#4-2-测试退出功能" class="headerlink" title="4.2 测试退出功能"></a>4.2 测试退出功能</h3><p>运行程序，效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548559026436.png"></p>
+<p>至此，退出程序功能实现</p>
+<h2 id="5、-创建身份类"><a href="#5、-创建身份类" class="headerlink" title="5、 创建身份类"></a>5、 创建身份类</h2><h3 id="5-1-身份的基类"><a href="#5-1-身份的基类" class="headerlink" title="5.1 身份的基类"></a>5.1 身份的基类</h3><ul>
+<li>在整个系统中，有三种身份，分别为：学生代表、老师以及管理员</li>
+<li>三种身份有其共性也有其特性，因此我们可以将三种身份抽象出一个身份基类<strong>identity</strong></li>
+<li>在头文件下创建Identity.h文件</li>
+</ul>
+<p>Identity.h中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+
+//身份抽象类
+class Identity
+{
+public:
+
+	//操作菜单
+	virtual void operMenu() = 0;
+
+	string m_Name; //用户名
+	string m_Pwd;  //密码
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548573329273.png"></p>
+<h3 id="5-2-学生类"><a href="#5-2-学生类" class="headerlink" title="5.2 学生类"></a>5.2 学生类</h3><h4 id="5-2-1-功能分析"><a href="#5-2-1-功能分析" class="headerlink" title="5.2.1 功能分析"></a>5.2.1 功能分析</h4><ul>
+<li><p>学生类主要功能是可以通过类中成员函数，实现预约实验室操作</p>
+</li>
+<li><p>学生类中主要功能有：</p>
+<ul>
+<li>显示学生操作的菜单界面</li>
+<li>申请预约</li>
+<li>查看自身预约</li>
+<li>查看所有预约</li>
+<li>取消预约</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-2-类的创建"><a href="#5-2-2-类的创建" class="headerlink" title="5.2.2 类的创建"></a>5.2.2 类的创建</h4><ul>
+<li>在头文件以及源文件下创建 student.h 和 student.cpp文件</li>
+</ul>
+<p>student.h中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+#include "identity.h"
+
+//学生类
+class Student :public Identity
+{
+public:
+	//默认构造
+	Student();
+
+	//有参构造(学号、姓名、密码)
+	Student(int id, string name, string pwd);
+
+	//菜单界面
+	virtual void operMenu(); 
+
+	//申请预约
+	void applyOrder(); 
+
+	//查看我的预约
+	void showMyOrder(); 
+
+	//查看所有预约
+	void showAllOrder(); 
+
+	//取消预约
+	void cancelOrder();
+	
+	//学生学号
+	int m_Id;
+
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>student.cpp中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include "student.h"
+
+//默认构造
+Student::Student()
+{
+}
+
+//有参构造(学号、姓名、密码)
+Student::Student(int id, string name, string pwd)
+{
+}
+
+//菜单界面
+void Student::operMenu()
+{
+}
+
+//申请预约
+void Student::applyOrder()
+{
+
+}
+
+//查看我的预约
+void Student::showMyOrder()
+{
+
+}
+
+//查看所有预约
+void Student::showAllOrder()
+{
+
+}
+
+//取消预约
+void Student::cancelOrder()
+{
+
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="5-3-老师类"><a href="#5-3-老师类" class="headerlink" title="5.3 老师类"></a>5.3 老师类</h3><h4 id="5-3-1-功能分析"><a href="#5-3-1-功能分析" class="headerlink" title="5.3.1 功能分析"></a>5.3.1 功能分析</h4><ul>
+<li><p>教师类主要功能是查看学生的预约，并进行审核</p>
+</li>
+<li><p>教师类中主要功能有：</p>
+<ul>
+<li><p>显示教师操作的菜单界面</p>
+</li>
+<li><p>查看所有预约</p>
+</li>
+<li><p>审核预约</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-3-2-类的创建"><a href="#5-3-2-类的创建" class="headerlink" title="5.3.2 类的创建"></a>5.3.2 类的创建</h4><ul>
+<li>在头文件以及源文件下创建 teacher.h 和 teacher.cpp文件</li>
+</ul>
+<p>teacher.h中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include&lt;iostream&gt;
+using namespace std;
+#include "identity.h"
+
+class Teacher :public Identity
+{
+public:
+
+	//默认构造
+	Teacher();
+
+	//有参构造 (职工编号，姓名，密码)
+	Teacher(int empId, string name, string pwd);
+
+	//菜单界面
+	virtual void operMenu();
+
+	//查看所有预约
+	void showAllOrder(); 
+
+	//审核预约
+	void validOrder(); 
+
+	int m_EmpId; //教师编号
+
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>teacher.cpp中添加如下代码:</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include"teacher.h"
+
+//默认构造
+Teacher::Teacher()
+{
+}
+
+//有参构造 (职工编号，姓名，密码)
+Teacher::Teacher(int empId, string name, string pwd)
+{
+}
+
+//菜单界面
+void Teacher::operMenu()
+{
+}
+
+//查看所有预约
+void Teacher::showAllOrder()
+{
+}
+
+//审核预约
+void Teacher::validOrder()
+{
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+<h3 id="5-4-管理员类"><a href="#5-4-管理员类" class="headerlink" title="5.4 管理员类"></a>5.4 管理员类</h3><h4 id="5-4-1-功能分析"><a href="#5-4-1-功能分析" class="headerlink" title="5.4.1 功能分析"></a>5.4.1 功能分析</h4><ul>
+<li><p>管理员类主要功能是对学生和老师账户进行管理，查看机房信息以及清空预约记录</p>
+</li>
+<li><p>管理员类中主要功能有：</p>
+<ul>
+<li><p>显示管理员操作的菜单界面</p>
+</li>
+<li><p>添加账号</p>
+</li>
+<li><p>查看账号</p>
+</li>
+<li><p>查看机房信息</p>
+</li>
+<li><p>清空预约记录</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-4-2-类的创建"><a href="#5-4-2-类的创建" class="headerlink" title="5.4.2 类的创建"></a>5.4.2 类的创建</h4><ul>
+<li>在头文件以及源文件下创建 manager.h 和 manager.cpp文件</li>
+</ul>
+<p>manager.h中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+#include "identity.h"
+
+class Manager :public Identity
+{
+public:
+
+	//默认构造
+	Manager();
+
+	//有参构造  管理员姓名，密码
+	Manager(string name, string pwd);
+
+	//选择菜单
+	virtual void operMenu();
+
+	//添加账号  
+	void addPerson();
+
+	//查看账号
+	void showPerson();
+
+	//查看机房信息
+	void showComputer();
+
+	//清空预约记录
+	void cleanFile();
+
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>manager.cpp中添加如下代码:</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include "manager.h"
+
+//默认构造
+Manager::Manager()
+{
+}
+
+//有参构造
+Manager::Manager(string name, string pwd)
+{
+}
+
+//选择菜单
+void Manager::operMenu()
+{
+}
+
+//添加账号  
+void Manager::addPerson()
+{
+}
+
+//查看账号
+void Manager::showPerson()
+{
+}
+
+//查看机房信息
+void Manager::showComputer()
+{
+}
+
+//清空预约记录
+void Manager::cleanFile()
+{
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>至此，所有身份类创建完毕，效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548574390768.png"></p>
+<h2 id="6、-登录模块"><a href="#6、-登录模块" class="headerlink" title="6、  登录模块"></a>6、  登录模块</h2><h3 id="6-1-全局文件添加"><a href="#6-1-全局文件添加" class="headerlink" title="6.1 全局文件添加"></a>6.1 全局文件添加</h3><p>功能描述：</p>
+<ul>
+<li>不同的身份可能会用到不同的文件操作，我们可以将所有的文件名定义到一个全局的文件中</li>
+<li>在头文件中添加 <strong>globalFile.h</strong> 文件</li>
+<li>并添加如下代码：</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once 
+
+//管理员文件
+#define ADMIN_FILE     "admin.txt"
+//学生文件
+#define STUDENT_FILE   "student.txt"
+//教师文件
+#define TEACHER_FILE   "teacher.txt"
+//机房信息文件
+#define COMPUTER_FILE  "computerRoom.txt"
+//订单文件
+#define ORDER_FILE     "order.txt"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>并且在同级目录下，创建这几个文件</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548575650130.png"></p>
+<h3 id="6-2-登录函数封装"><a href="#6-2-登录函数封装" class="headerlink" title="6.2  登录函数封装"></a>6.2  登录函数封装</h3><p>功能描述：</p>
+<ul>
+<li>根据用户的选择，进入不同的身份登录</li>
+</ul>
+<p>在预约系统的.cpp文件中添加全局函数 <code>void LoginIn(string fileName, int type)</code></p>
+<p>参数：</p>
+<ul>
+<li>fileName  — 操作的文件名</li>
+<li>type      —  登录的身份  （1代表学生、2代表老师、3代表管理员）</li>
+</ul>
+<p>LoginIn中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include "globalFile.h"
+#include "identity.h"
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+
+
+//登录功能
+void LoginIn(string fileName, int type)
+{
+
+	Identity * person = NULL;
+
+	ifstream ifs;
+	ifs.open(fileName, ios::in);
+
+	//文件不存在情况
+	if (!ifs.is_open())
+	{
+		cout &lt;&lt; "文件不存在" &lt;&lt; endl;
+		ifs.close();
+		return;
+	}
+
+	int id = 0;
+	string name;
+	string pwd;
+
+	if (type == 1)	//学生登录
+	{
+		cout &lt;&lt; "请输入你的学号" &lt;&lt; endl;
+		cin &gt;&gt; id;
+	}
+	else if (type == 2) //教师登录
+	{
+		cout &lt;&lt; "请输入你的职工号" &lt;&lt; endl;
+		cin &gt;&gt; id;
+	}
+
+	cout &lt;&lt; "请输入用户名：" &lt;&lt; endl;
+	cin &gt;&gt; name;
+
+	cout &lt;&lt; "请输入密码： " &lt;&lt; endl;
+	cin &gt;&gt; pwd;
+
+
+	if (type == 1)
+	{
+		//学生登录验证
+	}
+	else if (type == 2)
+	{
+		//教师登录验证
+	}
+	else if(type == 3)
+	{
+		//管理员登录验证
+	}
+	
+	cout &lt;&lt; "验证登录失败!" &lt;&lt; endl;
+
+	system("pause");
+	system("cls");
+	return;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>在main函数的不同分支中，填入不同的登录接口</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548575945985.png"></p>
+<h3 id="6-3-学生登录实现"><a href="#6-3-学生登录实现" class="headerlink" title="6.3 学生登录实现"></a>6.3 学生登录实现</h3><p>在student.txt文件中添加两条学生信息，用于测试</p>
+<p>添加信息:   </p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">1 张三 123
+2 李四 123456<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>其中：</p>
+<ul>
+<li>第一列  代表  <strong>学号</strong></li>
+<li>第二列  代表  <strong>学生姓名</strong></li>
+<li>第三列  代表  <strong>密码</strong></li>
+</ul>
+<p>效果图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548583693555.png"></p>
+<p>在Login函数的学生分支中加入如下代码，验证学生身份</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//学生登录验证
+int fId;
+string fName;
+string fPwd;
+while (ifs &gt;&gt; fId &amp;&amp; ifs &gt;&gt; fName &amp;&amp; ifs &gt;&gt; fPwd)
+{
+	if (id == fId &amp;&amp; name == fName &amp;&amp; pwd == fPwd)
+	{
+		cout &lt;&lt; "学生验证登录成功!" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		person = new Student(id, name, pwd);
+		
+		return;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>添加代码效果图</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548583915819.png"></p>
+<p>测试：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548583950828.png"></p>
+<h3 id="6-4-教师登录实现"><a href="#6-4-教师登录实现" class="headerlink" title="6.4 教师登录实现"></a>6.4 教师登录实现</h3><p>在teacher.txt文件中添加一条老师信息，用于测试</p>
+<p>添加信息:   </p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">1 老王 123<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>其中：</p>
+<ul>
+<li>第一列  代表  <strong>教师职工编号</strong></li>
+<li>第二列  代表  <strong>教师姓名</strong></li>
+<li>第三列  代表  <strong>密码</strong></li>
+</ul>
+<p>效果图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548584030522.png"></p>
+<p>在Login函数的教师分支中加入如下代码，验证教师身份</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//教师登录验证
+int fId;
+string fName;
+string fPwd;
+while (ifs &gt;&gt; fId &amp;&amp; ifs &gt;&gt; fName &amp;&amp; ifs &gt;&gt; fPwd)
+{
+	if (id == fId &amp;&amp; name == fName &amp;&amp; pwd == fPwd)
+	{
+		cout &lt;&lt; "教师验证登录成功!" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		person = new Teacher(id, name, pwd);
+		return;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>添加代码效果图</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548584158339.png"></p>
+<p>测试：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548584177003.png"></p>
+<h3 id="6-5-管理员登录实现"><a href="#6-5-管理员登录实现" class="headerlink" title="6.5 管理员登录实现"></a>6.5 管理员登录实现</h3><p>在admin.txt文件中添加一条管理员信息，由于我们只有一条管理员，因此本案例中没有添加管理员的功能</p>
+<p>添加信息:   </p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">admin 123<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>其中：<code>admin</code>代表管理员用户名，<code>123</code>代表管理员密码</p>
+<p>效果图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548577855190.png"></p>
+<p>在Login函数的管理员分支中加入如下代码，验证管理员身份</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//管理员登录验证
+		string fName;
+		string fPwd;
+		while (ifs &gt;&gt; fName &amp;&amp; ifs &gt;&gt; fPwd)
+		{
+			if (name == fName &amp;&amp; pwd == fPwd)
+			{
+				cout &lt;&lt; "验证登录成功!" &lt;&lt; endl;
+				//登录成功后，按任意键进入管理员界面
+				system("pause");
+				system("cls");
+				//创建管理员对象
+				person = new Manager(name,pwd);
+				return;
+			}
+		}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>添加效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548588322712.png"></p>
+<p>测试效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548583245072.png"></p>
+<p>至此，所有身份的登录功能全部实现！</p>
+<h2 id="7、-管理员模块"><a href="#7、-管理员模块" class="headerlink" title="7、 管理员模块"></a>7、 管理员模块</h2><h3 id="7-1-管理员登录和注销"><a href="#7-1-管理员登录和注销" class="headerlink" title="7.1  管理员登录和注销"></a>7.1  管理员登录和注销</h3><h4 id="7-1-1-构造函数"><a href="#7-1-1-构造函数" class="headerlink" title="7.1.1 构造函数"></a>7.1.1 构造函数</h4><ul>
+<li>在Manager类的构造函数中，初始化管理员信息，代码如下：</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//有参构造
+Manager::Manager(string name, string pwd)
+{
+	this-&gt;m_Name = name;
+	this-&gt;m_Pwd = pwd;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h4 id="7-1-2-管理员子菜单"><a href="#7-1-2-管理员子菜单" class="headerlink" title="7.1.2  管理员子菜单"></a>7.1.2  管理员子菜单</h4><ul>
+<li>在机房预约系统.cpp中，当用户登录的是管理员，添加管理员菜单接口</li>
+<li>将不同的分支提供出来<ul>
+<li>添加账号</li>
+<li>查看账号</li>
+<li>查看机房</li>
+<li>清空预约</li>
+<li>注销登录</li>
+</ul>
+</li>
+<li>实现注销功能</li>
+</ul>
+<p>添加全局函数 <code>void managerMenu(Identity * &amp;manager)</code>，代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//管理员菜单
+void managerMenu(Identity * &amp;manager)
+{
+	while (true)
+	{
+		//管理员菜单
+		manager-&gt;operMenu();
+
+		Manager* man = (Manager*)manager;
+		int select = 0;
+
+		cin &gt;&gt; select;
+        
+		if (select == 1)  //添加账号
+		{
+			cout &lt;&lt; "添加账号" &lt;&lt; endl;
+			man-&gt;addPerson();
+		}
+		else if (select == 2) //查看账号
+		{
+			cout &lt;&lt; "查看账号" &lt;&lt; endl;
+			man-&gt;showPerson(); 
+		}
+		else if (select == 3) //查看机房
+		{
+			cout &lt;&lt; "查看机房" &lt;&lt; endl;
+			man-&gt;showComputer();
+		}
+		else if (select == 4) //清空预约
+		{
+			cout &lt;&lt; "清空预约" &lt;&lt; endl;
+			man-&gt;cleanFile();
+		}
+		else
+		{
+			delete manager;
+			cout &lt;&lt; "注销成功" &lt;&lt; endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="7-1-3-菜单功能实现"><a href="#7-1-3-菜单功能实现" class="headerlink" title="7.1.3 菜单功能实现"></a>7.1.3 菜单功能实现</h4><ul>
+<li>在实现成员函数<code>void Manager::operMenu()</code> 代码如下：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//选择菜单
+void Manager::operMenu()
+{
+	cout &lt;&lt; "欢迎管理员："&lt;&lt;this-&gt;m_Name &lt;&lt; "登录！" &lt;&lt; endl;
+	cout &lt;&lt; "\t\t ---------------------------------\n";
+	cout &lt;&lt; "\t\t|                                |\n";
+	cout &lt;&lt; "\t\t|          1.添加账号            |\n";
+	cout &lt;&lt; "\t\t|                                |\n";
+	cout &lt;&lt; "\t\t|          2.查看账号            |\n";
+	cout &lt;&lt; "\t\t|                                |\n";
+	cout &lt;&lt; "\t\t|          3.查看机房            |\n";
+	cout &lt;&lt; "\t\t|                                |\n";
+	cout &lt;&lt; "\t\t|          4.清空预约            |\n";
+	cout &lt;&lt; "\t\t|                                |\n";
+	cout &lt;&lt; "\t\t|          0.注销登录            |\n";
+	cout &lt;&lt; "\t\t|                                |\n";
+	cout &lt;&lt; "\t\t ---------------------------------\n";
+	cout &lt;&lt; "请选择您的操作： " &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="7-1-4-接口对接"><a href="#7-1-4-接口对接" class="headerlink" title="7.1.4 接口对接"></a>7.1.4 接口对接</h4><ul>
+<li>管理员成功登录后，调用管理员子菜单界面</li>
+<li>在管理员登录验证分支中，添加代码：</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//进入管理员子菜单
+managerMenu(person);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>添加效果如：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548589297779.png"></p>
+<p>测试对接，效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548589344206.png"></p>
+<p>登录成功</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548589328710.png"></p>
+<p>注销登录：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548589416576.png"></p>
+<p>至此，管理员身份可以成功登录以及注销</p>
+<h3 id="7-2-添加账号"><a href="#7-2-添加账号" class="headerlink" title="7.2 添加账号"></a>7.2 添加账号</h3><p>功能描述：</p>
+<ul>
+<li>给学生或教师添加新的账号</li>
+</ul>
+<p>功能要求：</p>
+<ul>
+<li>添加时学生学号不能重复、教师职工号不能重复</li>
+</ul>
+<h4 id="7-2-1-添加功能实现"><a href="#7-2-1-添加功能实现" class="headerlink" title="7.2.1 添加功能实现"></a>7.2.1 添加功能实现</h4><p>在Manager的<strong>addPerson</strong>成员函数中，实现添加新账号功能，代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//添加账号  
+void Manager::addPerson()
+{
+
+	cout &lt;&lt; "请输入添加账号的类型" &lt;&lt; endl;
+	cout &lt;&lt; "1、添加学生" &lt;&lt; endl;
+	cout &lt;&lt; "2、添加老师" &lt;&lt; endl;
+
+	string fileName;
+	string tip;
+	ofstream ofs;
+
+	int select = 0;
+	cin &gt;&gt; select;
+
+	if (select == 1)
+	{
+		fileName = STUDENT_FILE;
+		tip = "请输入学号： ";
+	}
+	else
+	{
+		fileName = TEACHER_FILE;
+		tip = "请输入职工编号：";
+	}
+
+	ofs.open(fileName, ios::out | ios::app);
+	int id;
+	string name;
+	string pwd;
+	cout &lt;&lt;tip &lt;&lt; endl;
+	cin &gt;&gt; id;
+
+	cout &lt;&lt; "请输入姓名： " &lt;&lt; endl;
+	cin &gt;&gt; name;
+
+	cout &lt;&lt; "请输入密码： " &lt;&lt; endl;
+	cin &gt;&gt; pwd;
+
+	ofs &lt;&lt; id &lt;&lt; " " &lt;&lt; name &lt;&lt; " " &lt;&lt; pwd &lt;&lt; " " &lt;&lt; endl;
+	cout &lt;&lt; "添加成功" &lt;&lt; endl;
+
+	system("pause");
+	system("cls");
+
+	ofs.close();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>测试添加学生：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548641024216.png"></p>
+<p>成功在学生文件中添加了一条信息</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548641141027.png"></p>
+<p>测试添加教师：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548641195834.png"></p>
+<p>成功在教师文件中添加了一条信息</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548641237513.png"></p>
+<h4 id="7-2-2-去重操作"><a href="#7-2-2-去重操作" class="headerlink" title="7.2.2 去重操作"></a>7.2.2 去重操作</h4><p>功能描述：添加新账号时，如果是重复的学生编号，或是重复的教师职工编号，提示有误</p>
+<h5 id="7-2-2-1-读取信息"><a href="#7-2-2-1-读取信息" class="headerlink" title="7.2.2.1 读取信息"></a>7.2.2.1 读取信息</h5><ul>
+<li>要去除重复的账号，首先要先将学生和教师的账号信息获取到程序中，方可检测</li>
+<li>在manager.h中，添加两个容器，用于存放学生和教师的信息</li>
+<li>添加一个新的成员函数  <code>void initVector()</code> 初始化容器</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//初始化容器
+void initVector();
+
+//学生容器
+vector&lt;Student&gt; vStu;
+
+//教师容器
+vector&lt;Teacher&gt; vTea;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>添加位置如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548644354561.png"></p>
+<p>在Manager的有参构造函数中，获取目前的学生和教师信息</p>
+<p>代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Manager::initVector()
+{
+	//读取学生文件中信息
+	ifstream ifs;
+	ifs.open(STUDENT_FILE, ios::in);
+	if (!ifs.is_open())
+	{
+		cout &lt;&lt; "文件读取失败" &lt;&lt; endl;
+		return;
+	}
+    
+	vStu.clear();
+     vTea.clear();
+    
+	Student s;
+	while (ifs &gt;&gt; s.m_Id &amp;&amp; ifs &gt;&gt; s.m_Name &amp;&amp;  ifs &gt;&gt; s.m_Pwd)
+	{
+		vStu.push_back(s);
+	}
+	cout &lt;&lt; "当前学生数量为： " &lt;&lt; vStu.size() &lt;&lt; endl;
+	ifs.close(); //学生初始化
+
+	//读取老师文件信息
+	ifs.open(TEACHER_FILE, ios::in);
+
+	Teacher t;
+	while (ifs &gt;&gt; t.m_EmpId &amp;&amp; ifs &gt;&gt; t.m_Name &amp;&amp;  ifs &gt;&gt; t.m_Pwd)
+	{
+		vTea.push_back(t);
+	}
+	cout &lt;&lt; "当前教师数量为： " &lt;&lt; vTea.size() &lt;&lt; endl;
+
+	ifs.close();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>在有参构造函数中，调用初始化容器函数</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//有参构造
+Manager::Manager(string name, string pwd)
+{
+	this-&gt;m_Name = name;
+	this-&gt;m_Pwd = pwd;
+    
+	//初始化容器
+	this-&gt;initVector();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<p>测试，运行代码可以看到测试代码获取当前学生和教师数量</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548642488049.png"></p>
+<h5 id="7-2-2-2-去重函数封装"><a href="#7-2-2-2-去重函数封装" class="headerlink" title="7.2.2.2 去重函数封装"></a>7.2.2.2 去重函数封装</h5><p>在manager.h文件中添加成员函数<code> bool checkRepeat(int id, int type);</code></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//检测重复 参数:(传入id，传入类型) 返回值：(true 代表有重复，false代表没有重复)
+bool checkRepeat(int id, int type);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p>在manager.cpp文件中实现成员函数  <code> bool checkRepeat(int id, int type);</code></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">bool Manager::checkRepeat(int id, int type)
+{
+	if (type == 1)
+	{
+		for (vector&lt;Student&gt;::iterator it = vStu.begin(); it != vStu.end(); it++)
+		{
+			if (id == it-&gt;m_Id)
+			{
+				return true;
+			}
+		}
+	}
+	else
+	{
+		for (vector&lt;Teacher&gt;::iterator it = vTea.begin(); it != vTea.end(); it++)
+		{
+			if (id == it-&gt;m_EmpId)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h5 id="7-2-2-3-添加去重操作"><a href="#7-2-2-3-添加去重操作" class="headerlink" title="7.2.2.3 添加去重操作"></a>7.2.2.3 添加去重操作</h5><p>在添加学生编号或者教师职工号时，检测是否有重复，代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">string errorTip; //重复错误提示
+
+if (select == 1)
+{
+	fileName = STUDENT_FILE;
+	tip = "请输入学号： ";
+	errorTip = "学号重复，请重新输入";
+}
+else
+{
+	fileName = TEACHER_FILE;
+	tip = "请输入职工编号：";
+	errorTip = "职工号重复，请重新输入";
+}
+ofs.open(fileName, ios::out | ios::app);
+int id;
+string name;
+string pwd;
+cout &lt;&lt;tip &lt;&lt; endl;
+
+while (true)
+{
+	cin &gt;&gt; id;
+
+	bool ret = this-&gt;checkRepeat(id, 1);
+
+	if (ret) //有重复
+	{
+		cout &lt;&lt; errorTip &lt;&lt; endl;
+	}
+	else
+	{
+		break;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>代码位置如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548643909979.png"></p>
+<p>检测效果：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548644151974.png"></p>
+<h5 id="7-2-2-4-bug解决"><a href="#7-2-2-4-bug解决" class="headerlink" title="7.2.2.4 bug解决"></a>7.2.2.4 bug解决</h5><p>bug描述：</p>
+<ul>
+<li>虽然可以检测重复的账号，但是刚添加的账号由于没有更新到容器中，因此不会做检测</li>
+<li>导致刚加入的账号的学生号或者职工编号，再次添加时依然可以重复</li>
+</ul>
+<p>解决方案：</p>
+<ul>
+<li>在每次添加新账号时，重新初始化容器</li>
+</ul>
+<p>在添加完毕后，加入代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//初始化容器
+this-&gt;initVector();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>位置如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548644779578.png"></p>
+<p>再次测试，刚加入的账号不会重复添加了！</p>
+<h3 id="7-3-显示账号"><a href="#7-3-显示账号" class="headerlink" title="7.3  显示账号"></a>7.3  显示账号</h3><p>功能描述：显示学生信息或教师信息</p>
+<h4 id="7-3-1-显示功能实现"><a href="#7-3-1-显示功能实现" class="headerlink" title="7.3.1 显示功能实现"></a>7.3.1 显示功能实现</h4><p>在Manager的<strong>showPerson</strong>成员函数中，实现显示账号功能，代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void printStudent(Student &amp; s)
+{
+	cout &lt;&lt; "学号： " &lt;&lt; s.m_Id &lt;&lt; " 姓名： " &lt;&lt; s.m_Name &lt;&lt; " 密码：" &lt;&lt; s.m_Pwd &lt;&lt; endl;
+}
+void printTeacher(Teacher &amp; t)
+{
+	cout &lt;&lt; "职工号： " &lt;&lt; t.m_EmpId &lt;&lt; " 姓名： " &lt;&lt; t.m_Name &lt;&lt; " 密码：" &lt;&lt; t.m_Pwd &lt;&lt; endl;
+}
+
+void Manager::showPerson()
+{
+	cout &lt;&lt; "请选择查看内容：" &lt;&lt; endl;
+	cout &lt;&lt; "1、查看所有学生" &lt;&lt; endl;
+	cout &lt;&lt; "2、查看所有老师" &lt;&lt; endl;
+
+	int select = 0;
+
+	cin &gt;&gt; select;
+    
+	if (select == 1)
+	{
+		cout &lt;&lt; "所有学生信息如下： " &lt;&lt; endl;
+		for_each(vStu.begin(), vStu.end(), printStudent);
+	}
+	else
+	{
+		cout &lt;&lt; "所有老师信息如下： " &lt;&lt; endl;
+		for_each(vTea.begin(), vTea.end(), printTeacher);
+	}
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="7-3-2-测试"><a href="#7-3-2-测试" class="headerlink" title="7.3.2 测试"></a>7.3.2 测试</h4><p>测试查看学生效果</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548646791248.png"></p>
+<p>测试查看教师效果</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548646833665.png"></p>
+<p>至此，显示账号功能实现完毕</p>
+<h3 id="7-4-查看机房"><a href="#7-4-查看机房" class="headerlink" title="7.4 查看机房"></a>7.4 查看机房</h3><h4 id="7-4-1-添加机房信息"><a href="#7-4-1-添加机房信息" class="headerlink" title="7.4.1 添加机房信息"></a>7.4.1 添加机房信息</h4><p>案例需求中，机房一共有三个，其中1号机房容量20台机器，2号50台，3号100台</p>
+<p>我们可以将信息录入到computerRoom.txt中</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548647538570.png"></p>
+<h4 id="7-4-2-机房类创建"><a href="#7-4-2-机房类创建" class="headerlink" title="7.4.2 机房类创建"></a>7.4.2 机房类创建</h4><p>在头文件下，创建新的文件 computerRoom.h</p>
+<p>并添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+//机房类
+class ComputerRoom
+{
+public:
+
+	int m_ComId; //机房id号
+
+	int m_MaxNum; //机房最大容量
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h4 id="7-4-3-初始化机房信息"><a href="#7-4-3-初始化机房信息" class="headerlink" title="7.4.3 初始化机房信息"></a>7.4.3 初始化机房信息</h4><p>在Manager管理员类下，添加机房的容器,用于保存机房信息</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//机房容器
+vector&lt;ComputerRoom&gt; vCom;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在Manager有参构造函数中，追加如下代码，初始化机房信息</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//获取机房信息
+ifstream ifs;
+
+ifs.open(COMPUTER_FILE, ios::in);
+
+ComputerRoom c;
+while (ifs &gt;&gt; c.m_ComId &amp;&amp; ifs &gt;&gt; c.m_MaxNum)
+{
+	vCom.push_back(c);
+}
+cout &lt;&lt; "当前机房数量为： " &lt;&lt; vCom.size() &lt;&lt; endl;
+
+ifs.close();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>位置如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548647976462.png"></p>
+<p>因为机房信息目前版本不会有所改动，如果后期有修改功能，最好封装到一个函数中，方便维护</p>
+<h4 id="7-4-4-显示机房信息"><a href="#7-4-4-显示机房信息" class="headerlink" title="7.4.4 显示机房信息"></a>7.4.4 显示机房信息</h4><p>在Manager类的showComputer成员函数中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//查看机房信息
+void Manager::showComputer()
+{
+	cout &lt;&lt; "机房信息如下： " &lt;&lt; endl;
+	for (vector&lt;ComputerRoom&gt;::iterator it = vCom.begin(); it != vCom.end(); it++)
+	{
+		cout &lt;&lt; "机房编号： " &lt;&lt; it-&gt;m_ComId &lt;&lt; " 机房最大容量： " &lt;&lt; it-&gt;m_MaxNum &lt;&lt; endl;
+	}
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试显示机房信息功能：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548648276929.png"></p>
+<h3 id="7-5-清空预约"><a href="#7-5-清空预约" class="headerlink" title="7.5 清空预约"></a>7.5 清空预约</h3><p>功能描述：</p>
+<p>清空生成的<code>order.txt</code>预约文件</p>
+<h4 id="7-5-1-清空功能实现"><a href="#7-5-1-清空功能实现" class="headerlink" title="7.5.1 清空功能实现"></a>7.5.1 清空功能实现</h4><p>在Manager的cleanFile成员函数中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//清空预约记录
+void Manager::cleanFile()
+{
+	ofstream ofs(ORDER_FILE, ios::trunc);
+	ofs.close();
+
+	cout &lt;&lt; "清空成功！" &lt;&lt; endl;
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试清空，可以随意写入一些信息在order.txt中，然后调用cleanFile清空文件接口，查看是否清空干净</p>
+<h2 id="8、-学生模块"><a href="#8、-学生模块" class="headerlink" title="8、 学生模块"></a>8、 学生模块</h2><h3 id="8-1-学生登录和注销"><a href="#8-1-学生登录和注销" class="headerlink" title="8.1 学生登录和注销"></a>8.1 学生登录和注销</h3><h4 id="8-1-1-构造函数"><a href="#8-1-1-构造函数" class="headerlink" title="8.1.1 构造函数"></a>8.1.1 构造函数</h4><ul>
+<li>在Student类的构造函数中，初始化学生信息，代码如下：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//有参构造(学号、姓名、密码)
+Student::Student(int id, string name, string pwd)
+{
+	//初始化属性
+	this-&gt;m_Id = id;
+	this-&gt;m_Name = name;
+	this-&gt;m_Pwd = pwd;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="8-1-2-管理员子菜单"><a href="#8-1-2-管理员子菜单" class="headerlink" title="8.1.2  管理员子菜单"></a>8.1.2  管理员子菜单</h4><ul>
+<li>在机房预约系统.cpp中，当用户登录的是学生，添加学生菜单接口</li>
+<li>将不同的分支提供出来<ul>
+<li>申请预约</li>
+<li>查看我的预约</li>
+<li>查看所有预约</li>
+<li>取消预约</li>
+<li>注销登录</li>
+</ul>
+</li>
+<li>实现注销功能</li>
+</ul>
+<p>添加全局函数 <code>void studentMenu(Identity * &amp;manager)</code> 代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//学生菜单
+void studentMenu(Identity * &amp;student)
+{
+	while (true)
+	{
+		//学生菜单
+		student-&gt;operMenu();
+
+		Student* stu = (Student*)student;
+		int select = 0;
+
+		cin &gt;&gt; select;
+
+		if (select == 1) //申请预约
+		{
+			stu-&gt;applyOrder();
+		}
+		else if (select == 2) //查看自身预约
+		{
+			stu-&gt;showMyOrder();
+		}
+		else if (select == 3) //查看所有预约
+		{
+			stu-&gt;showAllOrder();
+		}
+		else if (select == 4) //取消预约
+		{
+			stu-&gt;cancelOrder();
+		}
+		else
+		{
+			delete student;
+			cout &lt;&lt; "注销成功" &lt;&lt; endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="8-1-3-菜单功能实现"><a href="#8-1-3-菜单功能实现" class="headerlink" title="8.1.3 菜单功能实现"></a>8.1.3 菜单功能实现</h4><ul>
+<li>在实现成员函数<code>void Student::operMenu()</code> 代码如下：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//菜单界面
+void Student::operMenu()
+{
+	cout &lt;&lt; "欢迎学生代表：" &lt;&lt; this-&gt;m_Name &lt;&lt; "登录！" &lt;&lt; endl;
+	cout &lt;&lt; "\t\t ----------------------------------\n";
+	cout &lt;&lt; "\t\t|                                 |\n";
+	cout &lt;&lt; "\t\t|          1.申请预约              |\n";
+	cout &lt;&lt; "\t\t|                                 |\n";
+	cout &lt;&lt; "\t\t|          2.查看我的预约          |\n";
+	cout &lt;&lt; "\t\t|                                 |\n";
+	cout &lt;&lt; "\t\t|          3.查看所有预约          |\n";
+	cout &lt;&lt; "\t\t|                                 |\n";
+	cout &lt;&lt; "\t\t|          4.取消预约              |\n";
+	cout &lt;&lt; "\t\t|                                 |\n";
+	cout &lt;&lt; "\t\t|          0.注销登录              |\n";
+	cout &lt;&lt; "\t\t|                                 |\n";
+	cout &lt;&lt; "\t\t ----------------------------------\n";
+	cout &lt;&lt; "请选择您的操作： " &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="8-1-4-接口对接"><a href="#8-1-4-接口对接" class="headerlink" title="8.1.4 接口对接"></a>8.1.4 接口对接</h4><ul>
+<li>学生成功登录后，调用学生的子菜单界面</li>
+<li>在学生登录分支中，添加代码：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//进入学生子菜单
+studentMenu(person);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>添加效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548659552298.png"></p>
+<p>测试对接，效果如图：</p>
+<p>登录验证通过：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548659590221.png"></p>
+<p>学生子菜单：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548659670651.png"></p>
+<p>注销登录：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548659682402.png"></p>
+<h3 id="8-2-申请预约"><a href="#8-2-申请预约" class="headerlink" title="8.2 申请预约"></a>8.2 申请预约</h3><h4 id="8-2-1-获取机房信息"><a href="#8-2-1-获取机房信息" class="headerlink" title="8.2.1 获取机房信息"></a>8.2.1 获取机房信息</h4><ul>
+<li>在申请预约时，学生可以看到机房的信息，因此我们需要让学生获取到机房的信息</li>
+</ul>
+<p>在student.h中添加新的成员函数如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//机房容器
+vector&lt;ComputerRoom&gt; vCom;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在学生的有参构造函数中追加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//获取机房信息
+ifstream ifs;
+ifs.open(COMPUTER_FILE, ios::in);
+
+ComputerRoom c;
+while (ifs &gt;&gt; c.m_ComId &amp;&amp; ifs &gt;&gt; c.m_MaxNum)
+{
+	vCom.push_back(c);
+}
+
+ifs.close();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>追加位置如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548661562158.png"></p>
+<p>至此，vCom容器中保存了所有机房的信息</p>
+<h4 id="8-2-2-预约功能实现"><a href="#8-2-2-预约功能实现" class="headerlink" title="8.2.2 预约功能实现"></a>8.2.2 预约功能实现</h4><p>在student.cpp中实现成员函数 <code>void Student::applyOrder()</code></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//申请预约
+void Student::applyOrder()
+{
+	cout &lt;&lt; "机房开放时间为周一至周五！" &lt;&lt; endl;
+	cout &lt;&lt; "请输入申请预约的时间：" &lt;&lt; endl;
+	cout &lt;&lt; "1、周一" &lt;&lt; endl;
+	cout &lt;&lt; "2、周二" &lt;&lt; endl;
+	cout &lt;&lt; "3、周三" &lt;&lt; endl;
+	cout &lt;&lt; "4、周四" &lt;&lt; endl;
+	cout &lt;&lt; "5、周五" &lt;&lt; endl;
+	int date = 0;
+	int interval = 0;
+	int room = 0;
+
+	while (true)
+	{
+		cin &gt;&gt; date;
+		if (date &gt;= 1 &amp;&amp; date &lt;= 5)
+		{
+			break;
+		}
+		cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+	}
+
+
+	cout &lt;&lt; "请输入申请预约的时间段：" &lt;&lt; endl;
+	cout &lt;&lt; "1、上午" &lt;&lt; endl;
+	cout &lt;&lt; "2、下午" &lt;&lt; endl;
+
+	while (true)
+	{
+		cin &gt;&gt; interval;
+		if (interval &gt;= 1 &amp;&amp; interval &lt;= 2)
+		{
+			break;
+		}
+		cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+	}
+
+	cout &lt;&lt; "请选择机房：" &lt;&lt; endl;
+	cout &lt;&lt; "1号机房容量：" &lt;&lt; vCom[0].m_MaxNum &lt;&lt; endl;
+	cout &lt;&lt; "2号机房容量：" &lt;&lt; vCom[1].m_MaxNum &lt;&lt; endl;
+	cout &lt;&lt; "3号机房容量：" &lt;&lt; vCom[2].m_MaxNum &lt;&lt; endl;
+
+	while (true)
+	{
+		cin &gt;&gt; room;
+		if (room &gt;= 1 &amp;&amp; room &lt;= 3)
+		{
+			break;
+		}
+		cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+	}
+
+	cout &lt;&lt; "预约成功！审核中" &lt;&lt; endl;
+
+	ofstream ofs(ORDER_FILE, ios::app);
+	ofs &lt;&lt; "date:" &lt;&lt; date &lt;&lt; " ";
+	ofs &lt;&lt; "interval:" &lt;&lt; interval &lt;&lt; " ";
+	ofs &lt;&lt; "stuId:" &lt;&lt; this-&gt;m_Id &lt;&lt; " ";
+	ofs &lt;&lt; "stuName:" &lt;&lt; this-&gt;m_Name &lt;&lt; " ";
+	ofs &lt;&lt; "roomId:" &lt;&lt; room &lt;&lt; " ";
+	ofs &lt;&lt; "status:" &lt;&lt; 1 &lt;&lt; endl;
+
+	ofs.close();
+
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>运行程序，测试代码:</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548728936052.png"></p>
+<p>在order.txt文件中生成如下内容：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548662281801.png"></p>
+<h3 id="8-3-显示预约"><a href="#8-3-显示预约" class="headerlink" title="8.3 显示预约"></a>8.3 显示预约</h3><h4 id="8-3-1-创建预约类"><a href="#8-3-1-创建预约类" class="headerlink" title="8.3.1 创建预约类"></a>8.3.1 创建预约类</h4><p>功能描述：显示预约记录时，需要从文件中获取到所有记录，用来显示，创建预约的类来管理记录以及更新</p>
+<p>在头文件以及源文件下分别创建<strong>orderFile.h</strong> 和 <strong>orderFile.cpp</strong>文件</p>
+<p>orderFile.h中添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+#include &lt;map&gt;
+#include "globalFile.h"
+
+class OrderFile
+{
+public:
+
+	//构造函数
+	OrderFile();
+
+	//更新预约记录
+	void updateOrder();
+
+	//记录的容器  key --- 记录的条数  value --- 具体记录的键值对信息
+	map&lt;int, map&lt;string, string&gt;&gt; m_orderData;
+
+	//预约记录条数
+	int m_Size;
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>构造函数</strong>中获取所有信息，并存放在容器中，添加如下代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">OrderFile::OrderFile()
+{
+	ifstream ifs;
+	ifs.open(ORDER_FILE, ios::in);
+
+	string date;      //日期
+	string interval;  //时间段
+	string stuId;     //学生编号
+	string stuName;   //学生姓名
+	string roomId;    //机房编号
+	string status;    //预约状态
+
+
+	this-&gt;m_Size = 0; //预约记录个数
+
+	while (ifs &gt;&gt; date &amp;&amp; ifs &gt;&gt; interval &amp;&amp; ifs &gt;&gt; stuId &amp;&amp; ifs &gt;&gt; stuName &amp;&amp; ifs &gt;&gt; roomId &amp;&amp;  ifs &gt;&gt; status)
+	{
+		//测试代码
+		/*
+		cout &lt;&lt; date &lt;&lt; endl;
+		cout &lt;&lt; interval &lt;&lt; endl;
+		cout &lt;&lt; stuId &lt;&lt; endl;
+		cout &lt;&lt; stuName &lt;&lt; endl;
+		cout &lt;&lt; roomId &lt;&lt; endl;
+		cout &lt;&lt; status &lt;&lt; endl;
+		*/
+
+		string key;
+		string value;
+		map&lt;string, string&gt; m;
+
+		int pos = date.find(":");
+		if (pos != -1)
+		{
+			key = date.substr(0, pos);
+			value = date.substr(pos + 1, date.size() - pos -1);
+			m.insert(make_pair(key, value));
+		}
+
+		pos = interval.find(":");
+		if (pos != -1)
+		{
+			key = interval.substr(0, pos);
+			value = interval.substr(pos + 1, interval.size() - pos -1 );
+			m.insert(make_pair(key, value));
+		}
+
+		pos = stuId.find(":");
+		if (pos != -1)
+		{
+			key = stuId.substr(0, pos);
+			value = stuId.substr(pos + 1, stuId.size() - pos -1 );
+			m.insert(make_pair(key, value));
+		}
+
+		pos = stuName.find(":");
+		if (pos != -1)
+		{
+			key = stuName.substr(0, pos);
+			value = stuName.substr(pos + 1, stuName.size() - pos -1);
+			m.insert(make_pair(key, value));
+		}
+
+		pos = roomId.find(":");
+		if (pos != -1)
+		{
+			key = roomId.substr(0, pos);
+			value = roomId.substr(pos + 1, roomId.size() - pos -1 );
+			m.insert(make_pair(key, value));
+		}
+
+		pos = status.find(":");
+		if (pos != -1)
+		{
+			key = status.substr(0, pos);
+			value = status.substr(pos + 1, status.size() - pos -1);
+			m.insert(make_pair(key, value));
+		}
+
+
+		this-&gt;m_orderData.insert(make_pair(this-&gt;m_Size, m));
+		this-&gt;m_Size++;
+	}
+
+	//测试代码
+	//for (map&lt;int, map&lt;string, string&gt;&gt;::iterator it = m_orderData.begin(); it != m_orderData.end();it++)
+	//{
+	//	cout &lt;&lt; "key = " &lt;&lt; it-&gt;first &lt;&lt; " value = " &lt;&lt; endl;
+	//	for (map&lt;string, string&gt;::iterator mit = it-&gt;second.begin(); mit != it-&gt;second.end(); mit++)
+	//	{
+	//		cout &lt;&lt; mit-&gt;first &lt;&lt; " " &lt;&lt; mit-&gt;second &lt;&lt; " ";
+	//	}
+	//	cout &lt;&lt; endl;
+	//}
+    
+    ifs.close();
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>更新预约记录的成员函数updateOrder代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void OrderFile::updateOrder()
+{
+	if (this-&gt;m_Size == 0)
+	{
+		return;
+	}
+
+	ofstream ofs(ORDER_FILE, ios::out | ios::trunc);
+	for (int i = 0; i &lt; m_Size;i++)
+	{
+		ofs &lt;&lt; "date:" &lt;&lt; this-&gt;m_orderData[i]["date"] &lt;&lt; " ";
+		ofs &lt;&lt; "interval:" &lt;&lt; this-&gt;m_orderData[i]["interval"] &lt;&lt; " ";
+		ofs &lt;&lt; "stuId:" &lt;&lt; this-&gt;m_orderData[i]["stuId"] &lt;&lt; " ";
+		ofs &lt;&lt; "stuName:" &lt;&lt; this-&gt;m_orderData[i]["stuName"] &lt;&lt; " ";
+		ofs &lt;&lt; "roomId:" &lt;&lt; this-&gt;m_orderData[i]["roomId"] &lt;&lt; " ";
+		ofs &lt;&lt; "status:" &lt;&lt; this-&gt;m_orderData[i]["status"] &lt;&lt; endl;
+	}
+    ofs.close();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="8-3-2-显示自身预约"><a href="#8-3-2-显示自身预约" class="headerlink" title="8.3.2 显示自身预约"></a>8.3.2 显示自身预约</h4><p>首先我们先添加几条预约记录，可以用程序添加或者直接修改order.txt文件</p>
+<p>order.txt文件内容如下： 比如我们有三名同学分别产生了3条预约记录</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548667534747.png"></p>
+<p>在Student类的<code>void Student::showMyOrder()</code>成员函数中，添加如下代码</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//查看我的预约
+void Student::showMyOrder()
+{
+	OrderFile of;
+	if (of.m_Size == 0)
+	{
+		cout &lt;&lt; "无预约记录" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	for (int i = 0; i &lt; of.m_Size; i++)
+	{
+		if (atoi(of.m_orderData[i]["stuId"].c_str()) == this-&gt;m_Id)
+		{
+			cout &lt;&lt; "预约日期： 周" &lt;&lt; of.m_orderData[i]["date"];
+			cout &lt;&lt; " 时段：" &lt;&lt; (of.m_orderData[i]["interval"] == "1" ? "上午" : "下午");
+			cout &lt;&lt; " 机房：" &lt;&lt; of.m_orderData[i]["roomId"];
+			string status = " 状态： ";  // 0 取消的预约   1 审核中   2 已预约 -1 预约失败
+			if (of.m_orderData[i]["status"] == "1")
+			{
+				status += "审核中";
+			}
+			else if (of.m_orderData[i]["status"] == "2")
+			{
+				status += "预约成功";
+			}
+			else if (of.m_orderData[i]["status"] == "-1")
+			{
+				status += "审核未通过，预约失败";
+			}
+			else
+			{
+				status += "预约已取消";
+			}
+			cout &lt;&lt; status &lt;&lt; endl;
+
+		}
+	}
+
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548667252474.png"></p>
+<h4 id="8-3-3-显示所有预约"><a href="#8-3-3-显示所有预约" class="headerlink" title="8.3.3 显示所有预约"></a>8.3.3 显示所有预约</h4><p>在Student类的<code>void Student::showAllOrder()</code>成员函数中，添加如下代码</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//查看所有预约
+void Student::showAllOrder()
+{
+	OrderFile of;
+	if (of.m_Size == 0)
+	{
+		cout &lt;&lt; "无预约记录" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+
+	for (int i = 0; i &lt; of.m_Size; i++)
+	{
+		cout &lt;&lt; i + 1 &lt;&lt; "、 ";
+
+		cout &lt;&lt; "预约日期： 周" &lt;&lt; of.m_orderData[i]["date"];
+		cout &lt;&lt; " 时段：" &lt;&lt; (of.m_orderData[i]["interval"] == "1" ? "上午" : "下午");
+		cout &lt;&lt; " 学号：" &lt;&lt; of.m_orderData[i]["stuId"];
+		cout &lt;&lt; " 姓名：" &lt;&lt; of.m_orderData[i]["stuName"];
+		cout &lt;&lt; " 机房：" &lt;&lt; of.m_orderData[i]["roomId"];
+		string status = " 状态： ";  // 0 取消的预约   1 审核中   2 已预约 -1 预约失败
+		if (of.m_orderData[i]["status"] == "1")
+		{
+			status += "审核中";
+		}
+		else if (of.m_orderData[i]["status"] == "2")
+		{
+			status += "预约成功";
+		}
+		else if (of.m_orderData[i]["status"] == "-1")
+		{
+			status += "审核未通过，预约失败";
+		}
+		else
+		{
+			status += "预约已取消";
+		}
+		cout &lt;&lt; status &lt;&lt; endl;
+	}
+
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548667591734.png"></p>
+<h3 id="8-4-取消预约"><a href="#8-4-取消预约" class="headerlink" title="8.4 取消预约"></a>8.4 取消预约</h3><p>在Student类的<code>void Student::cancelOrder()</code>成员函数中，添加如下代码</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//取消预约
+void Student::cancelOrder()
+{
+	OrderFile of;
+	if (of.m_Size == 0)
+	{
+		cout &lt;&lt; "无预约记录" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	cout &lt;&lt; "审核中或预约成功的记录可以取消，请输入取消的记录" &lt;&lt; endl;
+
+	vector&lt;int&gt;v;
+	int index = 1;
+	for (int i = 0; i &lt; of.m_Size; i++)
+	{
+		if (atoi(of.m_orderData[i]["stuId"].c_str()) == this-&gt;m_Id)
+		{
+			if (of.m_orderData[i]["status"] == "1" || of.m_orderData[i]["status"] == "2")
+			{
+				v.push_back(i);
+				cout &lt;&lt;  index ++  &lt;&lt; "、 ";
+				cout &lt;&lt; "预约日期： 周" &lt;&lt; of.m_orderData[i]["date"];
+				cout &lt;&lt; " 时段：" &lt;&lt; (of.m_orderData[i]["interval"] == "1" ? "上午" : "下午");
+				cout &lt;&lt; " 机房：" &lt;&lt; of.m_orderData[i]["roomId"];
+				string status = " 状态： ";  // 0 取消的预约   1 审核中   2 已预约  -1 预约失败
+				if (of.m_orderData[i]["status"] == "1")
+				{
+					status += "审核中";
+				}
+				else if (of.m_orderData[i]["status"] == "2")
+				{
+					status += "预约成功";
+				}
+				cout &lt;&lt; status &lt;&lt; endl;
+
+			}
+		}
+	}
+
+	cout &lt;&lt; "请输入取消的记录,0代表返回" &lt;&lt; endl;
+	int select = 0;
+	while (true)
+	{
+		cin &gt;&gt; select;
+		if (select &gt;= 0 &amp;&amp; select &lt;= v.size())
+		{
+			if (select == 0)
+			{
+				break;
+			}
+			else
+			{
+				//	cout &lt;&lt; "记录所在位置： " &lt;&lt; v[select - 1] &lt;&lt; endl;
+				of.m_orderData[v[select - 1]]["status"] = "0";
+				of.updateOrder();
+				cout &lt;&lt; "已取消预约" &lt;&lt; endl;
+				break;
+			}
+
+		}
+		cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+	}
+
+	system("pause");
+	system("cls");
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试取消预约：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548669551036.png"></p>
+<p>再次查看个人预约记录：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548669728023.png"></p>
+<p>查看所有预约</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548669753496.png"></p>
+<p>查看order.txt预约文件</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548669798037.png"></p>
+<p>至此，学生模块功能全部实现</p>
+<h2 id="9、-教师模块"><a href="#9、-教师模块" class="headerlink" title="9、 教师模块"></a>9、 教师模块</h2><h3 id="9-1-教师登录和注销"><a href="#9-1-教师登录和注销" class="headerlink" title="9.1 教师登录和注销"></a>9.1 教师登录和注销</h3><h4 id="9-1-1-构造函数"><a href="#9-1-1-构造函数" class="headerlink" title="9.1.1 构造函数"></a>9.1.1 构造函数</h4><ul>
+<li>在Teacher类的构造函数中，初始化教师信息，代码如下：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//有参构造 (职工编号，姓名，密码)
+Teacher::Teacher(int empId, string name, string pwd)
+{
+	//初始化属性
+	this-&gt;m_EmpId = empId;
+	this-&gt;m_Name = name;
+	this-&gt;m_Pwd = pwd;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="9-1-2-教师子菜单"><a href="#9-1-2-教师子菜单" class="headerlink" title="9.1.2  教师子菜单"></a>9.1.2  教师子菜单</h4><ul>
+<li>在机房预约系统.cpp中，当用户登录的是教师，添加教师菜单接口</li>
+<li>将不同的分支提供出来<ul>
+<li>查看所有预约</li>
+<li>审核预约</li>
+<li>注销登录</li>
+</ul>
+</li>
+<li>实现注销功能</li>
+</ul>
+<p>添加全局函数 <code>void TeacherMenu(Person * &amp;manager)</code> 代码如下：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//教师菜单
+void TeacherMenu(Identity * &amp;teacher)
+{
+	while (true)
+	{
+		//教师菜单
+		teacher-&gt;operMenu();
+
+		Teacher* tea = (Teacher*)teacher;
+		int select = 0;
+
+		cin &gt;&gt; select;
+
+		if (select == 1)
+		{
+			//查看所有预约
+			tea-&gt;showAllOrder();
+		}
+		else if (select == 2)
+		{
+			//审核预约
+			tea-&gt;validOrder();
+		}
+		else
+		{
+			delete teacher;
+			cout &lt;&lt; "注销成功" &lt;&lt; endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="9-1-3-菜单功能实现"><a href="#9-1-3-菜单功能实现" class="headerlink" title="9.1.3 菜单功能实现"></a>9.1.3 菜单功能实现</h4><ul>
+<li>在实现成员函数<code>void Teacher::operMenu()</code> 代码如下：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//教师菜单界面
+void Teacher::operMenu()
+{
+	cout &lt;&lt; "欢迎教师：" &lt;&lt; this-&gt;m_Name &lt;&lt; "登录！" &lt;&lt; endl;
+	cout &lt;&lt; "\t\t ----------------------------------\n";
+	cout &lt;&lt; "\t\t|                                  |\n";
+	cout &lt;&lt; "\t\t|          1.查看所有预约          |\n";
+	cout &lt;&lt; "\t\t|                                  |\n";
+	cout &lt;&lt; "\t\t|          2.审核预约              |\n";
+	cout &lt;&lt; "\t\t|                                  |\n";
+	cout &lt;&lt; "\t\t|          0.注销登录              |\n";
+	cout &lt;&lt; "\t\t|                                  |\n";
+	cout &lt;&lt; "\t\t ----------------------------------\n";
+	cout &lt;&lt; "请选择您的操作： " &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="9-1-4-接口对接"><a href="#9-1-4-接口对接" class="headerlink" title="9.1.4 接口对接"></a>9.1.4 接口对接</h4><ul>
+<li>教师成功登录后，调用教师的子菜单界面</li>
+<li>在教师登录分支中，添加代码：</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//进入教师子菜单
+TeacherMenu(person);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>添加效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548670866708.png"></p>
+<p>测试对接，效果如图：</p>
+<p>登录验证通过：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548670949885.png"></p>
+<p>教师子菜单：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548670958602.png"></p>
+<p>注销登录：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548670966988.png"></p>
+<h3 id="9-2-查看所有预约"><a href="#9-2-查看所有预约" class="headerlink" title="9.2 查看所有预约"></a>9.2 查看所有预约</h3><h4 id="9-2-1-所有预约功能实现"><a href="#9-2-1-所有预约功能实现" class="headerlink" title="9.2.1 所有预约功能实现"></a>9.2.1 所有预约功能实现</h4><p>该功能与学生身份的查看所有预约功能相似，用于显示所有预约记录</p>
+<p>在Teacher.cpp中实现成员函数 <code>void Teacher::showAllOrder()</code></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Teacher::showAllOrder()
+{
+	OrderFile of;
+	if (of.m_Size == 0)
+	{
+		cout &lt;&lt; "无预约记录" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	for (int i = 0; i &lt; of.m_Size; i++)
+	{
+		cout &lt;&lt; i + 1 &lt;&lt; "、 ";
+
+		cout &lt;&lt; "预约日期： 周" &lt;&lt; of.m_orderData[i]["date"];
+		cout &lt;&lt; " 时段：" &lt;&lt; (of.m_orderData[i]["interval"] == "1" ? "上午" : "下午");
+		cout &lt;&lt; " 学号：" &lt;&lt; of.m_orderData[i]["stuId"];
+		cout &lt;&lt; " 姓名：" &lt;&lt; of.m_orderData[i]["stuName"];
+		cout &lt;&lt; " 机房：" &lt;&lt; of.m_orderData[i]["roomId"];
+		string status = " 状态： ";  // 0 取消的预约   1 审核中   2 已预约 -1 预约失败
+		if (of.m_orderData[i]["status"] == "1")
+		{
+			status += "审核中";
+		}
+		else if (of.m_orderData[i]["status"] == "2")
+		{
+			status += "预约成功";
+		}
+		else if (of.m_orderData[i]["status"] == "-1")
+		{
+			status += "审核未通过，预约失败";
+		}
+		else
+		{
+			status += "预约已取消";
+		}
+		cout &lt;&lt; status &lt;&lt; endl;
+	}
+
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="9-2-2-测试功能"><a href="#9-2-2-测试功能" class="headerlink" title="9.2.2 测试功能"></a>9.2.2 测试功能</h4><p>运行测试教师身份的查看所有预约功能</p>
+<p>测试效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548676922678.png"></p>
+<h3 id="9-3-审核预约"><a href="#9-3-审核预约" class="headerlink" title="9.3 审核预约"></a>9.3 审核预约</h3><h4 id="9-3-1-审核功能实现"><a href="#9-3-1-审核功能实现" class="headerlink" title="9.3.1 审核功能实现"></a>9.3.1 审核功能实现</h4><p>功能描述：教师审核学生的预约，依据实际情况审核预约</p>
+<p>在Teacher.cpp中实现成员函数 <code>void Teacher::validOrder()</code></p>
+<p>代码如下：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//审核预约
+void Teacher::validOrder()
+{
+	OrderFile of;
+	if (of.m_Size == 0)
+	{
+		cout &lt;&lt; "无预约记录" &lt;&lt; endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	cout &lt;&lt; "待审核的预约记录如下：" &lt;&lt; endl;
+
+	vector&lt;int&gt;v;
+	int index = 0;
+	for (int i = 0; i &lt; of.m_Size; i++)
+	{
+		if (of.m_orderData[i]["status"] == "1")
+		{
+			v.push_back(i);
+			cout &lt;&lt; ++index &lt;&lt; "、 ";
+			cout &lt;&lt; "预约日期： 周" &lt;&lt; of.m_orderData[i]["date"];
+			cout &lt;&lt; " 时段：" &lt;&lt; (of.m_orderData[i]["interval"] == "1" ? "上午" : "下午");
+			cout &lt;&lt; " 机房：" &lt;&lt; of.m_orderData[i]["roomId"];
+			string status = " 状态： ";  // 0取消的预约   1 审核中   2 已预约  -1 预约失败
+			if (of.m_orderData[i]["status"] == "1")
+			{
+				status += "审核中";
+			}
+			cout &lt;&lt; status &lt;&lt; endl;
+		}
+	}
+	cout &lt;&lt; "请输入审核的预约记录,0代表返回" &lt;&lt; endl;
+	int select = 0;
+	int ret = 0;
+	while (true)
+	{
+		cin &gt;&gt; select;
+		if (select &gt;= 0 &amp;&amp; select &lt;= v.size())
+		{
+			if (select == 0)
+			{
+				break;
+			}
+			else
+			{
+				cout &lt;&lt; "请输入审核结果" &lt;&lt; endl;
+				cout &lt;&lt; "1、通过" &lt;&lt; endl;
+				cout &lt;&lt; "2、不通过" &lt;&lt; endl;
+				cin &gt;&gt; ret;
+
+				if (ret == 1)
+				{
+					of.m_orderData[v[select - 1]]["status"] = "2";
+				}
+				else
+				{
+					of.m_orderData[v[select - 1]]["status"] = "-1";
+				}
+				of.updateOrder();
+				cout &lt;&lt; "审核完毕！" &lt;&lt; endl;
+				break;
+			}
+		}
+		cout &lt;&lt; "输入有误，请重新输入" &lt;&lt; endl;
+	}
+
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="9-3-2-测试审核预约"><a href="#9-3-2-测试审核预约" class="headerlink" title="9.3.2 测试审核预约"></a>9.3.2 测试审核预约</h4><p>测试 - 审核通过</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548677286679.png"></p>
+<p>审核通过情况</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548677383681.png"></p>
+<p>测试-审核未通过</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548677402705.png"></p>
+<p>审核未通过情况：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548677632792.png"></p>
+<p>学生身份下查看记录：</p>
+<p><img src="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/1548677798815.png"></p>
+<p>审核预约成功！</p>
+<p>至此本案例制作完毕！  <code>^_^</code></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shida Wei</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://weishida01.github.io/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/">https://weishida01.github.io/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shida Wei</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="/tags/C-%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">C++ 机房预约系统</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>Comment</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'KhLsMNUiVO3V9QNfhUC0dO0c-gzGzoHsz',
+        appKey: 'chKUzpKCcT52zvQBUZjplIIa',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="4-机房预约系统">
+                        
+                        <span class="card-title">4-机房预约系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C++ 机房预约系统
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-%E6%A1%88%E4%BE%8B/" class="post-category">
+                                    C++案例
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/C-%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">C++ 机房预约系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="3-基于STL的演讲比赛流程管理系统">
+                        
+                        <span class="card-title">3-基于STL的演讲比赛流程管理系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C++ 基于STL的演讲比赛流程管理系统
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-%E6%A1%88%E4%BE%8B/" class="post-category">
+                                    C++案例
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/C-%E5%9F%BA%E4%BA%8ESTL%E7%9A%84%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">C++ 基于STL的演讲比赛流程管理系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('3'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Shida Wei</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">77.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2023";
+                    var startMonth = "1";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffDays + " day " + diffHours +
+                            " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffYears + " year " + diffDays +
+                            " day " + diffHours + " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    }
+                    // if (startYear == todayYear) {
+                    //     document.getElementById("year").innerHTML = todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                    //         " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // } else {
+                    //     document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                    //         " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // }
+                }
+                setInterval(siteTime, 1000);
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/weishida01" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:weishida01@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3058668859" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3058668859" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

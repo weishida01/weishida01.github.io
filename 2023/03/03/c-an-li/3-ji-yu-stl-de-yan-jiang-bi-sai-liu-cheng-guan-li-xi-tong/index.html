@@ -1,0 +1,2234 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="3-基于STL的演讲比赛流程管理系统, WSD">
+    <meta name="description" content="C++ 基于STL的演讲比赛流程管理系统">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>3-基于STL的演讲比赛流程管理系统 | WSD</title>
+    <link rel="icon" type="image/png" href="/wsd.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WSD" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">WSD</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">WSD</div>
+        <div class="logo-desc">
+            
+            Emotion defines life, data quantifies the world, and models predict the future.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/weishida01" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/weishida01" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%B0%81%E9%9D%A2.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">3-基于STL的演讲比赛流程管理系统</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="/tags/C-%E5%9F%BA%E4%BA%8ESTL%E7%9A%84%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">C++ 基于STL的演讲比赛流程管理系统</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C-%E6%A1%88%E4%BE%8B/" class="post-category">
+                                C++案例
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-03-03
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-03-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    3.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    16 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1、-演讲比赛程序需求"><a href="#1、-演讲比赛程序需求" class="headerlink" title="1、 演讲比赛程序需求"></a>1、 演讲比赛程序需求</h2><p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548154762048.png"></p>
+<h3 id="1-1-比赛规则"><a href="#1-1-比赛规则" class="headerlink" title="1.1 比赛规则"></a>1.1 比赛规则</h3><ul>
+<li>学校举行一场演讲比赛，共有<strong>12个人</strong>参加。<strong>比赛共两轮</strong>，第一轮为淘汰赛，第二轮为决赛。</li>
+<li>比赛方式：<strong>分组比赛，每组6个人</strong>；选手每次要随机分组，进行比赛</li>
+<li>每名选手都有对应的<strong>编号</strong>，如 10001 ~ 10012 </li>
+<li>第一轮分为两个小组，每组6个人。 整体按照选手编号进行<strong>抽签</strong>后顺序演讲。</li>
+<li>当小组演讲完后，淘汰组内排名最后的三个选手，<strong>前三名晋级</strong>，进入下一轮的比赛。</li>
+<li>第二轮为决赛，<strong>前三名胜出</strong></li>
+<li>每轮比赛过后需要<strong>显示晋级选手的信息</strong></li>
+</ul>
+<h3 id="1-2-程序功能"><a href="#1-2-程序功能" class="headerlink" title="1.2 程序功能"></a>1.2 程序功能</h3><ul>
+<li>开始演讲比赛：完成整届比赛的流程，每个比赛阶段需要给用户一个提示，用户按任意键后继续下一个阶段</li>
+<li>查看往届记录：查看之前比赛前三名结果，每次比赛都会记录到文件中，文件用.csv后缀名保存</li>
+<li>清空比赛记录：将文件中数据清空</li>
+<li>退出比赛程序：可以退出当前程序</li>
+</ul>
+<h3 id="1-3-程序效果图："><a href="#1-3-程序效果图：" class="headerlink" title="1.3 程序效果图："></a>1.3 程序效果图：</h3><p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548155966702.png"></p>
+<h2 id="2、-项目创建"><a href="#2、-项目创建" class="headerlink" title="2、 项目创建"></a>2、 项目创建</h2><p>创建项目步骤如下：</p>
+<ul>
+<li>创建新项目</li>
+<li>添加文件</li>
+</ul>
+<h3 id="2-1-创建项目"><a href="#2-1-创建项目" class="headerlink" title="2.1 创建项目"></a>2.1 创建项目</h3><ul>
+<li>打开vs2017后，点击创建新项目，创建新的C++项目</li>
+</ul>
+<p>如图：</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548121881969.png"></p>
+<ul>
+<li>填写项目名称以及选取项目路径，点击确定生成项目</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548122271773.png"></p>
+<h3 id="2-2-添加文件"><a href="#2-2-添加文件" class="headerlink" title="2.2 添加文件"></a>2.2 添加文件</h3><ul>
+<li>右键源文件，进行添加文件操作</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548122420253.png"></p>
+<ul>
+<li>填写文件名称，点击添加</li>
+</ul>
+<p><img src="/1548122510869.png"></p>
+<ul>
+<li>生成文件成功，效果如下图</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548122619712.png"></p>
+<ul>
+<li>至此，项目已创建完毕</li>
+</ul>
+<h2 id="3、-创建管理类"><a href="#3、-创建管理类" class="headerlink" title="3、 创建管理类"></a>3、 创建管理类</h2><p><strong>功能描述：</strong></p>
+<ul>
+<li>提供菜单界面与用户交互</li>
+<li>对演讲比赛流程进行控制</li>
+<li>与文件的读写交互</li>
+</ul>
+<h3 id="3-1创建文件"><a href="#3-1创建文件" class="headerlink" title="3.1创建文件"></a>3.1创建文件</h3><ul>
+<li>在头文件和源文件的文件夹下分别创建speechManager.h 和 speechManager.cpp文件</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548123402593.png"></p>
+<h3 id="3-2-头文件实现"><a href="#3-2-头文件实现" class="headerlink" title="3.2 头文件实现"></a>3.2 头文件实现</h3><p>在speechManager.h中设计管理类</p>
+<p>代码如下：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+
+//演讲管理类
+class SpeechManager
+{
+public:
+
+	//构造函数
+	SpeechManager();
+
+
+	//析构函数
+	~SpeechManager();
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-3-源文件实现"><a href="#3-3-源文件实现" class="headerlink" title="3.3 源文件实现"></a>3.3 源文件实现</h3><p>在speechManager.cpp中将构造和析构函数空实现补全</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "speechManager.h"
+
+SpeechManager::SpeechManager()
+{
+}
+
+SpeechManager::~SpeechManager()
+{
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>至此演讲管理类以创建完毕</li>
+</ul>
+<h2 id="4、-菜单功能"><a href="#4、-菜单功能" class="headerlink" title="4、 菜单功能"></a>4、 菜单功能</h2><p>功能描述：与用户的沟通界面</p>
+<h3 id="4-1-添加成员函数"><a href="#4-1-添加成员函数" class="headerlink" title="4.1 添加成员函数"></a>4.1 添加成员函数</h3><p>在管理类speechManager.h中添加成员函数  <code>void show_Menu();</code></p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548123942072.png"></p>
+<h3 id="4-2-菜单功能实现"><a href="#4-2-菜单功能实现" class="headerlink" title="4.2 菜单功能实现"></a>4.2 菜单功能实现</h3><ul>
+<li>在管理类speechManager.cpp中实现 show_Menu()函数</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void SpeechManager::show_Menu()
+{
+	cout &lt;&lt; "********************************************" &lt;&lt; endl;
+	cout &lt;&lt; "*************  欢迎参加演讲比赛 ************" &lt;&lt; endl;
+	cout &lt;&lt; "*************  1.开始演讲比赛  *************" &lt;&lt; endl;
+	cout &lt;&lt; "*************  2.查看往届记录  *************" &lt;&lt; endl;
+	cout &lt;&lt; "*************  3.清空比赛记录  *************" &lt;&lt; endl;
+	cout &lt;&lt; "*************  0.退出比赛程序  *************" &lt;&lt; endl;
+	cout &lt;&lt; "********************************************" &lt;&lt; endl;
+	cout &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="4-3-测试菜单功能"><a href="#4-3-测试菜单功能" class="headerlink" title="4.3 测试菜单功能"></a>4.3 测试菜单功能</h3><ul>
+<li>在演讲比赛流程管理系统.cpp中测试菜单功能</li>
+</ul>
+<p>代码：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+using namespace std;
+#include "speechManager.h"
+
+int main() {
+
+	SpeechManager sm;
+
+	sm.show_Menu();
+
+	system("pause");
+
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>运行效果如图：</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548124599641.png"></p>
+<ul>
+<li>菜单界面搭建完毕</li>
+</ul>
+<h2 id="5、-退出功能"><a href="#5、-退出功能" class="headerlink" title="5、 退出功能"></a>5、 退出功能</h2><h3 id="5-1-提供功能接口"><a href="#5-1-提供功能接口" class="headerlink" title="5.1  提供功能接口"></a>5.1  提供功能接口</h3><ul>
+<li>在main函数中提供分支选择，提供每个功能接口</li>
+</ul>
+<p>代码：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int main() {
+
+	SpeechManager sm;
+
+	int choice = 0; //用来存储用户的选项
+
+	while (true)
+	{
+		sm.show_Menu();
+
+		cout &lt;&lt; "请输入您的选择： " &lt;&lt; endl;
+		cin &gt;&gt; choice; // 接受用户的选项
+
+		switch (choice)
+		{
+		case 1:  //开始比赛
+			break;
+		case 2:  //查看记录
+			break;
+		case 3:  //清空记录
+			break;
+		case 0:  //退出系统
+			break;
+		default:
+			system("cls"); //清屏
+			break;
+		}
+	}
+
+	system("pause");
+
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="5-2-实现退出功能"><a href="#5-2-实现退出功能" class="headerlink" title="5.2 实现退出功能"></a>5.2 实现退出功能</h3><p>在speechManager.h中提供退出系统的成员函数 <code>	void exitSystem();</code></p>
+<p>在speechManager.cpp中提供具体的功能实现</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void SpeechManager::exitSystem()
+{
+	cout &lt;&lt; "欢迎下次使用" &lt;&lt; endl;
+	system("pause");
+	exit(0);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="5-3测试功能"><a href="#5-3测试功能" class="headerlink" title="5.3测试功能"></a>5.3测试功能</h3><p>在main函数分支 0  选项中，调用退出程序的接口</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548124853576.png"></p>
+<p>运行测试效果如图：</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548124888578.png"></p>
+<h2 id="6、演讲比赛功能"><a href="#6、演讲比赛功能" class="headerlink" title="6、演讲比赛功能"></a>6、演讲比赛功能</h2><h3 id="6-1-功能分析"><a href="#6-1-功能分析" class="headerlink" title="6.1 功能分析"></a>6.1 功能分析</h3><p>比赛流程分析：</p>
+<p>抽签 → 开始演讲比赛 → 显示第一轮比赛结果 → </p>
+<p>抽签 → 开始演讲比赛 → 显示前三名结果 → 保存分数</p>
+<h3 id="6-2-创建选手类"><a href="#6-2-创建选手类" class="headerlink" title="6.2 创建选手类"></a>6.2 创建选手类</h3><ul>
+<li>选手类中的属性包含：选手姓名、分数</li>
+<li>头文件中创建 speaker.h文件，并添加代码：</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#pragma once
+#include&lt;iostream&gt;
+using namespace std;
+
+class Speaker
+{
+public:
+	string m_Name;  //姓名
+	double m_Score[2]; //分数  最多有两轮得分
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="6-3-比赛"><a href="#6-3-比赛" class="headerlink" title="6.3 比赛"></a>6.3 比赛</h3><h4 id="6-3-1-成员属性添加"><a href="#6-3-1-成员属性添加" class="headerlink" title="6.3.1 成员属性添加"></a>6.3.1 成员属性添加</h4><ul>
+<li>在speechManager.h中添加属性</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//比赛选手 容器  12人
+vector&lt;int&gt;v1;
+
+//第一轮晋级容器  6人
+vector&lt;int&gt;v2;
+
+//胜利前三名容器  3人
+vector&lt;int&gt;vVictory;
+
+//存放编号 以及对应的 具体选手 容器
+map&lt;int, Speaker&gt; m_Speaker;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h4 id="6-3-2-初始化属性"><a href="#6-3-2-初始化属性" class="headerlink" title="6.3.2 初始化属性"></a>6.3.2 初始化属性</h4><ul>
+<li>在speechManager.h中提供开始比赛的的成员函数 <code>void initSpeech();</code></li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//初始化属性
+void initSpeech();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现<code>void initSpeech();</code></li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void SpeechManager::initSpeech()
+{
+	//容器保证为空
+	this-&gt;v1.clear();  
+	this-&gt;v2.clear();
+	this-&gt;vVictory.clear();
+	this-&gt;m_Speaker.clear();
+	//初始化比赛轮数
+	this-&gt;m_Index = 1;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>SpeechManager构造函数中调用<code>void initSpeech();</code></li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">SpeechManager::SpeechManager()
+{
+	//初始化属性
+	this-&gt;initSpeech();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h4 id="6-3-3-创建选手"><a href="#6-3-3-创建选手" class="headerlink" title="6.3.3 创建选手"></a>6.3.3 创建选手</h4><ul>
+<li>在speechManager.h中提供开始比赛的的成员函数 <code>void createSpeaker();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//初始化创建12名选手
+void createSpeaker();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现<code>void createSpeaker();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::createSpeaker()
+{
+	string nameSeed = "ABCDEFGHIJKL";
+	for (int i = 0; i &lt; nameSeed.size(); i++)
+	{
+		string name = "选手";
+		name += nameSeed[i];
+
+		Speaker sp;
+		sp.m_Name = name;
+		for (int i = 0; i &lt; 2; i++)
+		{
+			sp.m_Score[i] = 0;
+		}
+
+		//12名选手编号
+		this-&gt;v1.push_back(i + 10001);
+
+		//选手编号 以及对应的选手 存放到map容器中
+		this-&gt;m_Speaker.insert(make_pair(i + 10001, sp));
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>SpeechManager类的 构造函数中调用<code>void createSpeaker();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">SpeechManager::SpeechManager()
+{
+    //初始化属性
+	this-&gt;initSpeech();
+    
+	//创建选手
+	this-&gt;createSpeaker();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>测试 在main函数中，可以在创建完管理对象后，使用下列代码测试12名选手初始状态</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">for (map&lt;int, Speaker&gt;::iterator it = sm.m_Speaker.begin(); it != sm.m_Speaker.end(); it++)
+{
+	cout  &lt;&lt; "选手编号：" &lt;&lt; it-&gt;first 
+          &lt;&lt; " 姓名： " &lt;&lt; it-&gt;second.m_Name 
+          &lt;&lt; " 成绩： " &lt;&lt; it-&gt;second.m_Score[0] &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548141605742.png"></p>
+<ul>
+<li>测试效果如图：</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548141560164.png"></p>
+<ul>
+<li>测试完毕后，可以将测试代码删除或注释。</li>
+</ul>
+<h4 id="6-3-4-开始比赛成员函数添加"><a href="#6-3-4-开始比赛成员函数添加" class="headerlink" title="6.3.4 开始比赛成员函数添加"></a>6.3.4 开始比赛成员函数添加</h4><ul>
+<li>在speechManager.h中提供开始比赛的的成员函数 <code>void startSpeech();</code></li>
+<li>该函数功能是主要控制比赛的流程</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//开始比赛 - 比赛流程控制
+void startSpeech();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中将startSpeech的空实现先写入</li>
+<li>我们可以先将整个比赛的流程 写到函数中</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//开始比赛
+void SpeechManager::startSpeech()
+{
+	//第一轮比赛
+	//1、抽签
+	
+	//2、比赛
+
+	//3、显示晋级结果
+
+	//第二轮比赛
+
+	//1、抽签
+
+	//2、比赛
+
+	//3、显示最终结果
+
+	//4、保存分数
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="6-3-5-抽签"><a href="#6-3-5-抽签" class="headerlink" title="6.3.5 抽签"></a>6.3.5 抽签</h4><p><strong>功能描述：</strong></p>
+<ul>
+<li><p>正式比赛前，所有选手的比赛顺序需要打乱，我们只需要将存放选手编号的容器  打乱次序即可</p>
+</li>
+<li><p>在speechManager.h中提供抽签的的成员函数 <code>void speechDraw();</code></p>
+</li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//抽签
+void speechDraw();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void speechDraw();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::speechDraw()
+{
+	cout &lt;&lt; "第 &lt;&lt; " &lt;&lt; this-&gt;m_Index &lt;&lt; " &gt;&gt; 轮比赛选手正在抽签"&lt;&lt;endl;
+	cout &lt;&lt; "---------------------" &lt;&lt; endl;
+	cout &lt;&lt; "抽签后演讲顺序如下：" &lt;&lt; endl;
+	if (this-&gt;m_Index == 1)
+	{
+		random_shuffle(v1.begin(), v1.end());
+		for (vector&lt;int&gt;::iterator it = v1.begin(); it != v1.end(); it++)
+		{
+			cout &lt;&lt; *it &lt;&lt; " ";
+		}
+		cout &lt;&lt; endl;
+	}
+	else
+	{
+		random_shuffle(v2.begin(), v2.end());
+		for (vector&lt;int&gt;::iterator it = v2.begin(); it != v2.end(); it++)
+		{
+			cout &lt;&lt; *it &lt;&lt; " ";
+		}
+		cout &lt;&lt; endl;
+	}
+	cout &lt;&lt; "---------------------" &lt;&lt; endl;
+	system("pause");
+	cout &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在startSpeech比赛流程控制的函数中，调用抽签函数</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548143871202.png"></p>
+<ul>
+<li>在main函数中，分支1选项中，调用开始比赛的接口</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548143543475.png"></p>
+<ul>
+<li>测试</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548143610682.png"></p>
+<h4 id="6-3-6-开始比赛"><a href="#6-3-6-开始比赛" class="headerlink" title="6.3.6 开始比赛"></a>6.3.6 开始比赛</h4><ul>
+<li>在speechManager.h中提供比赛的的成员函数 <code>void speechContest();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//比赛
+void speechContest();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void speechContest();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::speechContest()
+{
+	cout &lt;&lt; "------------- 第"&lt;&lt; this-&gt;m_Index &lt;&lt; "轮正式比赛开始：------------- " &lt;&lt; endl;
+
+	multimap&lt;double, int, greater&lt;int&gt;&gt; groupScore; //临时容器，保存key分数 value 选手编号
+
+	int num = 0; //记录人员数，6个为1组
+
+	vector &lt;int&gt;v_Src;   //比赛的人员容器
+	if (this-&gt;m_Index == 1)
+	{
+		v_Src = v1;
+	}
+	else
+	{
+		v_Src = v2;
+	}
+
+	//遍历所有参赛选手
+	for (vector&lt;int&gt;::iterator it = v_Src.begin(); it != v_Src.end(); it++)
+	{
+		num++;
+
+		//评委打分
+		deque&lt;double&gt;d;
+		for (int i = 0; i &lt; 10; i++)
+		{
+			double score = (rand() % 401 + 600) / 10.f;  // 600 ~ 1000
+			//cout &lt;&lt; score &lt;&lt; " ";
+			d.push_back(score);
+		}
+
+		sort(d.begin(), d.end(), greater&lt;double&gt;());				//排序
+		d.pop_front();												//去掉最高分
+		d.pop_back();												//去掉最低分
+
+		double sum = accumulate(d.begin(), d.end(), 0.0f);				//获取总分
+		double avg = sum / (double)d.size();									//获取平均分
+
+		//每个人平均分
+		//cout &lt;&lt; "编号： " &lt;&lt; *it  &lt;&lt; " 选手： " &lt;&lt; this-&gt;m_Speaker[*it].m_Name &lt;&lt; " 获取平均分为： " &lt;&lt; avg &lt;&lt; endl;  //打印分数
+		this-&gt;m_Speaker[*it].m_Score[this-&gt;m_Index - 1] = avg;
+
+		//6个人一组，用临时容器保存
+		groupScore.insert(make_pair(avg, *it));
+		if (num % 6 == 0)
+		{
+
+			cout &lt;&lt; "第" &lt;&lt; num / 6 &lt;&lt; "小组比赛名次：" &lt;&lt; endl;
+			for (multimap&lt;double, int, greater&lt;int&gt;&gt;::iterator it = groupScore.begin(); it != groupScore.end(); it++)
+			{
+				cout &lt;&lt; "编号: " &lt;&lt; it-&gt;second &lt;&lt; " 姓名： " &lt;&lt; this-&gt;m_Speaker[it-&gt;second].m_Name &lt;&lt; " 成绩： " &lt;&lt; this-&gt;m_Speaker[it-&gt;second].m_Score[this-&gt;m_Index - 1] &lt;&lt; endl;
+			}
+
+			int count = 0;
+			//取前三名
+			for (multimap&lt;double, int, greater&lt;int&gt;&gt;::iterator it = groupScore.begin(); it != groupScore.end() &amp;&amp; count &lt; 3; it++, count++)
+			{
+				if (this-&gt;m_Index == 1)
+				{
+					v2.push_back((*it).second);
+				}
+				else
+				{
+					vVictory.push_back((*it).second);
+				}
+			}
+
+			groupScore.clear();
+
+			cout &lt;&lt; endl;
+
+		}
+	}
+	cout &lt;&lt; "------------- 第" &lt;&lt; this-&gt;m_Index &lt;&lt; "轮比赛完毕  ------------- " &lt;&lt; endl;
+	system("pause");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在startSpeech比赛流程控制的函数中，调用比赛函数</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548144491984.png"></p>
+<ul>
+<li>再次运行代码，测试比赛</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548144765146.png"></p>
+<h4 id="6-3-7-显示比赛分数"><a href="#6-3-7-显示比赛分数" class="headerlink" title="6.3.7 显示比赛分数"></a>6.3.7 显示比赛分数</h4><ul>
+<li>在speechManager.h中提供比赛的的成员函数 <code>void showScore();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//显示比赛结果
+void showScore();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void  showScore();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::showScore()
+{
+	cout &lt;&lt; "---------第" &lt;&lt; this-&gt;m_Index &lt;&lt; "轮晋级选手信息如下：-----------" &lt;&lt; endl;
+	vector&lt;int&gt;v;
+	if (this-&gt;m_Index == 1)
+	{
+		v = v2;
+	}
+	else
+	{
+		v = vVictory;
+	}
+
+	for (vector&lt;int&gt;::iterator it = v.begin(); it != v.end(); it++)
+	{
+		cout &lt;&lt; "选手编号：" &lt;&lt; *it &lt;&lt; " 姓名： " &lt;&lt; m_Speaker[*it].m_Name &lt;&lt; " 得分： " &lt;&lt; m_Speaker[*it].m_Score[this-&gt;m_Index - 1] &lt;&lt; endl;
+	}
+	cout &lt;&lt; endl;
+
+	system("pause");
+	system("cls");
+	this-&gt;show_Menu(); 
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>在startSpeech比赛流程控制的函数中，调用显示比赛分数函数</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548146903960.png"></p>
+<ul>
+<li>运行代码，测试效果</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548146961550.png"></p>
+<h4 id="6-3-8-第二轮比赛"><a href="#6-3-8-第二轮比赛" class="headerlink" title="6.3.8 第二轮比赛"></a>6.3.8 第二轮比赛</h4><p>第二轮比赛流程同第一轮，只是比赛的轮是+1，其余流程不变</p>
+<ul>
+<li>在startSpeech比赛流程控制的函数中，加入第二轮的流程</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548148593215.png"></p>
+<p>测试，将整个比赛流程都跑通</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548148536395.png"></p>
+<h3 id="6-4-保存分数"><a href="#6-4-保存分数" class="headerlink" title="6.4 保存分数"></a>6.4 保存分数</h3><p><strong>功能描述：</strong></p>
+<ul>
+<li>将每次演讲比赛的得分记录到文件中</li>
+</ul>
+<p><strong>功能实现：</strong></p>
+<ul>
+<li>在speechManager.h中添加保存记录的成员函数 <code>void saveRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//保存记录
+void saveRecord();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void saveRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::saveRecord()
+{
+	ofstream ofs;
+	ofs.open("speech.csv", ios::out | ios::app); // 用输出的方式打开文件  -- 写文件
+
+	//将每个人数据写入到文件中
+	for (vector&lt;int&gt;::iterator it = vVictory.begin(); it != vVictory.end(); it++)
+	{
+		ofs &lt;&lt; *it &lt;&lt; ","
+			&lt;&lt; m_Speaker[*it].m_Score[1] &lt;&lt; ",";
+	}
+	ofs &lt;&lt; endl;
+    
+	//关闭文件
+	ofs.close();
+    
+	cout &lt;&lt; "记录已经保存" &lt;&lt; endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在startSpeech比赛流程控制的函数中，最后调用保存记录分数函数</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548149937860.png"></p>
+<ul>
+<li>测试，整个比赛完毕后记录保存情况</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548149912863.png"></p>
+<p>利用记事本打开文件 speech.csv，里面保存了前三名选手的编号以及得分</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548150047975.png"></p>
+<p>至此，整个演讲比赛功能制作完毕！</p>
+<h2 id="7、-查看记录"><a href="#7、-查看记录" class="headerlink" title="7、 查看记录"></a>7、 查看记录</h2><h3 id="7-1-读取记录分数"><a href="#7-1-读取记录分数" class="headerlink" title="7.1 读取记录分数"></a>7.1 读取记录分数</h3><ul>
+<li>在speechManager.h中添加保存记录的成员函数 <code>void loadRecord();</code></li>
+<li>添加判断文件是否为空的标志  <code>bool fileIsEmpty;</code></li>
+<li>添加往届记录的容器<code>map&lt;int, vector&lt;string&gt;&gt; m_Record;</code></li>
+</ul>
+<p>其中m_Record 中的key代表第几届，value记录具体的信息</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//读取记录
+void loadRecord();
+
+//文件为空的标志
+bool fileIsEmpty;
+
+//往届记录
+map&lt;int, vector&lt;string&gt;&gt; m_Record;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void loadRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::loadRecord()
+{
+	ifstream ifs("speech.csv", ios::in); //输入流对象 读取文件
+
+	if (!ifs.is_open())
+	{
+		this-&gt;fileIsEmpty = true;
+		cout &lt;&lt; "文件不存在！" &lt;&lt; endl;
+		ifs.close();
+		return;
+	}
+
+	char ch;
+	ifs &gt;&gt; ch;
+	if (ifs.eof())
+	{
+		cout &lt;&lt; "文件为空!" &lt;&lt; endl;
+		this-&gt;fileIsEmpty = true;
+		ifs.close();
+		return;
+	}
+
+	//文件不为空
+	this-&gt;fileIsEmpty = false;
+
+	ifs.putback(ch); //读取的单个字符放回去
+
+	string data;
+	int index = 0;
+	while (ifs &gt;&gt; data)
+	{
+		//cout &lt;&lt; data &lt;&lt; endl;
+		vector&lt;string&gt;v;
+
+		int pos = -1;
+		int start = 0;
+
+		while (true)
+		{
+			pos = data.find(",", start); //从0开始查找 ','
+			if (pos == -1)
+			{
+				break; //找不到break返回
+			}
+			string tmp = data.substr(start, pos - start); //找到了,进行分割 参数1 起始位置，参数2 截取长度
+			v.push_back(tmp);
+			start = pos + 1;
+		}
+
+		this-&gt;m_Record.insert(make_pair(index, v));
+		index++;
+	}
+
+	ifs.close();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在SpeechManager构造函数中调用获取往届记录函数</li>
+</ul>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548151977242.png"></p>
+<h3 id="7-2-查看记录功能"><a href="#7-2-查看记录功能" class="headerlink" title="7.2 查看记录功能"></a>7.2 查看记录功能</h3><ul>
+<li>在speechManager.h中添加保存记录的成员函数 <code>void showRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//显示往届得分
+void showRecord();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void showRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::showRecord()
+{
+	for (int i = 0; i &lt; this-&gt;m_Record.size(); i++)
+	{
+		cout &lt;&lt; "第" &lt;&lt; i + 1 &lt;&lt; "届 " &lt;&lt;
+			"冠军编号：" &lt;&lt; this-&gt;m_Record[i][0] &lt;&lt; " 得分：" &lt;&lt; this-&gt;m_Record[i][1] &lt;&lt; " "
+			"亚军编号：" &lt;&lt; this-&gt;m_Record[i][2] &lt;&lt; " 得分：" &lt;&lt; this-&gt;m_Record[i][3] &lt;&lt; " "
+			"季军编号：" &lt;&lt; this-&gt;m_Record[i][4] &lt;&lt; " 得分：" &lt;&lt; this-&gt;m_Record[i][5] &lt;&lt; endl;
+	}
+    system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="7-3-测试功能"><a href="#7-3-测试功能" class="headerlink" title="7.3 测试功能"></a>7.3 测试功能</h3><p>在main函数分支 2  选项中，调用查看记录的接口</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548152359604.png"></p>
+<p>显示效果如图：（本次测试添加了4条记录）</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548152394715.png"></p>
+<h3 id="7-4-bug解决"><a href="#7-4-bug解决" class="headerlink" title="7.4 bug解决"></a>7.4 bug解决</h3><p>目前程序中有几处bug未解决：</p>
+<ol>
+<li>查看往届记录，若文件不存在或为空，并未提示</li>
+</ol>
+<p>解决方式：在showRecord函数中，开始判断文件状态并加以判断</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548152803116.png"></p>
+<ol start="2">
+<li>若记录为空或不存在，比完赛后依然提示记录为空</li>
+</ol>
+<p>解决方式：saveRecord中更新文件为空的标志</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548153005042.png"></p>
+<ol start="3">
+<li>比完赛后查不到本届比赛的记录，没有实时更新</li>
+</ol>
+<p>解决方式：比赛完毕后，所有数据重置</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548153319587.png"></p>
+<ol start="4">
+<li>在初始化时，没有初始化记录容器</li>
+</ol>
+<p>解决方式：initSpeech中添加 初始化记录容器</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548154340974.png"></p>
+<ol start="5">
+<li>每次记录都是一样的</li>
+</ol>
+<p>解决方式：在main函数一开始 添加随机数种子</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">srand((unsigned int)time(NULL));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p>所有bug解决后 测试：</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548153571603.png"></p>
+<h2 id="8、-清空记录"><a href="#8、-清空记录" class="headerlink" title="8、 清空记录"></a>8、 清空记录</h2><h3 id="8-1-清空记录功能实现"><a href="#8-1-清空记录功能实现" class="headerlink" title="8.1 清空记录功能实现"></a>8.1 清空记录功能实现</h3><ul>
+<li>在speechManager.h中添加保存记录的成员函数 <code>void clearRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//清空记录
+void clearRecord();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>在speechManager.cpp中实现成员函数 <code>void clearRecord();</code></li>
+</ul>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void SpeechManager::clearRecord()
+{
+	cout &lt;&lt; "确认清空？" &lt;&lt; endl;
+	cout &lt;&lt; "1、确认" &lt;&lt; endl;
+	cout &lt;&lt; "2、返回" &lt;&lt; endl;
+
+	int select = 0;
+	cin &gt;&gt; select;
+
+	if (select == 1)
+	{
+		//打开模式 ios::trunc 如果存在删除文件并重新创建
+		ofstream ofs("speech.csv", ios::trunc);
+		ofs.close();
+
+		//初始化属性
+		this-&gt;initSpeech();
+
+		//创建选手
+		this-&gt;createSpeaker();
+
+		//获取往届记录
+		this-&gt;loadRecord();
+		
+
+		cout &lt;&lt; "清空成功！" &lt;&lt; endl;
+	}
+
+	system("pause");
+	system("cls");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-2-测试清空"><a href="#8-2-测试清空" class="headerlink" title="8.2 测试清空"></a>8.2 测试清空</h3><p>在main函数分支 3  选项中，调用清空比赛记录的接口</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548154674242.png"></p>
+<p>运行程序，测试清空记录：</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548154004738.png"></p>
+<p>speech.csv中记录也为空</p>
+<p><img src="/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/1548154508831.png"></p>
+<ul>
+<li>至此本案例结束！ <code>^_^</code></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shida Wei</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://weishida01.github.io/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/">https://weishida01.github.io/2023/03/03/c-an-li/3-ji-yu-stl-de-yan-jiang-bi-sai-liu-cheng-guan-li-xi-tong/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shida Wei</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="/tags/C-%E5%9F%BA%E4%BA%8ESTL%E7%9A%84%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">C++ 基于STL的演讲比赛流程管理系统</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>Comment</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'KhLsMNUiVO3V9QNfhUC0dO0c-gzGzoHsz',
+        appKey: 'chKUzpKCcT52zvQBUZjplIIa',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2023/03/03/c-an-li/4-ji-fang-yu-yue-xi-tong/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="4-机房预约系统">
+                        
+                        <span class="card-title">4-机房预约系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C++ 机房预约系统
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-%E6%A1%88%E4%BE%8B/" class="post-category">
+                                    C++案例
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/C-%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">C++ 机房预约系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/03/c-an-li/2-ji-yu-duo-tai-de-qi-ye-zhi-gong-xi-tong-zi-liao/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="2-基于多态的职工管理系统">
+                        
+                        <span class="card-title">2-基于多态的职工管理系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C++ 基于多态的职工管理系统
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-%E6%A1%88%E4%BE%8B/" class="post-category">
+                                    C++案例
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/C-%E5%9F%BA%E4%BA%8E%E5%A4%9A%E6%80%81%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">C++ 基于多态的职工管理系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('3'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Shida Wei</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">77.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2023";
+                    var startMonth = "1";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffDays + " day " + diffHours +
+                            " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffYears + " year " + diffDays +
+                            " day " + diffHours + " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    }
+                    // if (startYear == todayYear) {
+                    //     document.getElementById("year").innerHTML = todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                    //         " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // } else {
+                    //     document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                    //         " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // }
+                }
+                setInterval(siteTime, 1000);
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/weishida01" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:weishida01@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3058668859" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3058668859" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
