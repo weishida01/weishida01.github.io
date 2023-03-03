@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="t1, WSD">
-    <meta name="description" content="简单例子">
+    <meta name="keywords" content="1-C++初识, WSD">
+    <meta name="description" content="C++程序 注释 变量 常量 关键字 标识符">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>t1 | WSD</title>
+    <title>1-C++初识 | WSD</title>
     <link rel="icon" type="image/png" href="/wsd.png">
     
 
@@ -52,9 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WSD" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="WSD" type="application/atom+xml">
 </head>
 
 
@@ -337,7 +337,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '78c72f67941a420cd4e5ee9fdabcaeaba6d72f16160915085f9802220fd83799';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -350,12 +350,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/images/03.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%B0%81%E9%9D%A2.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">t1</h1>
+                    <h1 class="description center-align post-title">1-C++初识</h1>
                 </div>
             </div>
         </div>
@@ -379,8 +379,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%96%87%E7%AB%A0/">
-                                <span class="chip bg-color">文章</span>
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AAC-%E7%A8%8B%E5%BA%8F/">
+                                <span class="chip bg-color">第一个C++程序</span>
                             </a>
                         
                     </div>
@@ -391,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%BB%A3%E7%A0%81/" class="post-category">
-                                代码
+                            <a href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="post-category">
+                                C++基础入门
                             </a>
                         
                     </div>
@@ -404,28 +408,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-02-26
+                    2023-03-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2023-02-27
+                    2023-03-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    125
+                    805
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    3 Min
                 </div>
                 
 
@@ -448,27 +452,227 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 本文中主要使用cv2处理图片，但不利于在notebook中展示，所以使用plt输出前做简单处理</span>
-<span class="token keyword">def</span> <span class="token function">img_convert</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    cv2使用BGR，plt使用RGB
-    包含灰度，3通道，4通道
-    下面这个不好使
-    ret_img = cv2.cvtColor(ret_img, cv2.COLOR_BGR2RGB)
-    """</span>
-    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> cv2_img
-    <span class="token keyword">elif</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token keyword">and</span> cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
-        b<span class="token punctuation">,</span> g<span class="token punctuation">,</span> r <span class="token operator">=</span> cv2<span class="token punctuation">.</span>split<span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> cv2<span class="token punctuation">.</span>merge<span class="token punctuation">(</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">elif</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token keyword">and</span> cv2_img<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
-        b<span class="token punctuation">,</span> g<span class="token punctuation">,</span> r<span class="token punctuation">,</span> a <span class="token operator">=</span> cv2<span class="token punctuation">.</span>split<span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> cv2<span class="token punctuation">.</span>merge<span class="token punctuation">(</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> cv2_img<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h3 id="1-1-第一个C-程序"><a href="#1-1-第一个C-程序" class="headerlink" title="1.1 第一个C++程序"></a>1.1 第一个C++程序</h3><p>编写一个C++程序总共分为4个步骤</p>
+<ul>
+<li>创建项目</li>
+<li>创建文件</li>
+<li>编写代码</li>
+<li>运行程序</li>
+</ul>
+<h4 id="1-1-1-创建项目"><a href="#1-1-1-创建项目" class="headerlink" title="1.1.1 创建项目"></a>1.1.1 创建项目</h4><p>​	Visual Studio是我们用来编写C++程序的主要工具，我们先将它打开</p>
+<p><img src="/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/1541383178746.png" alt="1541383178746"></p>
+<p><img src="/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/1541384366413.png" alt="1541384366413"></p>
+<h4 id="1-1-2-创建文件"><a href="#1-1-2-创建文件" class="headerlink" title="1.1.2 创建文件"></a>1.1.2 创建文件</h4><p>右键源文件，选择添加-&gt;新建项</p>
+<p><img src="/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/1541383817248.png" alt="1541383817248"></p>
+<p>给C++文件起个名称，然后点击添加即可。</p>
+<p><img src="/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/1541384140042.png" alt="1541384140042"></p>
+<h4 id="1-1-3-编写代码"><a href="#1-1-3-编写代码" class="headerlink" title="1.1.3 编写代码"></a>1.1.3 编写代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+using namespace std;
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">img_convert</span><span class="token punctuation">(</span>cv2_img<span class="token punctuation">)</span><span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+int main() {
 
+	cout &lt;&lt; "Hello world" &lt;&lt; endl;
+
+	system("pause");
+
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="1-1-4-运行程序"><a href="#1-1-4-运行程序" class="headerlink" title="1.1.4 运行程序"></a>1.1.4 运行程序</h4><p><img src="/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/1541384818688.png" alt="1541384818688"></p>
+<h3 id="1-2-注释"><a href="#1-2-注释" class="headerlink" title="1.2 注释"></a>1.2 注释</h3><p><strong>作用</strong>：在代码中加一些说明和解释，方便自己或其他程序员程序员阅读代码</p>
+<p><strong>两种格式</strong></p>
+<ol>
+<li><strong>单行注释</strong>：<code>// 描述信息</code> <ul>
+<li>通常放在一行代码的上方，或者一条语句的末尾，==对该行代码说明==</li>
+</ul>
+</li>
+<li><strong>多行注释</strong>： <code>/* 描述信息 */</code><ul>
+<li>通常放在一段代码的上方，==对该段代码做整体说明==</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>提示：编译器在编译代码时，会忽略注释的内容</p>
+</blockquote>
+<h3 id="1-3-变量"><a href="#1-3-变量" class="headerlink" title="1.3 变量"></a>1.3 变量</h3><p><strong>作用</strong>：给一段指定的内存空间起名，方便操作这段内存</p>
+<p><strong>语法</strong>：<code>数据类型 变量名 = 初始值;</code></p>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include&lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+	//变量的定义
+	//语法：数据类型  变量名 = 初始值
+
+	int a = 10;
+
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	
+	system("pause");
+
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p>注意：C++在创建变量时，必须给变量一个初始值，否则会报错</p>
+</blockquote>
+<h3 id="1-4-常量"><a href="#1-4-常量" class="headerlink" title="1.4  常量"></a>1.4  常量</h3><p><strong>作用</strong>：用于记录程序中不可更改的数据</p>
+<p>C++定义常量两种方式</p>
+<ol>
+<li><p><strong>#define</strong> 宏常量： <code>#define 常量名 常量值</code></p>
+<ul>
+<li>==通常在文件上方定义==，表示一个常量</li>
+</ul>
+</li>
+<li><p><strong>const</strong>修饰的变量 <code>const 数据类型 常量名 = 常量值</code></p>
+<ul>
+<li>==通常在变量定义前加关键字const==，修饰该变量为常量，不可修改</li>
+</ul>
+</li>
+</ol>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//1、宏常量
+#define day 7
+
+int main() {
+
+	cout &lt;&lt; "一周里总共有 " &lt;&lt; day &lt;&lt; " 天" &lt;&lt; endl;
+	//day = 8;  //报错，宏常量不可以修改
+
+	//2、const修饰变量
+	const int month = 12;
+	cout &lt;&lt; "一年里总共有 " &lt;&lt; month &lt;&lt; " 个月份" &lt;&lt; endl;
+	//month = 24; //报错，常量是不可以修改的
+	
+	
+	system("pause");
+
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+<h3 id="1-5-关键字"><a href="#1-5-关键字" class="headerlink" title="1.5 关键字"></a>1.5 关键字</h3><p><strong>作用：</strong>关键字是C++中预先保留的单词（标识符）</p>
+<ul>
+<li><strong>在定义变量或者常量时候，不要用关键字</strong></li>
+</ul>
+<p>C++关键字如下：</p>
+<table>
+<thead>
+<tr>
+<th>asm</th>
+<th>do</th>
+<th>if</th>
+<th>return</th>
+<th>typedef</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>auto</td>
+<td>double</td>
+<td>inline</td>
+<td>short</td>
+<td>typeid</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>dynamic_cast</td>
+<td>int</td>
+<td>signed</td>
+<td>typename</td>
+</tr>
+<tr>
+<td>break</td>
+<td>else</td>
+<td>long</td>
+<td>sizeof</td>
+<td>union</td>
+</tr>
+<tr>
+<td>case</td>
+<td>enum</td>
+<td>mutable</td>
+<td>static</td>
+<td>unsigned</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>explicit</td>
+<td>namespace</td>
+<td>static_cast</td>
+<td>using</td>
+</tr>
+<tr>
+<td>char</td>
+<td>export</td>
+<td>new</td>
+<td>struct</td>
+<td>virtual</td>
+</tr>
+<tr>
+<td>class</td>
+<td>extern</td>
+<td>operator</td>
+<td>switch</td>
+<td>void</td>
+</tr>
+<tr>
+<td>const</td>
+<td>false</td>
+<td>private</td>
+<td>template</td>
+<td>volatile</td>
+</tr>
+<tr>
+<td>const_cast</td>
+<td>float</td>
+<td>protected</td>
+<td>this</td>
+<td>wchar_t</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>for</td>
+<td>public</td>
+<td>throw</td>
+<td>while</td>
+</tr>
+<tr>
+<td>default</td>
+<td>friend</td>
+<td>register</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>delete</td>
+<td>goto</td>
+<td>reinterpret_cast</td>
+<td>try</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><code>提示：在给变量或者常量起名称时候，不要用C++得关键字，否则会产生歧义。</code></p>
+<h3 id="1-6-标识符命名规则"><a href="#1-6-标识符命名规则" class="headerlink" title="1.6 标识符命名规则"></a>1.6 标识符命名规则</h3><p><strong>作用</strong>：C++规定给标识符（变量、常量）命名时，有一套自己的规则</p>
+<ul>
+<li>标识符不能是关键字</li>
+<li>标识符只能由字母、数字、下划线组成</li>
+<li>第一个字符必须为字母或下划线</li>
+<li>标识符中字母区分大小写</li>
+</ul>
+<blockquote>
+<p>建议：给标识符命名时，争取做到见名知意的效果，方便自己和他人的阅读</p>
+</blockquote>
 
                 
             </div>
@@ -485,7 +689,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">wsd</a>
+                    <a href="/about" rel="external nofollow noreferrer">Shida Wei</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -495,7 +699,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://weishida01.github.io/2023/02/26/t1/">https://weishida01.github.io/2023/02/26/t1/</a>
+                    <a href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/">https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/1-c-chu-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -508,7 +712,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">wsd</a>
+                    <a href="/about" target="_blank">Shida Wei</a>
                     !
                 </span>
             </div>
@@ -533,8 +737,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%96%87%E7%AB%A0/">
-                                    <span class="chip bg-color">文章</span>
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AAC-%E7%A8%8B%E5%BA%8F/">
+                                    <span class="chip bg-color">第一个C++程序</span>
                                 </a>
                             
                         </div>
@@ -876,47 +1084,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/02/26/t1/">
+                <a href="/2023/03/03/c-ji-chu-ru-men/2-shu-ju-lei-xing/">
                     <div class="card-image">
                         
-                        <img src="/medias/images/03.jpg" class="responsive-img" alt="t1">
+                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="2-数据类型">
                         
-                        <span class="card-title">t1</span>
+                        <span class="card-title">2-数据类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简单例子
+                            C++ 数据类型
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BB%A3%E7%A0%81/" class="post-category">
-                                    代码
+                            <a href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="post-category">
+                                    C++基础入门
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%96%87%E7%AB%A0/">
-                        <span class="chip bg-color">文章</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/C-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                        <span class="chip bg-color">C++ 数据类型</span>
                     </a>
                     
                 </div>
@@ -930,32 +1140,47 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/26/hello-world/">
+                <a href="/2023/03/03/c-kai-fa-huan-jing-da-jian/c-kai-fa-huan-jing-da-jian/">
                     <div class="card-image">
                         
+                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="C++编程环境搭建教程">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">C++编程环境搭建教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            C++编程环境搭建教程
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Shida Wei
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" class="post-category">
+                                    C++编程环境搭建教程
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">环境搭建</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1017,7 +1242,7 @@
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('3'),
             headingSelector: 'h2, h3, h4'
         });
 
@@ -1097,7 +1322,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">198</span>
+                        class="white-color">6.6k</span>
             
             
             
@@ -1384,8 +1609,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
