@@ -6,7 +6,7 @@
   <link href="https://weishida01.github.io/atom.xml" rel="self"/>
   
   <link href="https://weishida01.github.io/"/>
-  <updated>2023-03-03T06:08:01.987Z</updated>
+  <updated>2023-03-04T12:33:10.089Z</updated>
   <id>https://weishida01.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2-栈最小min函数</title>
+    <link href="https://weishida01.github.io/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/"/>
+    <id>https://weishida01.github.io/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/</id>
+    <published>2023-03-04T12:29:22.000Z</published>
+    <updated>2023-03-04T12:33:10.089Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1-两栈实现队列</title>
+    <link href="https://weishida01.github.io/2023/03/04/li-kou-shua-ti/1-liang-zhan-shi-xian-dui-lie/"/>
+    <id>https://weishida01.github.io/2023/03/04/li-kou-shua-ti/1-liang-zhan-shi-xian-dui-lie/</id>
+    <published>2023-03-04T12:21:18.000Z</published>
+    <updated>2023-03-04T12:33:07.924Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;用两个栈实现一个队列。队列的声明如下，请实现它的两个函数 appendTail 和 deleteHead</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>4-机房预约系统</title>
@@ -510,70 +564,6 @@
     <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
     
     <category term="C++ 数组" scheme="https://weishida01.github.io/tags/C-%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4-程序流程结构</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/4-cheng-xu-liu-cheng-jie-gou/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/4-cheng-xu-liu-cheng-jie-gou/</id>
-    <published>2023-03-03T04:03:13.000Z</published>
-    <updated>2023-03-03T04:06:28.970Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;C/C++支持最基本的三种程序运行结构：==顺序结构、选择结构、循环结构==&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;顺序结构：程序按顺序执行，不发生跳转&lt;/li&gt;
-&lt;li&gt;选择结构：依据条件是否满足，有选择的执行相应功能&lt;/li&gt;
-&lt;li&gt;循环结构：依据条件是否满足，循环多次执行某段代</summary>
-        
-      
-    
-    
-    
-    <category term="C++基础入门" scheme="https://weishida01.github.io/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 程序流程结构" scheme="https://weishida01.github.io/tags/C-%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3-运算符</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/3-yun-suan-fu/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/3-yun-suan-fu/</id>
-    <published>2023-03-03T03:53:42.000Z</published>
-    <updated>2023-03-03T03:56:08.931Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;作用：&lt;/strong&gt;用于执行代码的运算&lt;/p&gt;
-&lt;p&gt;本章我们主要讲解以下几类运算符：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;运算符类型&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;作用&lt;/strong&gt;&lt;/t</summary>
-        
-      
-    
-    
-    
-    <category term="C++基础入门" scheme="https://weishida01.github.io/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 运算符" scheme="https://weishida01.github.io/tags/C-%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     
   </entry>
   
