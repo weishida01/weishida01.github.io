@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>5-复杂链表的赋值</title>
+      <link href="/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/"/>
+      <url>/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h1><p>请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个 random 指针指向链表中的任意节点或者 null。</p><p><img src="/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/copy.png"></p><p>输入：head = [[7,null],[13,0],[11,4],[10,2],[1,0]]</p><p>输出：[[7,null],[13,0],[11,4],[10,2],[1,0]]</p><h1 id="2-C"><a href="#2-C" class="headerlink" title="2.C++"></a>2.C++</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/*// Definition for a Node.class Node {public:    int val;    Node* next;    Node* random;        Node(int _val) {        val = _val;        next = NULL;        random = NULL;    }};*/class Solution {public:    Node* copyRandomList(Node* head)     {        if (head == nullptr) {            return nullptr;        }        //将拷贝节点放到原节点后面，例如1-&gt;2-&gt;3这样的链表就变成了这样1-&gt;1'-&gt;2-&gt;2'-&gt;3-&gt;3'        for (Node* node = head; node != nullptr; node = node-&gt;next-&gt;next) {            Node* nodeNew = new Node(node-&gt;val);            nodeNew-&gt;next = node-&gt;next;            node-&gt;next = nodeNew;        }        //把拷贝节点的random指针安排上        for (Node* node = head; node != nullptr; node = node-&gt;next-&gt;next) {            Node* nodeNew = node-&gt;next;            nodeNew-&gt;random = (node-&gt;random != nullptr) ? node-&gt;random-&gt;next : nullptr;        }        //分离拷贝节点和原节点，变成1-&gt;2-&gt;3和1'-&gt;2'-&gt;3'两个链表，后者就是答案        Node* headNew = head-&gt;next;        for (Node* node = head; node != nullptr; node = node-&gt;next) {            Node* nodeNew = node-&gt;next;            node-&gt;next = node-&gt;next-&gt;next;            nodeNew-&gt;next = (nodeNew-&gt;next != nullptr) ? nodeNew-&gt;next-&gt;next : nullptr;        }        return headNew;    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++ 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>4-反转链表</title>
+      <link href="/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/"/>
+      <url>/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h1><p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点</p><h1 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/** * Definition for singly-linked list. * struct ListNode { *     int val; *     ListNode *next; *     ListNode(int x) : val(x), next(NULL) {} * }; */class Solution {public:    ListNode* reverseList(ListNode* head)     {        if (head == NULL || head-&gt;next == NULL)        {            return head;        }        ListNode* pre = NULL;        ListNode* nex = NULL;        while(head != NULL)        {            nex = head-&gt;next;            head-&gt;next = pre;             pre = head;            head = nex;        }        return pre;    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span><span class="token comment"># class ListNode(object):</span><span class="token comment">#     def __init__(self, x):</span><span class="token comment">#         self.val = x</span><span class="token comment">#         self.next = None</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token triple-quoted-string string">"""        :type head: ListNode        :rtype: ListNode        """</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span>head<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            <span class="token keyword">return</span> head        pre <span class="token operator">=</span> <span class="token boolean">None</span>        cur <span class="token operator">=</span> head        <span class="token keyword">while</span> cur<span class="token punctuation">:</span>            nex <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span>            cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> pre            pre <span class="token operator">=</span> cur            cur <span class="token operator">=</span> nex        <span class="token keyword">return</span> pre<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++ 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3-从尾到头打印链表</title>
+      <link href="/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/"/>
+      <url>/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h1><p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p><h1 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/** * Definition for singly-linked list. * struct ListNode { *     int val; *     ListNode *next; *     ListNode(int x) : val(x), next(NULL) {} * }; */class Solution {public:    vector&lt;int&gt; reversePrint(ListNode* head)     {        stack&lt;int&gt; st;        vector&lt;int&gt; ve;        while(head != NULL)        {            st.push(head-&gt;val);            head = head-&gt;next;        }        while(!st.empty())        {            ve.push_back(st.top());            st.pop();        }        return ve;    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span><span class="token comment"># class ListNode(object):</span><span class="token comment">#     def __init__(self, x):</span><span class="token comment">#         self.val = x</span><span class="token comment">#         self.next = None</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">reversePrint</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token triple-quoted-string string">"""        :type head: ListNode        :rtype: List[int]        """</span>        li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>        <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">:</span>            li<span class="token punctuation">.</span>append<span class="token punctuation">(</span>head<span class="token punctuation">.</span>val<span class="token punctuation">)</span>            head <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>        li2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            li2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>li<span class="token punctuation">[</span><span class="token operator">-</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>        <span class="token comment"># return li[::-1]</span>        <span class="token keyword">return</span> li2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++ 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2-栈最小min函数</title>
       <link href="/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/"/>
       <url>/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/</url>

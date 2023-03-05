@@ -6,7 +6,7 @@
   <link href="https://weishida01.github.io/atom.xml" rel="self"/>
   
   <link href="https://weishida01.github.io/"/>
-  <updated>2023-03-04T12:37:15.775Z</updated>
+  <updated>2023-03-05T12:26:31.749Z</updated>
   <id>https://weishida01.github.io/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5-复杂链表的赋值</title>
+    <link href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/"/>
+    <id>https://weishida01.github.io/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/</id>
+    <published>2023-03-05T12:24:15.000Z</published>
+    <updated>2023-03-05T12:26:31.749Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h1&gt;&lt;p&gt;请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4-反转链表</title>
+    <link href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/"/>
+    <id>https://weishida01.github.io/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/</id>
+    <published>2023-03-05T12:21:53.000Z</published>
+    <updated>2023-03-05T12:26:30.467Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h1&gt;&lt;p&gt;定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点&lt;/p&gt;
+&lt;h1 id=&quot;2-C&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3-从尾到头打印链表</title>
+    <link href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/"/>
+    <id>https://weishida01.github.io/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/</id>
+    <published>2023-03-05T12:19:29.000Z</published>
+    <updated>2023-03-05T12:26:42.202Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h1&gt;&lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
+&lt;h1 id=&quot;2-C&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>2-栈最小min函数</title>
@@ -483,87 +566,6 @@
     <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
     
     <category term="C++ 结构体" scheme="https://weishida01.github.io/tags/C-%E7%BB%93%E6%9E%84%E4%BD%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>7-指针</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/7-zhi-zhen/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/7-zhi-zhen/</id>
-    <published>2023-03-03T04:19:26.000Z</published>
-    <updated>2023-03-03T04:21:15.816Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;7-1-指针的基本概念&quot;&gt;&lt;a href=&quot;#7-1-指针的基本概念&quot; class=&quot;headerlink&quot; title=&quot;7.1 指针的基本概念&quot;&gt;&lt;/a&gt;7.1 指针的基本概念&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;指针的作用：&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="C++基础入门" scheme="https://weishida01.github.io/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 指针" scheme="https://weishida01.github.io/tags/C-%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6-函数</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/6-han-shu/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/6-han-shu/</id>
-    <published>2023-03-03T04:17:28.000Z</published>
-    <updated>2023-03-03T04:18:40.622Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;6-1-概述&quot;&gt;&lt;a href=&quot;#6-1-概述&quot; class=&quot;headerlink&quot; title=&quot;6.1 概述&quot;&gt;&lt;/a&gt;6.1</summary>
-        
-      
-    
-    
-    
-    <category term="C++基础入门" scheme="https://weishida01.github.io/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 函数" scheme="https://weishida01.github.io/tags/C-%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5-数组</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/5-shu-zu/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/5-shu-zu/</id>
-    <published>2023-03-03T04:14:28.000Z</published>
-    <updated>2023-03-03T04:16:16.571Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1</summary>
-        
-      
-    
-    
-    
-    <category term="C++基础入门" scheme="https://weishida01.github.io/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 数组" scheme="https://weishida01.github.io/tags/C-%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   

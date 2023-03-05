@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="2-STL初识, WSD">
-    <meta name="description" content="C++ STL初识">
+    <meta name="keywords" content="3-从尾到头打印链表, WSD">
+    <meta name="description" content="输入一个链表的头节点，从尾到头反过来返回每个节点的值">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>2-STL初识 | WSD</title>
+    <title>3-从尾到头打印链表 | WSD</title>
     <link rel="icon" type="image/png" href="/wsd.png">
     
 
@@ -350,12 +350,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%B0%81%E9%9D%A2.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%89%91%E6%8C%87offer.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">2-STL初识</h1>
+                    <h1 class="description center-align post-title">3-从尾到头打印链表</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                                 <span class="chip bg-color">C++</span>
                             </a>
                         
-                            <a href="/tags/C-STL%E5%88%9D%E8%AF%86/">
-                                <span class="chip bg-color">C++ STL初识</span>
+                            <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">C++ 算法题</span>
                             </a>
                         
                     </div>
@@ -395,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="post-category">
-                                C++提高编程
+                            <a href="/categories/%E5%89%91%E6%8C%87offer/" class="post-category">
+                                剑指offer
                             </a>
                         
                     </div>
@@ -408,28 +408,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-03-03
+                    2023-03-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2023-03-03
+                    2023-03-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.6k
+                    156
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    6 Min
+                    1 Min
                 </div>
                 
 
@@ -452,267 +452,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="2-1-STL的诞生"><a href="#2-1-STL的诞生" class="headerlink" title="2.1 STL的诞生"></a>2.1 STL的诞生</h3><ul>
-<li><p>长久以来，软件界一直希望建立一种可重复利用的东西</p>
-</li>
-<li><p>C++的<strong>面向对象</strong>和<strong>泛型编程</strong>思想，目的就是<strong>复用性的提升</strong></p>
-</li>
-<li><p>大多情况下，数据结构和算法都未能有一套标准,导致被迫从事大量重复工作</p>
-</li>
-<li><p>为了建立数据结构和算法的一套标准,诞生了<strong>STL</strong></p>
-</li>
-</ul>
-<h3 id="2-2-STL基本概念"><a href="#2-2-STL基本概念" class="headerlink" title="2.2 STL基本概念"></a>2.2 STL基本概念</h3><ul>
-<li>STL(Standard Template Library,<strong>标准模板库</strong>)</li>
-<li>STL 从广义上分为: <strong>容器(container) 算法(algorithm) 迭代器(iterator)</strong></li>
-<li><strong>容器</strong>和<strong>算法</strong>之间通过<strong>迭代器</strong>进行无缝连接。</li>
-<li>STL 几乎所有的代码都采用了模板类或者模板函数</li>
-</ul>
-<h3 id="2-3-STL六大组件"><a href="#2-3-STL六大组件" class="headerlink" title="2.3 STL六大组件"></a>2.3 STL六大组件</h3><p>STL大体分为六大组件，分别是:<strong>容器、算法、迭代器、仿函数、适配器（配接器）、空间配置器</strong></p>
-<ol>
-<li>容器：各种数据结构，如vector、list、deque、set、map等,用来存放数据。</li>
-<li>算法：各种常用的算法，如sort、find、copy、for_each等</li>
-<li>迭代器：扮演了容器与算法之间的胶合剂。</li>
-<li>仿函数：行为类似函数，可作为算法的某种策略。</li>
-<li>适配器：一种用来修饰容器或者仿函数或迭代器接口的东西。</li>
-<li>空间配置器：负责空间的配置与管理。</li>
-</ol>
-<h3 id="2-4-STL中容器、算法、迭代器"><a href="#2-4-STL中容器、算法、迭代器" class="headerlink" title="2.4  STL中容器、算法、迭代器"></a>2.4  STL中容器、算法、迭代器</h3><p><strong>容器：</strong>置物之所也</p>
-<p>STL<strong>容器</strong>就是将运用<strong>最广泛的一些数据结构</strong>实现出来</p>
-<p>常用的数据结构：数组, 链表,树, 栈, 队列, 集合, 映射表 等</p>
-<p>这些容器分为<strong>序列式容器</strong>和<strong>关联式容器</strong>两种:</p>
-<p>​	<strong>序列式容器</strong>:强调值的排序，序列式容器中的每个元素均有固定的位置。<br>​	<strong>关联式容器</strong>:二叉树结构，各元素之间没有严格的物理上的顺序关系</p>
-<p><strong>算法：</strong>问题之解法也</p>
-<p>有限的步骤，解决逻辑或数学上的问题，这一门学科我们叫做算法(Algorithms)</p>
-<p>算法分为:<strong>质变算法</strong>和<strong>非质变算法</strong>。</p>
-<p>质变算法：是指运算过程中会更改区间内的元素的内容。例如拷贝，替换，删除等等</p>
-<p>非质变算法：是指运算过程中不会更改区间内的元素内容，例如查找、计数、遍历、寻找极值等等</p>
-<p><strong>迭代器：</strong>容器和算法之间粘合剂</p>
-<p>提供一种方法，使之能够依序寻访某个容器所含的各个元素，而又无需暴露该容器的内部表示方式。</p>
-<p>每个容器都有自己专属的迭代器</p>
-<p>迭代器使用非常类似于指针，初学阶段我们可以先理解迭代器为指针</p>
-<p>迭代器种类：</p>
-<table>
-<thead>
-<tr>
-<th>种类</th>
-<th>功能</th>
-<th>支持运算</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>输入迭代器</td>
-<td>对数据的只读访问</td>
-<td>只读，支持++、==、！=</td>
-</tr>
-<tr>
-<td>输出迭代器</td>
-<td>对数据的只写访问</td>
-<td>只写，支持++</td>
-</tr>
-<tr>
-<td>前向迭代器</td>
-<td>读写操作，并能向前推进迭代器</td>
-<td>读写，支持++、==、！=</td>
-</tr>
-<tr>
-<td>双向迭代器</td>
-<td>读写操作，并能向前和向后操作</td>
-<td>读写，支持++、–，</td>
-</tr>
-<tr>
-<td>随机访问迭代器</td>
-<td>读写操作，可以以跳跃的方式访问任意数据，功能最强的迭代器</td>
-<td>读写，支持++、–、[n]、-n、&lt;、&lt;=、&gt;、&gt;=</td>
-</tr>
-</tbody></table>
-<p>常用的容器中迭代器种类为双向迭代器，和随机访问迭代器</p>
-<h3 id="2-5-容器算法迭代器初识"><a href="#2-5-容器算法迭代器初识" class="headerlink" title="2.5 容器算法迭代器初识"></a>2.5 容器算法迭代器初识</h3><p>了解STL中容器、算法、迭代器概念之后，我们利用代码感受STL的魅力</p>
-<p>STL中最常用的容器为Vector，可以理解为数组，下面我们将学习如何向这个容器中插入数据、并遍历这个容器</p>
-<h4 id="2-5-1-vector存放内置数据类型"><a href="#2-5-1-vector存放内置数据类型" class="headerlink" title="2.5.1 vector存放内置数据类型"></a>2.5.1 vector存放内置数据类型</h4><p>容器：     <code>vector</code></p>
-<p>算法：     <code>for_each</code></p>
-<p>迭代器： <code>vector&lt;int&gt;::iterator</code></p>
-<p><strong>示例：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-
-void MyPrint(int val)
-{
-	cout &lt;&lt; val &lt;&lt; endl;
-}
-
-void test01() {
-
-	//创建vector容器对象，并且通过模板参数指定容器中存放的数据的类型
-	vector&lt;int&gt; v;
-	//向容器中放数据
-	v.push_back(10);
-	v.push_back(20);
-	v.push_back(30);
-	v.push_back(40);
-
-	//每一个容器都有自己的迭代器，迭代器是用来遍历容器中的元素
-	//v.begin()返回迭代器，这个迭代器指向容器中第一个数据
-	//v.end()返回迭代器，这个迭代器指向容器元素的最后一个元素的下一个位置
-	//vector&lt;int&gt;::iterator 拿到vector&lt;int&gt;这种容器的迭代器类型
-
-	vector&lt;int&gt;::iterator pBegin = v.begin();
-	vector&lt;int&gt;::iterator pEnd = v.end();
-
-	//第一种遍历方式：
-	while (pBegin != pEnd) {
-		cout &lt;&lt; *pBegin &lt;&lt; endl;
-		pBegin++;
-	}
-
-	
-	//第二种遍历方式：
-	for (vector&lt;int&gt;::iterator it = v.begin(); it != v.end(); it++) {
-		cout &lt;&lt; *it &lt;&lt; endl;
-	}
-	cout &lt;&lt; endl;
-
-	//第三种遍历方式：
-	//使用STL提供标准遍历算法  头文件 algorithm
-	for_each(v.begin(), v.end(), MyPrint);
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h4 id="2-5-2-Vector存放自定义数据类型"><a href="#2-5-2-Vector存放自定义数据类型" class="headerlink" title="2.5.2 Vector存放自定义数据类型"></a>2.5.2 Vector存放自定义数据类型</h4><p>学习目标：vector中存放自定义数据类型，并打印输出</p>
-<p><strong>示例：</strong></p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;vector&gt;
-#include &lt;string&gt;
-
-//自定义数据类型
-class Person {
+                <h1 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h1><p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p>
+<h1 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
 public:
-	Person(string name, int age) {
-		mName = name;
-		mAge = age;
-	}
-public:
-	string mName;
-	int mAge;
-};
-//存放对象
-void test01() {
+    vector&lt;int&gt; reversePrint(ListNode* head) 
+    {
+        stack&lt;int&gt; st;
+        vector&lt;int&gt; ve;
+        while(head != NULL)
+        {
+            st.push(head-&gt;val);
+            head = head-&gt;next;
+        }
+        while(!st.empty())
+        {
+            ve.push_back(st.top());
+            st.pop();
+        }
+        return ve;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-	vector&lt;Person&gt; v;
+<h1 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span>
+<span class="token comment"># class ListNode(object):</span>
+<span class="token comment">#     def __init__(self, x):</span>
+<span class="token comment">#         self.val = x</span>
+<span class="token comment">#         self.next = None</span>
 
-	//创建数据
-	Person p1("aaa", 10);
-	Person p2("bbb", 20);
-	Person p3("ccc", 30);
-	Person p4("ddd", 40);
-	Person p5("eee", 50);
-
-	v.push_back(p1);
-	v.push_back(p2);
-	v.push_back(p3);
-	v.push_back(p4);
-	v.push_back(p5);
-
-	for (vector&lt;Person&gt;::iterator it = v.begin(); it != v.end(); it++) {
-		cout &lt;&lt; "Name:" &lt;&lt; (*it).mName &lt;&lt; " Age:" &lt;&lt; (*it).mAge &lt;&lt; endl;
-
-	}
-}
-
-
-//放对象指针
-void test02() {
-
-	vector&lt;Person*&gt; v;
-
-	//创建数据
-	Person p1("aaa", 10);
-	Person p2("bbb", 20);
-	Person p3("ccc", 30);
-	Person p4("ddd", 40);
-	Person p5("eee", 50);
-
-	v.push_back(&amp;p1);
-	v.push_back(&amp;p2);
-	v.push_back(&amp;p3);
-	v.push_back(&amp;p4);
-	v.push_back(&amp;p5);
-
-	for (vector&lt;Person*&gt;::iterator it = v.begin(); it != v.end(); it++) {
-		Person * p = (*it);
-		cout &lt;&lt; "Name:" &lt;&lt; p-&gt;mName &lt;&lt; " Age:" &lt;&lt; (*it)-&gt;mAge &lt;&lt; endl;
-	}
-}
-
-
-int main() {
-
-	test01();
-    
-	test02();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h4 id="2-5-3-Vector容器嵌套容器"><a href="#2-5-3-Vector容器嵌套容器" class="headerlink" title="2.5.3 Vector容器嵌套容器"></a>2.5.3 Vector容器嵌套容器</h4><p>学习目标：容器中嵌套容器，我们将所有数据进行遍历输出</p>
-<p><strong>示例：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;vector&gt;
-
-//容器嵌套容器
-void test01() {
-
-	vector&lt; vector&lt;int&gt; &gt;  v;
-
-	vector&lt;int&gt; v1;
-	vector&lt;int&gt; v2;
-	vector&lt;int&gt; v3;
-	vector&lt;int&gt; v4;
-
-	for (int i = 0; i &lt; 4; i++) {
-		v1.push_back(i + 1);
-		v2.push_back(i + 2);
-		v3.push_back(i + 3);
-		v4.push_back(i + 4);
-	}
-
-	//将容器元素插入到vector v中
-	v.push_back(v1);
-	v.push_back(v2);
-	v.push_back(v3);
-	v.push_back(v4);
-
-
-	for (vector&lt;vector&lt;int&gt;&gt;::iterator it = v.begin(); it != v.end(); it++) {
-
-		for (vector&lt;int&gt;::iterator vit = (*it).begin(); vit != (*it).end(); vit++) {
-			cout &lt;&lt; *vit &lt;&lt; " ";
-		}
-		cout &lt;&lt; endl;
-	}
-
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">reversePrint</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        :type head: ListNode
+        :rtype: List[int]
+        """</span>
+        li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            li<span class="token punctuation">.</span>append<span class="token punctuation">(</span>head<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+            head <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>
+        li2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            li2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>li<span class="token punctuation">[</span><span class="token operator">-</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token comment"># return li[::-1]</span>
+        <span class="token keyword">return</span> li2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -740,7 +530,7 @@ int main() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://weishida01.github.io/2023/03/03/c-ti-gao-bian-cheng/2-stl-chu-shi/">https://weishida01.github.io/2023/03/03/c-ti-gao-bian-cheng/2-stl-chu-shi/</a>
+                    <a href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/">https://weishida01.github.io/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -782,8 +572,8 @@ int main() {
                                     <span class="chip bg-color">C++</span>
                                 </a>
                             
-                                <a href="/tags/C-STL%E5%88%9D%E8%AF%86/">
-                                    <span class="chip bg-color">C++ STL初识</span>
+                                <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">C++ 算法题</span>
                                 </a>
                             
                         </div>
@@ -1129,30 +919,30 @@ int main() {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/03/03/c-ti-gao-bian-cheng/3-stl-chang-yong-rong-qi/">
+                <a href="/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/">
                     <div class="card-image">
                         
-                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="3-STL- 常用容器">
+                        <img src="/medias/C++/%E5%89%91%E6%8C%87offer.png" class="responsive-img" alt="4-反转链表">
                         
-                        <span class="card-title">3-STL- 常用容器</span>
+                        <span class="card-title">4-反转链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ STL-常用容器
+                            输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-05
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    C++提高编程
+                            <a href="/categories/%E5%89%91%E6%8C%87offer/" class="post-category">
+                                    剑指offer
                                 </a>
                             
                             
@@ -1166,8 +956,8 @@ int main() {
                         <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="/tags/C-STL-%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8/">
-                        <span class="chip bg-color">C++ STL-常用容器</span>
+                    <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">C++ 算法题</span>
                     </a>
                     
                 </div>
@@ -1181,30 +971,30 @@ int main() {
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/03/c-ti-gao-bian-cheng/1-mo-ban/">
+                <a href="/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/">
                     <div class="card-image">
                         
-                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="1-模版">
+                        <img src="/medias/C++/%E5%89%91%E6%8C%87offer.png" class="responsive-img" alt="2-栈最小min函数">
                         
-                        <span class="card-title">1-模版</span>
+                        <span class="card-title">2-栈最小min函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 模版
+                            栈的数据结构，栈的最小元素的 min 函数
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    C++提高编程
+                            <a href="/categories/%E5%89%91%E6%8C%87offer/" class="post-category">
+                                    剑指offer
                                 </a>
                             
                             
@@ -1218,8 +1008,8 @@ int main() {
                         <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="/tags/C-%E6%A8%A1%E7%89%88/">
-                        <span class="chip bg-color">C++ 模版</span>
+                    <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">C++ 算法题</span>
                     </a>
                     
                 </div>
