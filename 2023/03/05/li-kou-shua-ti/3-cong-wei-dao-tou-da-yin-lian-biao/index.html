@@ -415,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2023-03-05
+                    2023-03-06
                 </div>
                 
 
@@ -452,36 +452,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h1><p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p>
-<h1 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/**
+                <h3 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h3><p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p>
+<h3 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
  *     ListNode *next;
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
- */
-class Solution {
-public:
-    vector&lt;int&gt; reversePrint(ListNode* head) 
-    {
-        stack&lt;int&gt; st;
-        vector&lt;int&gt; ve;
-        while(head != NULL)
-        {
-            st.push(head-&gt;val);
-            head = head-&gt;next;
-        }
-        while(!st.empty())
-        {
-            ve.push_back(st.top());
-            st.pop();
-        }
-        return ve;
-    }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ */</span>
+class Solution <span class="token punctuation">{</span>
+public<span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">reversePrint</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        stack<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> st<span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> ve<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>head <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            st<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>head<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            head <span class="token operator">=</span> head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ve<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            st<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ve<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span>
+<h3 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span>
 <span class="token comment"># class ListNode(object):</span>
 <span class="token comment">#     def __init__(self, x):</span>
 <span class="token comment">#         self.val = x</span>
@@ -1153,7 +1153,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">78.9k</span>
+                        class="white-color">79.2k</span>
             
             
             

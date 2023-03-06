@@ -6,7 +6,7 @@
   <link href="https://weishida01.github.io/atom.xml" rel="self"/>
   
   <link href="https://weishida01.github.io/"/>
-  <updated>2023-03-05T12:26:31.749Z</updated>
+  <updated>2023-03-06T03:18:00.447Z</updated>
   <id>https://weishida01.github.io/</id>
   
   <author>
@@ -17,18 +17,73 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>7-左旋字符串</title>
+    <link href="https://weishida01.github.io/2023/03/06/li-kou-shua-ti/7-zuo-xuan-zi-fu-chuan/"/>
+    <id>https://weishida01.github.io/2023/03/06/li-kou-shua-ti/7-zuo-xuan-zi-fu-chuan/</id>
+    <published>2023-03-06T03:16:27.000Z</published>
+    <updated>2023-03-06T03:18:00.447Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6-字符串替换空格</title>
+    <link href="https://weishida01.github.io/2023/03/06/li-kou-shua-ti/6-zi-fu-chuan-ti-huan-kong-ge/"/>
+    <id>https://weishida01.github.io/2023/03/06/li-kou-shua-ti/6-zi-fu-chuan-ti-huan-kong-ge/</id>
+    <published>2023-03-06T03:02:58.000Z</published>
+    <updated>2023-03-06T03:15:32.046Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1. 题目&quot;&gt;&lt;/a&gt;1. 题目&lt;/h3&gt;&lt;p&gt;请实现一个函数，把字符串 &lt;code&gt;s&lt;/code&gt; 中的每个空格替换成”%20”。&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>5-复杂链表的赋值</title>
     <link href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/"/>
     <id>https://weishida01.github.io/2023/03/05/li-kou-shua-ti/5-fu-za-lian-biao-de-fu-zhi/</id>
     <published>2023-03-05T12:24:15.000Z</published>
-    <updated>2023-03-05T12:26:31.749Z</updated>
+    <updated>2023-03-06T03:15:28.109Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h1&gt;&lt;p&gt;请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next</summary>
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h3&gt;&lt;p&gt;请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next</summary>
         
       
     
@@ -48,15 +103,15 @@
     <link href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/"/>
     <id>https://weishida01.github.io/2023/03/05/li-kou-shua-ti/4-fan-zhuan-lian-biao/</id>
     <published>2023-03-05T12:21:53.000Z</published>
-    <updated>2023-03-05T12:26:30.467Z</updated>
+    <updated>2023-03-06T03:15:14.990Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h1&gt;&lt;p&gt;定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点&lt;/p&gt;
-&lt;h1 id=&quot;2-C&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h3&gt;&lt;p&gt;定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点&lt;/p&gt;
+&lt;h3 id=&quot;2-C&quot;&gt;&lt;a</summary>
         
       
     
@@ -76,15 +131,15 @@
     <link href="https://weishida01.github.io/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/"/>
     <id>https://weishida01.github.io/2023/03/05/li-kou-shua-ti/3-cong-wei-dao-tou-da-yin-lian-biao/</id>
     <published>2023-03-05T12:19:29.000Z</published>
-    <updated>2023-03-05T12:26:42.202Z</updated>
+    <updated>2023-03-06T03:15:05.675Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h1&gt;&lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
-&lt;h1 id=&quot;2-C&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h3&gt;&lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
+&lt;h3 id=&quot;2-C&quot;&gt;&lt;a</summary>
         
       
     
@@ -104,14 +159,14 @@
     <link href="https://weishida01.github.io/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/"/>
     <id>https://weishida01.github.io/2023/03/04/li-kou-shua-ti/2-zhan-zui-xiao-min-han-shu/</id>
     <published>2023-03-04T12:29:22.000Z</published>
-    <updated>2023-03-04T12:37:15.775Z</updated>
+    <updated>2023-03-06T03:14:52.428Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是</summary>
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h3&gt;&lt;p&gt;定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop</summary>
         
       
     
@@ -131,14 +186,14 @@
     <link href="https://weishida01.github.io/2023/03/04/li-kou-shua-ti/1-liang-zhan-shi-xian-dui-lie/"/>
     <id>https://weishida01.github.io/2023/03/04/li-kou-shua-ti/1-liang-zhan-shi-xian-dui-lie/</id>
     <published>2023-03-04T12:21:18.000Z</published>
-    <updated>2023-03-04T12:33:07.924Z</updated>
+    <updated>2023-03-06T03:14:43.823Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;用两个栈实现一个队列。队列的声明如下，请实现它的两个函数 appendTail 和 deleteHead</summary>
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1.题目&quot;&gt;&lt;/a&gt;1.题目&lt;/h3&gt;&lt;p&gt;用两个栈实现一个队列。队列的声明如下，请实现它的两个函数 appendTail 和 deleteHead</summary>
         
       
     
@@ -511,61 +566,6 @@
     <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
     
     <category term="C++ 引用" scheme="https://weishida01.github.io/tags/C-%E5%BC%95%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1-内存分区模型</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-he-xin-bian-cheng/1-nei-cun-fen-qu-mo-xing/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-he-xin-bian-cheng/1-nei-cun-fen-qu-mo-xing/</id>
-    <published>2023-03-03T04:25:44.000Z</published>
-    <updated>2023-03-03T04:27:50.749Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本阶段主要针对C++==面向对象==编程技术做详细讲解，探讨C++中的核心和精髓。&lt;/p&gt;
-&lt;h2 id=&quot;1-内存分区模型&quot;&gt;&lt;a href=&quot;#1-内存分区模型&quot; class=&quot;headerlink&quot; title=&quot;1 内存分区模型&quot;&gt;&lt;/a&gt;1</summary>
-        
-      
-    
-    
-    
-    <category term="C++核心编程" scheme="https://weishida01.github.io/categories/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 内存分区模型" scheme="https://weishida01.github.io/tags/C-%E5%86%85%E5%AD%98%E5%88%86%E5%8C%BA%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>8-结构体</title>
-    <link href="https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/8-jie-gou-ti/"/>
-    <id>https://weishida01.github.io/2023/03/03/c-ji-chu-ru-men/8-jie-gou-ti/</id>
-    <published>2023-03-03T04:22:04.000Z</published>
-    <updated>2023-03-03T04:23:04.352Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;8-1-结构体基本概念&quot;&gt;&lt;a href=&quot;#8-1-结构体基本概念&quot; class=&quot;headerlink&quot; title=&quot;8.1 结构体基本概念&quot;&gt;&lt;/a&gt;8.1</summary>
-        
-      
-    
-    
-    
-    <category term="C++基础入门" scheme="https://weishida01.github.io/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 结构体" scheme="https://weishida01.github.io/tags/C-%E7%BB%93%E6%9E%84%E4%BD%93/"/>
     
   </entry>
   

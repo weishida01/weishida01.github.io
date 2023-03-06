@@ -415,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2023-03-05
+                    2023-03-06
                 </div>
                 
 
@@ -452,37 +452,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h1><p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点</p>
-<h1 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/**
+                <h3 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h3><p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点</p>
+<h3 id="2-C"><a href="#2-C" class="headerlink" title="2. C++"></a>2. C++</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
  *     ListNode *next;
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
- */
-class Solution {
-public:
-    ListNode* reverseList(ListNode* head) 
-    {
-        if (head == NULL || head-&gt;next == NULL)
-        {
-            return head;
-        }
-        ListNode* pre = NULL;
-        ListNode* nex = NULL;
-        while(head != NULL)
-        {
-            nex = head-&gt;next;
-            head-&gt;next = pre; 
-            pre = head;
-            head = nex;
-        }
-        return pre;
-    }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ */</span>
+class Solution <span class="token punctuation">{</span>
+public<span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token constant">NULL</span> <span class="token operator">||</span> head<span class="token operator">-&gt;</span>next <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        ListNode<span class="token operator">*</span> pre <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> nex <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>head <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            nex <span class="token operator">=</span> head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            head<span class="token operator">-&gt;</span>next <span class="token operator">=</span> pre<span class="token punctuation">;</span> 
+            pre <span class="token operator">=</span> head<span class="token punctuation">;</span>
+            head <span class="token operator">=</span> nex<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> pre<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span>
+<h3 id="3-python"><a href="#3-python" class="headerlink" title="3. python"></a>3. python</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span>
 <span class="token comment"># class ListNode(object):</span>
 <span class="token comment">#     def __init__(self, x):</span>
 <span class="token comment">#         self.val = x</span>
@@ -1154,7 +1154,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">78.9k</span>
+                        class="white-color">79.2k</span>
             
             
             
