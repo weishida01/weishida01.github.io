@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="5-文件操作, WSD">
-    <meta name="description" content="C++ 文件操作">
+    <meta name="keywords" content="9-排序数组中查找数字, WSD">
+    <meta name="description" content="排序数组中查找数字">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>5-文件操作 | WSD</title>
+    <title>9-排序数组中查找数字 | WSD</title>
     <link rel="icon" type="image/png" href="/wsd.png">
     
 
@@ -350,12 +350,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%B0%81%E9%9D%A2.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/C++/%E5%89%91%E6%8C%87offer.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">5-文件操作</h1>
+                    <h1 class="description center-align post-title">9-排序数组中查找数字</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                                 <span class="chip bg-color">C++</span>
                             </a>
                         
-                            <a href="/tags/C-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">C++ 文件操作</span>
+                            <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">C++ 算法题</span>
                             </a>
                         
                     </div>
@@ -395,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="post-category">
-                                C++核心编程
+                            <a href="/categories/%E5%89%91%E6%8C%87offer/" class="post-category">
+                                剑指offer
                             </a>
                         
                     </div>
@@ -408,28 +408,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-03-03
+                    2023-03-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2023-03-03
+                    2023-03-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.1k
+                    116
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    4 Min
+                    1 Min
                 </div>
                 
 
@@ -452,276 +452,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>程序运行时产生的数据都属于临时数据，程序一旦运行结束都会被释放</p>
-<p>通过<strong>文件可以将数据持久化</strong></p>
-<p>C++中对文件操作需要包含头文件 ==&lt; fstream &gt;==</p>
-<p>文件类型分为两种：</p>
-<ol>
-<li><strong>文本文件</strong>     -  文件以文本的<strong>ASCII码</strong>形式存储在计算机中</li>
-<li><strong>二进制文件</strong> -  文件以文本的<strong>二进制</strong>形式存储在计算机中，用户一般不能直接读懂它们</li>
-</ol>
-<p>操作文件的三大类:</p>
-<ol>
-<li>ofstream：写操作</li>
-<li>ifstream： 读操作</li>
-<li>fstream ： 读写操作</li>
-</ol>
-<h3 id="5-1文本文件"><a href="#5-1文本文件" class="headerlink" title="5.1文本文件"></a>5.1文本文件</h3><h4 id="5-1-1写文件"><a href="#5-1-1写文件" class="headerlink" title="5.1.1写文件"></a>5.1.1写文件</h4><p>   写文件步骤如下：</p>
-<ol>
-<li><p>包含头文件   </p>
-<p>#include &lt;fstream&gt;</p>
-</li>
-<li><p>创建流对象  </p>
-<p>ofstream ofs;</p>
-</li>
-<li><p>打开文件</p>
-<p>ofs.open(“文件路径”,打开方式);</p>
-</li>
-<li><p>写数据</p>
-<p>ofs &lt;&lt; “写入的数据”;</p>
-</li>
-<li><p>关闭文件</p>
-<p>ofs.close();</p>
-</li>
-</ol>
-<p>文件打开方式：</p>
-<table>
-<thead>
-<tr>
-<th>打开方式</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ios::in</td>
-<td>为读文件而打开文件</td>
-</tr>
-<tr>
-<td>ios::out</td>
-<td>为写文件而打开文件</td>
-</tr>
-<tr>
-<td>ios::ate</td>
-<td>初始位置：文件尾</td>
-</tr>
-<tr>
-<td>ios::app</td>
-<td>追加方式写文件</td>
-</tr>
-<tr>
-<td>ios::trunc</td>
-<td>如果文件存在先删除，再创建</td>
-</tr>
-<tr>
-<td>ios::binary</td>
-<td>二进制方式</td>
-</tr>
-</tbody></table>
-<p><strong>注意：</strong> 文件打开方式可以配合使用，利用|操作符</p>
-<p><strong>例如：</strong>用二进制方式写文件 <code>ios::binary |  ios:: out</code></p>
-<p><strong>示例：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;fstream&gt;
+                <h3 id="1-在排序数组中查找数字-I"><a href="#1-在排序数组中查找数字-I" class="headerlink" title="1. 在排序数组中查找数字 I"></a>1. 在排序数组中查找数字 I</h3><p>在排序数组中查找数字 I</p>
+<p>统计一个数字在排序数组中出现的次数。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">输入<span class="token punctuation">:</span> nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target <span class="token operator">=</span> <span class="token number">8</span>
+输出<span class="token punctuation">:</span> <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-void test01()
-{
-	ofstream ofs;
-	ofs.open("test.txt", ios::out);
+<h3 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        length <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        l <span class="token operator">=</span> <span class="token number">0</span>
+        r <span class="token operator">=</span> length <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            mid <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">:</span>
+                l <span class="token operator">=</span> mid <span class="token operator">+</span><span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                r <span class="token operator">=</span> mid
+        i <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>l<span class="token operator">+</span>i<span class="token punctuation">)</span> <span class="token operator">&lt;</span> length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>l <span class="token operator">+</span> i<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">:</span>
+                i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+        <span class="token keyword">return</span> i<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-	ofs &lt;&lt; "姓名：张三" &lt;&lt; endl;
-	ofs &lt;&lt; "性别：男" &lt;&lt; endl;
-	ofs &lt;&lt; "年龄：18" &lt;&lt; endl;
-
-	ofs.close();
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>总结：</p>
-<ul>
-<li>文件操作必须包含头文件 fstream</li>
-<li>读文件可以利用 ofstream  ，或者fstream类</li>
-<li>打开文件时候需要指定操作文件的路径，以及打开方式</li>
-<li>利用&lt;&lt;可以向文件中写数据</li>
-<li>操作完毕，要关闭文件</li>
-</ul>
-<h4 id="5-1-2读文件"><a href="#5-1-2读文件" class="headerlink" title="5.1.2读文件"></a>5.1.2读文件</h4><p>读文件与写文件步骤相似，但是读取方式相对于比较多</p>
-<p>读文件步骤如下：</p>
-<ol>
-<li><p>包含头文件   </p>
-<p>#include &lt;fstream&gt;</p>
-</li>
-<li><p>创建流对象  </p>
-<p>ifstream ifs;</p>
-</li>
-<li><p>打开文件并判断文件是否打开成功</p>
-<p>ifs.open(“文件路径”,打开方式);</p>
-</li>
-<li><p>读数据</p>
-<p>四种方式读取</p>
-</li>
-<li><p>关闭文件</p>
-<p>ifs.close();</p>
-</li>
-</ol>
-<p><strong>示例：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;fstream&gt;
-#include &lt;string&gt;
-void test01()
-{
-	ifstream ifs;
-	ifs.open("test.txt", ios::in);
-
-	if (!ifs.is_open())
-	{
-		cout &lt;&lt; "文件打开失败" &lt;&lt; endl;
-		return;
-	}
-
-	//第一种方式
-	//char buf[1024] = { 0 };
-	//while (ifs &gt;&gt; buf)
-	//{
-	//	cout &lt;&lt; buf &lt;&lt; endl;
-	//}
-
-	//第二种
-	//char buf[1024] = { 0 };
-	//while (ifs.getline(buf,sizeof(buf)))
-	//{
-	//	cout &lt;&lt; buf &lt;&lt; endl;
-	//}
-
-	//第三种
-	//string buf;
-	//while (getline(ifs, buf))
-	//{
-	//	cout &lt;&lt; buf &lt;&lt; endl;
-	//}
-
-	char c;
-	while ((c = ifs.get()) != EOF)
-	{
-		cout &lt;&lt; c;
-	}
-
-	ifs.close();
-
-
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>总结：</p>
-<ul>
-<li>读文件可以利用 ifstream  ，或者fstream类</li>
-<li>利用is_open函数可以判断文件是否打开成功</li>
-<li>close 关闭文件</li>
-</ul>
-<h3 id="5-2-二进制文件"><a href="#5-2-二进制文件" class="headerlink" title="5.2 二进制文件"></a>5.2 二进制文件</h3><p>以二进制的方式对文件进行读写操作</p>
-<p>打开方式要指定为 ==ios::binary==</p>
-<h4 id="5-2-1-写文件"><a href="#5-2-1-写文件" class="headerlink" title="5.2.1 写文件"></a>5.2.1 写文件</h4><p>二进制方式写文件主要利用流对象调用成员函数write</p>
-<p>函数原型 ：<code>ostream&amp; write(const char * buffer,int len);</code></p>
-<p>参数解释：字符指针buffer指向内存中一段存储空间。len是读写的字节数</p>
-<p><strong>示例：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;fstream&gt;
-#include &lt;string&gt;
-
-class Person
-{
-public:
-	char m_Name[64];
-	int m_Age;
-};
-
-//二进制文件  写文件
-void test01()
-{
-	//1、包含头文件
-
-	//2、创建输出流对象
-	ofstream ofs("person.txt", ios::out | ios::binary);
-	
-	//3、打开文件
-	//ofs.open("person.txt", ios::out | ios::binary);
-
-	Person p = {"张三"  , 18};
-
-	//4、写文件
-	ofs.write((const char *)&amp;p, sizeof(p));
-
-	//5、关闭文件
-	ofs.close();
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>总结：</p>
-<ul>
-<li>文件输出流对象 可以通过write函数，以二进制方式写数据</li>
-</ul>
-<h4 id="5-2-2-读文件"><a href="#5-2-2-读文件" class="headerlink" title="5.2.2 读文件"></a>5.2.2 读文件</h4><p>二进制方式读文件主要利用流对象调用成员函数read</p>
-<p>函数原型：<code>istream&amp; read(char *buffer,int len);</code></p>
-<p>参数解释：字符指针buffer指向内存中一段存储空间。len是读写的字节数</p>
-<p>示例：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;fstream&gt;
-#include &lt;string&gt;
-
-class Person
-{
-public:
-	char m_Name[64];
-	int m_Age;
-};
-
-void test01()
-{
-	ifstream ifs("person.txt", ios::in | ios::binary);
-	if (!ifs.is_open())
-	{
-		cout &lt;&lt; "文件打开失败" &lt;&lt; endl;
-	}
-
-	Person p;
-	ifs.read((char *)&amp;p, sizeof(p));
-
-	cout &lt;&lt; "姓名： " &lt;&lt; p.m_Name &lt;&lt; " 年龄： " &lt;&lt; p.m_Age &lt;&lt; endl;
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<ul>
-<li>文件输入流对象 可以通过read函数，以二进制方式读数据</li>
-</ul>
 
                 
             </div>
@@ -748,7 +502,7 @@ int main() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://weishida01.github.io/2023/03/03/c-he-xin-bian-cheng/5-wen-jian-cao-zuo/">https://weishida01.github.io/2023/03/03/c-he-xin-bian-cheng/5-wen-jian-cao-zuo/</a>
+                    <a href="https://weishida01.github.io/2023/03/09/li-kou-shua-ti/9-pai-xu-shu-zu-zhong-cha-zhao-shu-zi/">https://weishida01.github.io/2023/03/09/li-kou-shua-ti/9-pai-xu-shu-zu-zhong-cha-zhao-shu-zi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -790,8 +544,8 @@ int main() {
                                     <span class="chip bg-color">C++</span>
                                 </a>
                             
-                                <a href="/tags/C-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">C++ 文件操作</span>
+                                <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">C++ 算法题</span>
                                 </a>
                             
                         </div>
@@ -1137,30 +891,30 @@ int main() {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/03/03/c-ti-gao-bian-cheng/1-mo-ban/">
+                <a href="/2023/03/09/li-kou-shua-ti/10-0-n-zhong-que-shi-de-shu-zi/">
                     <div class="card-image">
                         
-                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="1-模版">
+                        <img src="/medias/C++/%E5%89%91%E6%8C%87offer.png" class="responsive-img" alt="10-0-n中缺失的数字">
                         
-                        <span class="card-title">1-模版</span>
+                        <span class="card-title">10-0-n中缺失的数字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 模版
+                            0-n中缺失的数字
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-09
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    C++提高编程
+                            <a href="/categories/%E5%89%91%E6%8C%87offer/" class="post-category">
+                                    剑指offer
                                 </a>
                             
                             
@@ -1174,8 +928,8 @@ int main() {
                         <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="/tags/C-%E6%A8%A1%E7%89%88/">
-                        <span class="chip bg-color">C++ 模版</span>
+                    <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">C++ 算法题</span>
                     </a>
                     
                 </div>
@@ -1189,30 +943,30 @@ int main() {
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/03/c-he-xin-bian-cheng/4-lei-he-dui-xiang/">
+                <a href="/2023/03/09/li-kou-shua-ti/8-shu-zu-zhong-chong-fu-shu-zi/">
                     <div class="card-image">
                         
-                        <img src="/medias/C++/%E5%B0%81%E9%9D%A2.png" class="responsive-img" alt="4-类和对象">
+                        <img src="/medias/C++/%E5%89%91%E6%8C%87offer.png" class="responsive-img" alt="8-数组中重复数字">
                         
-                        <span class="card-title">4-类和对象</span>
+                        <span class="card-title">8-数组中重复数字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 类和对象
+                            数组中重复数字
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    C++核心编程
+                            <a href="/categories/%E5%89%91%E6%8C%87offer/" class="post-category">
+                                    剑指offer
                                 </a>
                             
                             
@@ -1226,8 +980,8 @@ int main() {
                         <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="/tags/C-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">
-                        <span class="chip bg-color">C++ 类和对象</span>
+                    <a href="/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">C++ 算法题</span>
                     </a>
                     
                 </div>

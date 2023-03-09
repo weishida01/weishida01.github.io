@@ -6,7 +6,7 @@
   <link href="https://weishida01.github.io/atom.xml" rel="self"/>
   
   <link href="https://weishida01.github.io/"/>
-  <updated>2023-03-08T12:07:37.815Z</updated>
+  <updated>2023-03-09T13:03:18.303Z</updated>
   <id>https://weishida01.github.io/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>10-0-n中缺失的数字</title>
+    <link href="https://weishida01.github.io/2023/03/09/li-kou-shua-ti/10-0-n-zhong-que-shi-de-shu-zi/"/>
+    <id>https://weishida01.github.io/2023/03/09/li-kou-shua-ti/10-0-n-zhong-que-shi-de-shu-zi/</id>
+    <published>2023-03-09T12:58:49.000Z</published>
+    <updated>2023-03-09T13:03:18.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-0-n-1中缺失的数字&quot;&gt;&lt;a href=&quot;#1-0-n-1中缺失的数字&quot; class=&quot;headerlink&quot; title=&quot;1. 0~n-1中缺失的数字&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>9-排序数组中查找数字</title>
+    <link href="https://weishida01.github.io/2023/03/09/li-kou-shua-ti/9-pai-xu-shu-zu-zhong-cha-zhao-shu-zi/"/>
+    <id>https://weishida01.github.io/2023/03/09/li-kou-shua-ti/9-pai-xu-shu-zu-zhong-cha-zhao-shu-zi/</id>
+    <published>2023-03-09T12:58:16.000Z</published>
+    <updated>2023-03-09T13:02:24.557Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-在排序数组中查找数字-I&quot;&gt;&lt;a href=&quot;#1-在排序数组中查找数字-I&quot; class=&quot;headerlink&quot; title=&quot;1. 在排序数组中查找数字 I&quot;&gt;&lt;/a&gt;1. 在排序数组中查找数字 I&lt;/h3&gt;&lt;p&gt;在排序数组中查找数字</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8-数组中重复数字</title>
+    <link href="https://weishida01.github.io/2023/03/09/li-kou-shua-ti/8-shu-zu-zhong-chong-fu-shu-zi/"/>
+    <id>https://weishida01.github.io/2023/03/09/li-kou-shua-ti/8-shu-zu-zhong-chong-fu-shu-zi/</id>
+    <published>2023-03-09T12:57:53.000Z</published>
+    <updated>2023-03-09T13:01:37.790Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1. 题目&quot;&gt;&lt;/a&gt;1. 题目&lt;/h3&gt;&lt;p&gt;找出数组中重复的数字。&lt;/p&gt;
+&lt;p&gt;在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1</summary>
+        
+      
+    
+    
+    
+    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
+    
+    
+    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
+    
+    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>2-笔试算法-python</title>
@@ -433,82 +515,6 @@
         
         
     <summary type="html">&lt;h3 id=&quot;1-集合&quot;&gt;&lt;a href=&quot;#1-集合&quot; class=&quot;headerlink&quot; title=&quot;1. 集合&quot;&gt;&lt;/a&gt;1. 集合&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3-深浅复制</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/3-shen-qian-fu-zhi/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/3-shen-qian-fu-zhi/</id>
-    <published>2023-03-06T13:04:44.000Z</published>
-    <updated>2023-03-06T15:40:16.834Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-浅复制&quot;&gt;&lt;a href=&quot;#1-浅复制&quot; class=&quot;headerlink&quot; title=&quot;1. 浅复制&quot;&gt;&lt;/a&gt;1. 浅复制&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2-序列类型</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/2-xu-lie-lei-xing/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/2-xu-lie-lei-xing/</id>
-    <published>2023-03-06T12:54:05.000Z</published>
-    <updated>2023-03-06T15:39:43.430Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-列表&quot;&gt;&lt;a href=&quot;#1-列表&quot; class=&quot;headerlink&quot; title=&quot;1. 列表&quot;&gt;&lt;/a&gt;1. 列表&lt;/h3&gt;&lt;h4 id=&quot;1-1-新建&quot;&gt;&lt;a href=&quot;#1-1-新建&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1-数值类型</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/1-shu-zhi-lei-xing/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/1-shu-zhi-lei-xing/</id>
-    <published>2023-03-06T12:37:36.000Z</published>
-    <updated>2023-03-06T15:52:12.283Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-数值类型&quot;&gt;&lt;a href=&quot;#1-数值类型&quot; class=&quot;headerlink&quot; title=&quot;1. 数值类型&quot;&gt;&lt;/a&gt;1. 数值类型&lt;/h3&gt;&lt;p&gt; int  float bool complex&lt;/p&gt;
-&lt;h3 id=&quot;2-code&quot;&gt;&lt;a</summary>
         
       
     
