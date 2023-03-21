@@ -6,7 +6,7 @@
   <link href="https://weishida01.github.io/atom.xml" rel="self"/>
   
   <link href="https://weishida01.github.io/"/>
-  <updated>2023-03-09T16:20:46.582Z</updated>
+  <updated>2023-03-21T03:51:01.523Z</updated>
   <id>https://weishida01.github.io/</id>
   
   <author>
@@ -15,6 +15,347 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>11-图片风格迁移</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/11-feng-ge-qian-yi/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/11-feng-ge-qian-yi/</id>
+    <published>2023-03-21T03:35:18.000Z</published>
+    <updated>2023-03-21T03:51:01.523Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-基本依据&quot;&gt;&lt;a href=&quot;#1-基本依据&quot; class=&quot;headerlink&quot; title=&quot;1. 基本依据&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="机器学习" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="风格迁移" scheme="https://weishida01.github.io/tags/%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10-机器学习-统计学</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/10-ji-qi-xue-xi-tong-ji-xue/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/10-ji-qi-xue-xi-tong-ji-xue/</id>
+    <published>2023-03-21T03:22:18.000Z</published>
+    <updated>2023-03-21T03:52:19.597Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-机器学习与统计学习&quot;&gt;&lt;a href=&quot;#1-机器学习与统计学习&quot; class=&quot;headerlink&quot; title=&quot;1. 机器学习与统计学习&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="统计学" scheme="https://weishida01.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+    <category term="数理统计" scheme="https://weishida01.github.io/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>9-支持向量机</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/9-zhi-chi-xiang-liang-ji/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/9-zhi-chi-xiang-liang-ji/</id>
+    <published>2023-03-21T03:18:18.000Z</published>
+    <updated>2023-03-21T03:50:34.267Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-支持向量机算法&quot;&gt;&lt;a href=&quot;#1-支持向量机算法&quot; class=&quot;headerlink&quot; title=&quot;1. 支持向量机算法&quot;&gt;&lt;/a&gt;1. 支持向量机算法&lt;/h2&gt;&lt;p&gt;支持向量机（support vector</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="支持向量机" scheme="https://weishida01.github.io/tags/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8-PySpark</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/8-pyspark/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/8-pyspark/</id>
+    <published>2023-03-21T03:14:18.000Z</published>
+    <updated>2023-03-21T03:50:03.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-初识spark&quot;&gt;&lt;a href=&quot;#1-初识spark&quot; class=&quot;headerlink&quot; title=&quot;1. 初识spark&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="spark" scheme="https://weishida01.github.io/tags/spark/"/>
+    
+    <category term="pyspark" scheme="https://weishida01.github.io/tags/pyspark/"/>
+    
+    <category term="大数据" scheme="https://weishida01.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7-从CNN到GNN看图神经网络</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/7-cong-cnn-dao-gnn-kan-tu-shen-jing-wang-luo/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/7-cong-cnn-dao-gnn-kan-tu-shen-jing-wang-luo/</id>
+    <published>2023-03-21T03:08:18.000Z</published>
+    <updated>2023-03-21T03:50:45.809Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-图这种数据结构&quot;&gt;&lt;a href=&quot;#1-图这种数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 图这种数据结构&quot;&gt;&lt;/a&gt;1. 图这种数据结构&lt;/h2&gt;&lt;h3 id=&quot;1-1-图是啥&quot;&gt;&lt;a href=&quot;#1-1-图是啥&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="卷积神经网络" scheme="https://weishida01.github.io/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="图卷积神经网络" scheme="https://weishida01.github.io/tags/%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="图神经网络" scheme="https://weishida01.github.io/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6-目标检测算法的演进</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/6-mu-biao-jian-ce-suan-fa-de-yan-jin/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/6-mu-biao-jian-ce-suan-fa-de-yan-jin/</id>
+    <published>2023-03-21T03:04:18.000Z</published>
+    <updated>2023-03-21T03:50:55.567Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文为我在公司内部做技术分享时（面向人群不全是算法工程师）的PPT，去掉了部分敏感信息。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="目标检测" scheme="https://weishida01.github.io/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+    <category term="机器学习" scheme="https://weishida01.github.io/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://weishida01.github.io/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="目标检测" scheme="https://weishida01.github.io/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+    <category term="CNN" scheme="https://weishida01.github.io/tags/CNN/"/>
+    
+    <category term="R-CNN" scheme="https://weishida01.github.io/tags/R-CNN/"/>
+    
+    <category term="SPP-Net" scheme="https://weishida01.github.io/tags/SPP-Net/"/>
+    
+    <category term="Fast-RCNN" scheme="https://weishida01.github.io/tags/Fast-RCNN/"/>
+    
+    <category term="Faster-RCNN" scheme="https://weishida01.github.io/tags/Faster-RCNN/"/>
+    
+    <category term="SSD" scheme="https://weishida01.github.io/tags/SSD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5-十大经典排序算法python实现</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/5-shi-da-jing-dian-pai-xu-suan-fa-python-shi-xian/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/5-shi-da-jing-dian-pai-xu-suan-fa-python-shi-xian/</id>
+    <published>2023-03-21T02:58:18.000Z</published>
+    <updated>2023-03-21T02:59:50.879Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-性能比较&quot;&gt;&lt;a href=&quot;#1-性能比较&quot; class=&quot;headerlink&quot; title=&quot;1. 性能比较&quot;&gt;&lt;/a&gt;1. 性能比较&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;排序算法&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
+    
+    <category term="排序算法" scheme="https://weishida01.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4-Hexo+Github搭建博客</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/4-hexo-github-da-jian-bo-ke/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/4-hexo-github-da-jian-bo-ke/</id>
+    <published>2023-03-21T02:55:18.000Z</published>
+    <updated>2023-03-21T03:00:44.586Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1. 前言&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="环境搭建" scheme="https://weishida01.github.io/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="Hexo" scheme="https://weishida01.github.io/tags/Hexo/"/>
+    
+    <category term="github" scheme="https://weishida01.github.io/tags/github/"/>
+    
+    <category term="博客搭建" scheme="https://weishida01.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3-CV2图像处理</title>
+    <link href="https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/3-cv2-tu-xiang-chu-li/"/>
+    <id>https://weishida01.github.io/2023/03/21/zhi-shi-zong-jie/3-cv2-tu-xiang-chu-li/</id>
+    <published>2023-03-21T02:41:18.000Z</published>
+    <updated>2023-03-21T03:00:38.699Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;#!/usr/bin/env</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="OpenCv" scheme="https://weishida01.github.io/tags/OpenCv/"/>
+    
+    <category term="cv2" scheme="https://weishida01.github.io/tags/cv2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2-python面试题50道</title>
+    <link href="https://weishida01.github.io/2023/03/17/zhi-shi-zong-jie/2-python-mian-shi-ti-50-dao/"/>
+    <id>https://weishida01.github.io/2023/03/17/zhi-shi-zong-jie/2-python-mian-shi-ti-50-dao/</id>
+    <published>2023-03-17T06:17:18.000Z</published>
+    <updated>2023-03-21T03:51:49.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-Python-2-和-Python-3-的差异（这里写15个）&quot;&gt;&lt;a href=&quot;#1-Python-2-和-Python-3-的差异（这里写15个）&quot; class=&quot;headerlink&quot; title=&quot;1. Python 2 和 Python 3</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="笔试算法" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
+    
+    <category term="python教程" scheme="https://weishida01.github.io/tags/python%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="面试问题" scheme="https://weishida01.github.io/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1-常用距离定义与计算</title>
+    <link href="https://weishida01.github.io/2023/03/17/zhi-shi-zong-jie/1-chang-yong-ju-chi-ding-yi-yu-ji-suan/"/>
+    <id>https://weishida01.github.io/2023/03/17/zhi-shi-zong-jie/1-chang-yong-ju-chi-ding-yi-yu-ji-suan/</id>
+    <published>2023-03-17T04:02:18.000Z</published>
+    <updated>2023-03-21T03:51:57.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-说明&quot;&gt;&lt;a href=&quot;#1-说明&quot; class=&quot;headerlink&quot; title=&quot;1. 说明&quot;&gt;&lt;/a&gt;1. 说明&lt;/h3&gt;&lt;p&gt;此处主要使用scipy中的距离计算模块，scipy.spatial.distance&lt;/p&gt;
+&lt;p&gt;源码在这里 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://weishida01.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
+    
+    <category term="距离算法" scheme="https://weishida01.github.io/tags/%E8%B7%9D%E7%A6%BB%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>7-transformer</title>
@@ -258,288 +599,6 @@
     <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
     
     <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>8-数组中重复数字</title>
-    <link href="https://weishida01.github.io/2023/03/09/li-kou-shua-ti/8-shu-zu-zhong-chong-fu-shu-zi/"/>
-    <id>https://weishida01.github.io/2023/03/09/li-kou-shua-ti/8-shu-zu-zhong-chong-fu-shu-zi/</id>
-    <published>2023-03-09T12:57:53.000Z</published>
-    <updated>2023-03-09T13:01:37.790Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-题目&quot;&gt;&lt;a href=&quot;#1-题目&quot; class=&quot;headerlink&quot; title=&quot;1. 题目&quot;&gt;&lt;/a&gt;1. 题目&lt;/h3&gt;&lt;p&gt;找出数组中重复的数字。&lt;/p&gt;
-&lt;p&gt;在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1</summary>
-        
-      
-    
-    
-    
-    <category term="剑指offer" scheme="https://weishida01.github.io/categories/%E5%89%91%E6%8C%87offer/"/>
-    
-    
-    <category term="C++" scheme="https://weishida01.github.io/tags/C/"/>
-    
-    <category term="C++ 算法题" scheme="https://weishida01.github.io/tags/C-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2-笔试算法-python</title>
-    <link href="https://weishida01.github.io/2023/03/08/bi-shi-suan-fa/2-bi-shi-suan-fa-python/"/>
-    <id>https://weishida01.github.io/2023/03/08/bi-shi-suan-fa/2-bi-shi-suan-fa-python/</id>
-    <published>2023-03-08T12:05:48.000Z</published>
-    <updated>2023-03-10T12:01:56.687Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#1-买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;1. 买卖股票的最佳时机&quot;&gt;&lt;/a&gt;1. 买卖股票的最佳时机&lt;/h3&gt;&lt;h4 id=&quot;1-1-问题&quot;&gt;&lt;a href=&quot;#1-1-问题&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="笔试算法" scheme="https://weishida01.github.io/categories/%E7%AC%94%E8%AF%95%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-    <category term="python 算法题" scheme="https://weishida01.github.io/tags/python-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1-笔试算法-python</title>
-    <link href="https://weishida01.github.io/2023/03/07/bi-shi-suan-fa/1-bi-shi-suan-fa-python/"/>
-    <id>https://weishida01.github.io/2023/03/07/bi-shi-suan-fa/1-bi-shi-suan-fa-python/</id>
-    <published>2023-03-07T14:51:11.000Z</published>
-    <updated>2023-03-07T15:04:17.600Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-字符串解码&quot;&gt;&lt;a href=&quot;#1-字符串解码&quot; class=&quot;headerlink&quot; title=&quot;1. 字符串解码&quot;&gt;&lt;/a&gt;1. 字符串解码&lt;/h3&gt;&lt;h4 id=&quot;1-1-题目&quot;&gt;&lt;a href=&quot;#1-1-题目&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="笔试算法" scheme="https://weishida01.github.io/categories/%E7%AC%94%E8%AF%95%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-    <category term="python 算法题" scheme="https://weishida01.github.io/tags/python-%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>18-python案例</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/18-python-an-li/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/18-python-an-li/</id>
-    <published>2023-03-06T15:48:08.000Z</published>
-    <updated>2023-03-06T15:49:56.023Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-登录注册&quot;&gt;&lt;a href=&quot;#1-登录注册&quot; class=&quot;headerlink&quot; title=&quot;1.登录注册&quot;&gt;&lt;/a&gt;1.登录注册&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>17-stringio与bytesio</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/17-stringio-yu-bytesio/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/17-stringio-yu-bytesio/</id>
-    <published>2023-03-06T15:36:52.000Z</published>
-    <updated>2023-03-06T15:37:40.420Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1.&quot;&gt;&lt;/a&gt;1.&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>16-变量定义规则</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/16-bian-liang-ding-yi-gui-ze/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/16-bian-liang-ding-yi-gui-ze/</id>
-    <published>2023-03-06T15:35:08.000Z</published>
-    <updated>2023-03-06T15:35:58.596Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-变量定义规则&quot;&gt;&lt;a href=&quot;#1-变量定义规则&quot; class=&quot;headerlink&quot; title=&quot;1.变量定义规则&quot;&gt;&lt;/a&gt;1.变量定义规则&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>15-正则匹配</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/15-zheng-ze-pi-pei/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/15-zheng-ze-pi-pei/</id>
-    <published>2023-03-06T15:26:19.000Z</published>
-    <updated>2023-03-06T15:32:38.750Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-元字符&quot;&gt;&lt;a href=&quot;#1-元字符&quot; class=&quot;headerlink&quot; title=&quot;1.元字符&quot;&gt;&lt;/a&gt;1.元字符&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>14-import</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/14-import/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/14-import/</id>
-    <published>2023-03-06T15:24:11.000Z</published>
-    <updated>2023-03-06T15:25:57.934Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-import-通用形式&quot;&gt;&lt;a href=&quot;#1-import-通用形式&quot; class=&quot;headerlink&quot; title=&quot;1.import 通用形式&quot;&gt;&lt;/a&gt;1.import 通用形式&lt;/h3&gt;&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>13-迭代器生成器</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/13-die-dai-qi-sheng-cheng-qi/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/13-die-dai-qi-sheng-cheng-qi/</id>
-    <published>2023-03-06T15:22:03.000Z</published>
-    <updated>2023-03-06T15:48:20.826Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-迭代器&quot;&gt;&lt;a href=&quot;#1-迭代器&quot; class=&quot;headerlink&quot; title=&quot;1.迭代器&quot;&gt;&lt;/a&gt;1.迭代器&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>12-异常</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/12-yi-chang/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/12-yi-chang/</id>
-    <published>2023-03-06T15:18:46.000Z</published>
-    <updated>2023-03-06T15:46:18.056Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-异常类型&quot;&gt;&lt;a href=&quot;#1-异常类型&quot; class=&quot;headerlink&quot; title=&quot;1.异常类型&quot;&gt;&lt;/a&gt;1.异常类型&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>11-文件os</title>
-    <link href="https://weishida01.github.io/2023/03/06/python-ji-chu/11-wen-jian-os/"/>
-    <id>https://weishida01.github.io/2023/03/06/python-ji-chu/11-wen-jian-os/</id>
-    <published>2023-03-06T15:16:12.000Z</published>
-    <updated>2023-03-06T15:45:44.162Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-文件操作&quot;&gt;&lt;a href=&quot;#1-文件操作&quot; class=&quot;headerlink&quot; title=&quot;1.文件操作&quot;&gt;&lt;/a&gt;1.文件操作&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python基础" scheme="https://weishida01.github.io/categories/python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="python" scheme="https://weishida01.github.io/tags/python/"/>
     
   </entry>
   
