@@ -1,0 +1,1821 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="14-集成学习-随即森林, WSD">
+    <meta name="description" content="集成学习-随即森林">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>14-集成学习-随即森林 | WSD</title>
+    <link rel="icon" type="image/png" href="/wsd.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WSD" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">WSD</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">WSD</div>
+        <div class="logo-desc">
+            
+            Emotion defines life, data quantifies the world, and models predict the future.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/weishida01" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/weishida01" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%81%E9%9D%A2.jpeg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">14-集成学习-随即森林</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                                <span class="chip bg-color">数据分析</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E5%8D%B3%E6%A3%AE%E6%9E%97/">
+                                <span class="chip bg-color">集成学习-随即森林</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                数据分析
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-03-22
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-03-22
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    12 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="1-集成学习概述"><a href="#1-集成学习概述" class="headerlink" title="1. 集成学习概述"></a>1. 集成学习概述</h3><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/1.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/2.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/3.png"></p>
+<h3 id="2-集成学习方式"><a href="#2-集成学习方式" class="headerlink" title="2. 集成学习方式"></a>2. 集成学习方式</h3><h4 id="2-1-集成学习种类"><a href="#2-1-集成学习种类" class="headerlink" title="2.1 集成学习种类"></a>2.1 集成学习种类</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/4.png"></p>
+<h4 id="2-2-集成学习结构图"><a href="#2-2-集成学习结构图" class="headerlink" title="2.2 集成学习结构图"></a>2.2 集成学习结构图</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/5.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/6.png"></p>
+<h4 id="2-3-集成学习思想介绍"><a href="#2-3-集成学习思想介绍" class="headerlink" title="2.3 集成学习思想介绍"></a>2.3 集成学习思想介绍</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/7.png"></p>
+<h4 id="2-4-集成学习处理方式"><a href="#2-4-集成学习处理方式" class="headerlink" title="2.4 集成学习处理方式"></a>2.4 集成学习处理方式</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/8.png"></p>
+<h4 id="2-5-Stacking"><a href="#2-5-Stacking" class="headerlink" title="2.5 Stacking"></a>2.5 Stacking</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/9.png"></p>
+<h4 id="2-6-集成模型一览"><a href="#2-6-集成模型一览" class="headerlink" title="2.6 集成模型一览"></a>2.6 集成模型一览</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/10.png"></p>
+<h3 id="3-随机森林概述"><a href="#3-随机森林概述" class="headerlink" title="3. 随机森林概述"></a>3. 随机森林概述</h3><h4 id="3-1-随机森林思想"><a href="#3-1-随机森林思想" class="headerlink" title="3.1 随机森林思想"></a>3.1 随机森林思想</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/11.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/12.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/13.png"></p>
+<h4 id="3-2-随机森林伪代码"><a href="#3-2-随机森林伪代码" class="headerlink" title="3.2 随机森林伪代码"></a>3.2 随机森林伪代码</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/14.png"></p>
+<h4 id="3-3-随机森林结合策略"><a href="#3-3-随机森林结合策略" class="headerlink" title="3.3 随机森林结合策略"></a>3.3 随机森林结合策略</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/15.png"></p>
+<h4 id="3-4-随机森林底层代码"><a href="#3-4-随机森林底层代码" class="headerlink" title="3.4 随机森林底层代码"></a>3.4 随机森林底层代码</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/16.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/17.png"></p>
+<h4 id="3-5-随机森林回归底层代码"><a href="#3-5-随机森林回归底层代码" class="headerlink" title="3.5 随机森林回归底层代码"></a>3.5 随机森林回归底层代码</h4><p>随机森林底层代码演示</p>
+<p>三个臭皮匠，顶个诸葛亮<br>随机森林使用bagging思想进行数据的处理<br>采用预剪枝的决策树作为基学习器，并且每个基学习器拟合部分数据样本<br>在强学习器中，使用所有弱学习器加和后的结果进行均值运算，得到一个最综合的结果</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">基学习器创建过程
+创建<span class="token number">20</span>个决策树，使用<span class="token number">0.9</span>的样本进行拟合，达到弱学习效果
+并使用列表将<span class="token number">20</span>个弱学习进行存储，准备后续使用<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>tree <span class="token keyword">import</span> DecisionTreeRegressor
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> mean_squared_error
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+<span class="token comment"># 读取数据集</span>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5.56</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5.7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5.91</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6.4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6.8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7.05</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8.9</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8.7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9.05</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">)</span>
+<span class="token number">0</span>     <span class="token number">1</span>
+<span class="token number">0</span>   <span class="token number">1</span>  <span class="token number">5.56</span>
+<span class="token number">1</span>   <span class="token number">2</span>  <span class="token number">5.70</span>
+<span class="token number">2</span>   <span class="token number">3</span>  <span class="token number">5.91</span>
+<span class="token number">3</span>   <span class="token number">4</span>  <span class="token number">6.40</span>
+<span class="token number">4</span>   <span class="token number">5</span>  <span class="token number">6.80</span>
+<span class="token number">5</span>   <span class="token number">6</span>  <span class="token number">7.05</span>
+<span class="token number">6</span>   <span class="token number">7</span>  <span class="token number">8.90</span>
+<span class="token number">7</span>   <span class="token number">8</span>  <span class="token number">8.70</span>
+<span class="token number">8</span>   <span class="token number">9</span>  <span class="token number">9.00</span>
+<span class="token number">9</span>  <span class="token number">10</span>  <span class="token number">9.05</span>
+
+<span class="token comment"># 基学习器创建过程</span>
+<span class="token comment"># 创建20个决策树，使用0.9的样本进行拟合，达到弱学习效果</span>
+<span class="token comment"># 并使用列表将20个弱学习进行存储，准备后续使用</span>
+M <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">#存储决策树模型(弱分类器)的列表</span>
+n_trees <span class="token operator">=</span> <span class="token number">20</span>  <span class="token comment">#创建20棵分类树（弱分类器）</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_trees<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tmp <span class="token operator">=</span> df<span class="token punctuation">.</span>sample<span class="token punctuation">(</span>frac<span class="token operator">=</span><span class="token number">0.9</span><span class="token punctuation">)</span>  <span class="token comment">#对样本进行采样，目的是建造不同的树</span>
+    X <span class="token operator">=</span> tmp<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span>  <span class="token comment">#构造采样后不同的x</span>
+    Y <span class="token operator">=</span> tmp<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>  <span class="token comment">#构造采用后不同的y</span>
+    model <span class="token operator">=</span> DecisionTreeRegressor<span class="token punctuation">(</span>max_depth<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span>Y<span class="token punctuation">)</span><span class="token comment">#创建的模型都是弱分类器</span>
+    M<span class="token punctuation">.</span>append<span class="token punctuation">(</span>model<span class="token punctuation">)</span> 
+    
+<span class="token comment"># 随机森林运行过程</span>
+<span class="token comment"># 使用全部的数据，使用每个弱分类器进行结果预测，并将每个弱分类器结果进行存储 打印每个弱分类器性能，查看弱分类器性能</span>
+X <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token comment">#获取全部数据的X</span>
+Y <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">#获取全部数据的Y</span>
+res <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>df<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#初始化全零向量，强学习器数据的初始值</span>
+<span class="token keyword">for</span> j<span class="token punctuation">,</span>i <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>M<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#遍历模型数组</span>
+    res <span class="token operator">+=</span> i<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span> <span class="token comment">#将每个模型预测值叠加到res变量</span>
+    y_ <span class="token operator">=</span> i<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token comment">#打印模型预测值</span>
+    mse <span class="token operator">=</span> mean_squared_error<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> y_<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'第%d个模型的均方误差为%.2f'</span><span class="token operator">%</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> mse<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#基学习器的均方误差</span>
+第<span class="token number">0</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">1</span>个模型的均方误差为<span class="token number">0.04</span>
+第<span class="token number">2</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">3</span>个模型的均方误差为<span class="token number">0.04</span>
+第<span class="token number">4</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">5</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">6</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">7</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">8</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">9</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">10</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">11</span>个模型的均方误差为<span class="token number">0.06</span>
+第<span class="token number">12</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">13</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">14</span>个模型的均方误差为<span class="token number">0.49</span>
+第<span class="token number">15</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">16</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">17</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">18</span>个模型的均方误差为<span class="token number">0.03</span>
+第<span class="token number">19</span>个模型的均方误差为<span class="token number">0.03</span>
+
+<span class="token comment"># 强分类器处理</span>
+<span class="token comment"># 将每次若分类器的结果除以弱分类器个数，得到最后的预测结果</span>
+y_ <span class="token operator">=</span> res<span class="token operator">/</span>n_trees <span class="token comment">#取平均输出最终对每个样本标签的预测值</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>mean_squared_error<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> y_<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#取平均输出最终对每个样本标签的预测值  0.0287846069444</span>
+
+<span class="token comment"># 获取数据的数量</span>
+plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+m <span class="token operator">=</span> df<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">,</span> Y<span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">,</span>  label<span class="token operator">=</span><span class="token string">'真实值'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">,</span> y_<span class="token punctuation">,</span> <span class="token string">'b-'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'预测值'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/18.png"></p>
+<h4 id="3-6-随机森林分类底层"><a href="#3-6-随机森林分类底层" class="headerlink" title="3.6 随机森林分类底层"></a>3.6 随机森林分类底层</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>tree <span class="token keyword">import</span> DecisionTreeClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> f1_score
+
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">)</span>
+ <span class="token number">0</span>  <span class="token number">1</span>
+<span class="token number">0</span>  <span class="token number">0</span>  <span class="token number">1</span>
+<span class="token number">1</span>  <span class="token number">1</span>  <span class="token number">1</span>
+<span class="token number">2</span>  <span class="token number">2</span>  <span class="token number">1</span>
+<span class="token number">3</span>  <span class="token number">3</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token number">4</span>  <span class="token number">4</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token number">5</span>  <span class="token number">5</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token number">6</span>  <span class="token number">6</span>  <span class="token number">1</span>
+<span class="token number">7</span>  <span class="token number">7</span>  <span class="token number">1</span>
+<span class="token number">8</span>  <span class="token number">8</span>  <span class="token number">1</span>
+<span class="token number">9</span>  <span class="token number">9</span> <span class="token operator">-</span><span class="token number">1</span>
+
+<span class="token comment"># 使用分类决策树作为弱分类器进行处理</span>
+<span class="token comment"># 弱分类器模型创建存储过程</span>
+<span class="token comment"># 使用分类决策树创建模型，每个模型深度为2 每个决策树只分析80%的数据</span>
+M <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">#存储决策树模型的数组</span>
+n_trees <span class="token operator">=</span> <span class="token number">10</span>  <span class="token comment">#设置树的颗数</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_trees<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tmp <span class="token operator">=</span> df<span class="token punctuation">.</span>sample<span class="token punctuation">(</span>frac<span class="token operator">=</span><span class="token number">0.8</span><span class="token punctuation">)</span>  <span class="token comment">#对样本进行采样，目的是建造不同的树</span>
+    X <span class="token operator">=</span> tmp<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment">#构造X</span>
+    Y <span class="token operator">=</span> tmp<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment">#构造Y</span>
+    model <span class="token operator">=</span> DecisionTreeClassifier<span class="token punctuation">(</span>max_depth<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+    M<span class="token punctuation">.</span>append<span class="token punctuation">(</span>model<span class="token punctuation">)</span>  <span class="token comment">#将决策树模型加入数组</span>
+    
+<span class="token comment"># 强分类计算过程</span>
+<span class="token comment"># 计算每一个弱分类器的分类结果，将结果进行整合，通过投票计算最终结果</span>
+X <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">#获取全部数据的X</span>
+Y <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token comment">#获取全部数据的Y</span>
+res <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>df<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#初始化全零向量</span>
+<span class="token keyword">for</span> j<span class="token punctuation">,</span> i <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>M<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#遍历模型数组</span>
+    y_ <span class="token operator">=</span> i<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+    res <span class="token operator">+=</span> y_ <span class="token comment">#将每个模型预测值叠加到res变量   正得多大于零，负得多小于零</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> f1_score<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> y_<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---最终结果---'</span><span class="token punctuation">)</span>
+y_ <span class="token operator">=</span> np<span class="token punctuation">.</span>sign<span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token comment">#取平均输出最终对每个样本标签的预测值   大于零为1，小于零为-1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f1_score<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> y_<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token number">0</span> <span class="token number">0.833333333333</span>
+<span class="token number">1</span> <span class="token number">0.909090909091</span>
+<span class="token number">2</span> <span class="token number">0.666666666667</span>
+<span class="token number">3</span> <span class="token number">0.8</span>
+<span class="token number">4</span> <span class="token number">0.923076923077</span>
+<span class="token number">5</span> <span class="token number">0.666666666667</span>
+<span class="token number">6</span> <span class="token number">0.666666666667</span>
+<span class="token number">7</span> <span class="token number">0.923076923077</span>
+<span class="token number">8</span> <span class="token number">0.923076923077</span>
+<span class="token number">9</span> <span class="token number">0.666666666667</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>最终结果<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token number">1.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-随机森林特征选择"><a href="#4-随机森林特征选择" class="headerlink" title="4. 随机森林特征选择"></a>4. 随机森林特征选择</h3><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/19.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/20.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/21.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/22.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/23.png"></p>
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/24.png"></p>
+<h3 id="5-随机森林代码实战"><a href="#5-随机森林代码实战" class="headerlink" title="5. 随机森林代码实战"></a>5. 随机森林代码实战</h3><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/25.png"></p>
+<h4 id="5-1-随机森林回归"><a href="#5-1-随机森林回归" class="headerlink" title="5.1 随机森林回归"></a>5.1 随机森林回归</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/26.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> mean_squared_error<span class="token punctuation">,</span> r2_score
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> GridSearchCV
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>ensemble <span class="token keyword">import</span> RandomForestRegressor
+<span class="token keyword">import</span> warnings
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">'ignore'</span><span class="token punctuation">)</span>
+
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5.56</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5.7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5.91</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6.4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6.8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7.05</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8.9</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8.7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9.05</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+Y <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+RF <span class="token operator">=</span> RandomForestRegressor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+pg <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'n_estimators'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'max_depth'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+      <span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+model <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>RF<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>pg<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token comment">#cv  cross validation</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'最优参数{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>best_params_<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'均方误差:{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>mean_squared_error<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'r2数值:{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+最优参数<span class="token punctuation">{</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'n_estimators'</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">}</span>
+均方误差<span class="token punctuation">:</span><span class="token number">0.03242686956819326</span>
+r2数值<span class="token punctuation">:</span><span class="token number">0.9830352028317187</span>
+    
+y_ <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+m <span class="token operator">=</span> df<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">,</span> Y<span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'实际样本'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>y_<span class="token punctuation">,</span> <span class="token string">'b-'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'预测效果'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/29.png"></p>
+<h4 id="5-2-随机森林回归-广告"><a href="#5-2-随机森林回归-广告" class="headerlink" title="5.2 随机森林回归-广告"></a>5.2 随机森林回归-广告</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>tree <span class="token keyword">import</span> DecisionTreeRegressor
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>ensemble <span class="token keyword">import</span> RandomForestRegressor
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> mean_squared_error<span class="token punctuation">,</span> r2_score
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split<span class="token punctuation">,</span> GridSearchCV
+<span class="token keyword">import</span> warnings
+warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">'ignore'</span><span class="token punctuation">)</span>
+
+data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">r'../datas/Advertising.csv'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	TV  Radio  Newspaper  Sales
+<span class="token number">1</span>  <span class="token number">230.1</span>   <span class="token number">37.8</span>       <span class="token number">69.2</span>   <span class="token number">22.1</span>
+<span class="token number">2</span>   <span class="token number">44.5</span>   <span class="token number">39.3</span>       <span class="token number">45.1</span>   <span class="token number">10.4</span>
+<span class="token number">3</span>   <span class="token number">17.2</span>   <span class="token number">45.9</span>       <span class="token number">69.3</span>    <span class="token number">9.3</span>
+<span class="token number">4</span>  <span class="token number">151.5</span>   <span class="token number">41.3</span>       <span class="token number">58.5</span>   <span class="token number">18.5</span>
+<span class="token number">5</span>  <span class="token number">180.8</span>   <span class="token number">10.8</span>       <span class="token number">58.4</span>   <span class="token number">12.9</span>、
+
+<span class="token comment">#划分x，y</span>
+x <span class="token operator">=</span> data<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+y <span class="token operator">=</span> data<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token comment">#留出法，分训练集和测试集</span>
+x_train<span class="token punctuation">,</span> x_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.3</span><span class="token punctuation">)</span>
+<span class="token comment">#创建模型</span>
+model <span class="token operator">=</span> DecisionTreeRegressor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#网格搜索</span>
+param_grid<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+tree <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>model<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>param_grid<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+tree<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tree<span class="token punctuation">.</span>best_params_<span class="token punctuation">)</span>		<span class="token comment"># {'max_depth': 11}</span>
+
+tree_score <span class="token operator">=</span> tree<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> y_test<span class="token punctuation">)</span><span class="token comment">#R^2</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tree_score<span class="token punctuation">)</span>				<span class="token comment"># 0.859152729372</span>
+tree_predict <span class="token operator">=</span> tree<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span><span class="token comment">#用于我们后续画图使用</span>
+
+model <span class="token operator">=</span> RandomForestRegressor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+param_grid <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'n_estimators'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+rf <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>model<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>param_grid<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+rf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rf<span class="token punctuation">.</span>best_params_<span class="token punctuation">)</span>		<span class="token comment"># {'max_depth': 3, 'n_estimators': 20}</span>
+
+rf_score <span class="token operator">=</span> rf<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> y_test<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rf_score<span class="token punctuation">)</span>				<span class="token comment"># 0.895737292394</span>
+rf_predict <span class="token operator">=</span> rf<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+m<span class="token punctuation">,</span> n <span class="token operator">=</span> y_test<span class="token punctuation">.</span>shape<span class="token comment">#获取行和列</span>
+<span class="token comment"># print(m)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">,</span> y_test<span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'真实分布'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>tree_predict<span class="token punctuation">,</span> <span class="token string">'g-'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">u'决策树回归，$R^2$=%.4f'</span> <span class="token operator">%</span> tree_score<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>rf_predict<span class="token punctuation">,</span> <span class="token string">'b-'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">u'随机森林, $R^2$=%.4f'</span><span class="token operator">%</span> rf_score<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/30.png"></p>
+<h4 id="5-3-随机森林分类"><a href="#5-3-随机森林分类" class="headerlink" title="5.3 随机森林分类"></a>5.3 随机森林分类</h4><p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/27.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> f1_score<span class="token punctuation">,</span> recall_score<span class="token punctuation">,</span> precision_score<span class="token punctuation">,</span> confusion_matrix
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> classification_report<span class="token punctuation">,</span> roc_auc_score<span class="token punctuation">,</span> roc_curve
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>ensemble <span class="token keyword">import</span> RandomForestClassifier
+<span class="token keyword">import</span> warnings
+warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">'ignore'</span><span class="token punctuation">)</span>
+
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+Y <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+
+model <span class="token operator">=</span> RandomForestClassifier<span class="token punctuation">(</span>n_estimators<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f1_score<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 1.0</span>
+
+<span class="token comment"># 更正一个错误，ROC曲线的参数是实际标签和预测的得分（概率）进行计算的</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>confusion_matrix<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'AUC:'</span><span class="token punctuation">,</span> roc_auc_score<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict_proba<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+fpr<span class="token punctuation">,</span> tpr<span class="token punctuation">,</span> th <span class="token operator">=</span> roc_curve<span class="token punctuation">(</span>Y<span class="token punctuation">,</span> model<span class="token punctuation">.</span>predict_proba<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>fpr<span class="token punctuation">,</span> tpr<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span> <span class="token number">0</span><span class="token punctuation">]</span>
+ <span class="token punctuation">[</span><span class="token number">0</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+AUC<span class="token punctuation">:</span> <span class="token number">1.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/28.png"></p>
+<h4 id="5-4-随机森林分类-鸢尾花"><a href="#5-4-随机森林分类-鸢尾花" class="headerlink" title="5.4 随机森林分类-鸢尾花"></a>5.4 随机森林分类-鸢尾花</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> matplotlib <span class="token keyword">as</span> mpl
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>tree <span class="token keyword">import</span> DecisionTreeClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>ensemble <span class="token keyword">import</span> RandomForestClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split<span class="token punctuation">,</span> GridSearchCV
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler<span class="token punctuation">,</span> LabelEncoder
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>pipeline <span class="token keyword">import</span> Pipeline
+<span class="token keyword">import</span> warnings
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> classification_report
+warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">'ignore'</span><span class="token punctuation">)</span>
+
+data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">r'../datas/iris.txt'</span><span class="token punctuation">,</span> header<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'x1'</span><span class="token punctuation">,</span> <span class="token string">'x2'</span><span class="token punctuation">,</span> <span class="token string">'x3'</span><span class="token punctuation">,</span> <span class="token string">'x4'</span><span class="token punctuation">,</span> <span class="token string">'lable'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	x1   x2   x3   x4        lable
+<span class="token number">0</span>  <span class="token number">5.1</span>  <span class="token number">3.5</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>  Iris<span class="token operator">-</span>setosa
+<span class="token number">1</span>  <span class="token number">4.9</span>  <span class="token number">3.0</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>  Iris<span class="token operator">-</span>setosa
+<span class="token number">2</span>  <span class="token number">4.7</span>  <span class="token number">3.2</span>  <span class="token number">1.3</span>  <span class="token number">0.2</span>  Iris<span class="token operator">-</span>setosa
+<span class="token number">3</span>  <span class="token number">4.6</span>  <span class="token number">3.1</span>  <span class="token number">1.5</span>  <span class="token number">0.2</span>  Iris<span class="token operator">-</span>setosa
+<span class="token number">4</span>  <span class="token number">5.0</span>  <span class="token number">3.6</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>  Iris<span class="token operator">-</span>setosa
+
+x <span class="token operator">=</span> data<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+y <span class="token operator">=</span> data<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+lable <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> lable<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>y<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span>		<span class="token comment"># [0 0 0 0 0 0 0 0 0 0]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+	x1   x2   x3   x4
+<span class="token number">0</span>  <span class="token number">5.1</span>  <span class="token number">3.5</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>
+<span class="token number">1</span>  <span class="token number">4.9</span>  <span class="token number">3.0</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>
+<span class="token number">2</span>  <span class="token number">4.7</span>  <span class="token number">3.2</span>  <span class="token number">1.3</span>  <span class="token number">0.2</span>
+<span class="token number">3</span>  <span class="token number">4.6</span>  <span class="token number">3.1</span>  <span class="token number">1.5</span>  <span class="token number">0.2</span>
+<span class="token number">4</span>  <span class="token number">5.0</span>  <span class="token number">3.6</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>
+<span class="token number">5</span>  <span class="token number">5.4</span>  <span class="token number">3.9</span>  <span class="token number">1.7</span>  <span class="token number">0.4</span>
+<span class="token number">6</span>  <span class="token number">4.6</span>  <span class="token number">3.4</span>  <span class="token number">1.4</span>  <span class="token number">0.3</span>
+<span class="token number">7</span>  <span class="token number">5.0</span>  <span class="token number">3.4</span>  <span class="token number">1.5</span>  <span class="token number">0.2</span>
+<span class="token number">8</span>  <span class="token number">4.4</span>  <span class="token number">2.9</span>  <span class="token number">1.4</span>  <span class="token number">0.2</span>
+<span class="token number">9</span>  <span class="token number">4.9</span>  <span class="token number">3.1</span>  <span class="token number">1.5</span>  <span class="token number">0.1</span>
+
+<span class="token comment"># 使用分类决策树拟合数据</span>
+x_train<span class="token punctuation">,</span> x_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.3</span><span class="token punctuation">)</span>
+model <span class="token operator">=</span> DecisionTreeClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+dt <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>model<span class="token punctuation">,</span> param_grid<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+dt<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dt<span class="token punctuation">.</span>best_params_<span class="token punctuation">)</span>		<span class="token comment"># {'max_depth': 3}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dt<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> y_test<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># acc准确率	0.977777777778</span>
+
+<span class="token comment"># 使用随机森林进行分类</span>
+model <span class="token operator">=</span> RandomForestClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+param_grid <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'n_estimators'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+rf <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>model<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>param_grid<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+rf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rf<span class="token punctuation">.</span>best_params_<span class="token punctuation">)</span>		<span class="token comment"># {'max_depth': 2, 'n_estimators': 20}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rf<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> y_test<span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># 1.0</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>classification_report<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> rf<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+				precision    recall  f1<span class="token operator">-</span>score   support
+          <span class="token number">0</span>       <span class="token number">1.00</span>      <span class="token number">1.00</span>      <span class="token number">1.00</span>        <span class="token number">17</span>
+          <span class="token number">1</span>       <span class="token number">1.00</span>      <span class="token number">1.00</span>      <span class="token number">1.00</span>        <span class="token number">15</span>
+          <span class="token number">2</span>       <span class="token number">1.00</span>      <span class="token number">1.00</span>      <span class="token number">1.00</span>        <span class="token number">13</span>
+avg <span class="token operator">/</span> total       <span class="token number">1.00</span>      <span class="token number">1.00</span>      <span class="token number">1.00</span>        <span class="token number">45</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shida Wei</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://weishida01.github.io/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/">https://weishida01.github.io/2023/03/22/shu-ju-fen-xi-ji-chu/14-ji-cheng-xue-xi-sui-ji-sen-lin/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shida Wei</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">数据分析</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E5%8D%B3%E6%A3%AE%E6%9E%97/">
+                                    <span class="chip bg-color">集成学习-随即森林</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>Comment</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'KhLsMNUiVO3V9QNfhUC0dO0c-gzGzoHsz',
+        appKey: 'chKUzpKCcT52zvQBUZjplIIa',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2023/03/22/shu-ju-fen-xi-ji-chu/15-ji-cheng-xue-xi-boosting-adaboost-gbdt/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%81%E9%9D%A2.jpeg" class="responsive-img" alt="15-集成学习-Boosting-Adaboost-GBDT">
+                        
+                        <span class="card-title">15-集成学习-Boosting-Adaboost-GBDT</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            集成学习-Boosting-Adaboost-GBDT
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">数据分析</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0-Boosting-Adaboost-GBDT/">
+                        <span class="chip bg-color">集成学习-Boosting-Adaboost-GBDT</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/22/shu-ju-fen-xi-ji-chu/13-jue-ce-shu/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%81%E9%9D%A2.jpeg" class="responsive-img" alt="13-决策树">
+                        
+                        <span class="card-title">13-决策树</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            决策树
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">数据分析</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%86%B3%E7%AD%96%E6%A0%91/">
+                        <span class="chip bg-color">决策树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('3'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Shida Wei</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">183k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2023";
+                    var startMonth = "1";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffDays + " day " + diffHours +
+                            " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffYears + " year " + diffDays +
+                            " day " + diffHours + " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    }
+                    // if (startYear == todayYear) {
+                    //     document.getElementById("year").innerHTML = todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                    //         " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // } else {
+                    //     document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                    //         " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // }
+                }
+                setInterval(siteTime, 1000);
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/weishida01" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:weishida01@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3058668859" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3058668859" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
