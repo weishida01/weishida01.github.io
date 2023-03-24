@@ -4,6 +4,106 @@
   
     
     <entry>
+      <title>8-各大工业视觉软件分析</title>
+      <link href="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/"/>
+      <url>/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-IRV"><a href="#1-IRV" class="headerlink" title="1. IRV"></a>1. IRV</h3><h4 id="1-1-软件框架"><a href="#1-1-软件框架" class="headerlink" title="1.1 软件框架"></a>1.1 软件框架</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/1.png"></p><h4 id="1-2-工具、序列执行特点"><a href="#1-2-工具、序列执行特点" class="headerlink" title="1.2 工具、序列执行特点"></a>1.2 工具、序列执行特点</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/2.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/3.png"></p><h3 id="2-visionpro"><a href="#2-visionpro" class="headerlink" title="2. visionpro"></a>2. visionpro</h3><p>VisionPro是美国康耐视公司开发的一套基于.NET的视觉软件，VisionPro 快速原型设计环境将高级编程的先进性和灵活性与易于开发性相结合，兼具易用性和深度定制特性， VisionPro适于任何人使用、拖放、手写或编程，VisionPro全面支持所有模式的开发；其中VisionPro QuickBuild可建立一个包含多个作业的的应用程序，可根据检测需求选择相应工具进行编程。</p><h4 id="2-1-软件框架"><a href="#2-1-软件框架" class="headerlink" title="2.1 软件框架"></a>2.1 软件框架</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/4.png"></p><p>按照检测需求的不同选择所需工具，采用拖拉式图形编程模式，简单易操作</p><h4 id="2-2-工具、序列执行特点"><a href="#2-2-工具、序列执行特点" class="headerlink" title="2.2 工具、序列执行特点"></a>2.2 工具、序列执行特点</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/5.png"></p><h3 id="3-海康威视"><a href="#3-海康威视" class="headerlink" title="3. 海康威视"></a>3. 海康威视</h3><p>算法平台：视觉定位、尺寸测量、缺陷检测以及信息识别等机器视觉应用</p><h4 id="3-1-软件框架"><a href="#3-1-软件框架" class="headerlink" title="3.1 软件框架"></a>3.1 软件框架</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/6.png"></p><h4 id="3-2-工具列表"><a href="#3-2-工具列表" class="headerlink" title="3.2 工具列表"></a>3.2 工具列表</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/7.png"></p><h4 id="3-3-典型应用"><a href="#3-3-典型应用" class="headerlink" title="3.3 典型应用"></a>3.3 典型应用</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/8.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/9.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/10.png"></p><h3 id="4-基恩士XG"><a href="#4-基恩士XG" class="headerlink" title="4. 基恩士XG"></a>4. 基恩士XG</h3><h4 id="4-1-软件框架"><a href="#4-1-软件框架" class="headerlink" title="4.1 软件框架"></a>4.1 软件框架</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/11.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/12.png"></p><h4 id="4-2-序列案例"><a href="#4-2-序列案例" class="headerlink" title="4.2 序列案例"></a>4.2 序列案例</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/13.png"></p><h3 id="5-基恩士XV"><a href="#5-基恩士XV" class="headerlink" title="5. 基恩士XV"></a>5. 基恩士XV</h3><h4 id="5-1-软件框架"><a href="#5-1-软件框架" class="headerlink" title="5.1 软件框架"></a>5.1 软件框架</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/14.png"></p><h4 id="5-2-工具、序列执行特点"><a href="#5-2-工具、序列执行特点" class="headerlink" title="5.2 工具、序列执行特点"></a>5.2 工具、序列执行特点</h4><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/15.png"></p><p>1、按照检测需求来分类，分为7类（有无、瑕疵、位置、几何测量、计数、识别、图形显示）<br>2、将未分类到需求中的工具，整合至功能一览<br>3、常用的计算功能与位置偏移补正各单独为一类</p><h3 id="6-康耐视insight"><a href="#6-康耐视insight" class="headerlink" title="6. 康耐视insight"></a>6. 康耐视insight</h3><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/16.png"></p><h3 id="7-麒麟"><a href="#7-麒麟" class="headerlink" title="7. 麒麟"></a>7. 麒麟</h3><p><img src="/2023/03/24/gong-zuo-jing-li/8-ge-da-gong-ye-shi-jue-ruan-jian-fen-xi/17.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作经历 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工业视觉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>7-深度学习缺陷检测</title>
+      <link href="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/"/>
+      <url>/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-灌装项目背景介绍"><a href="#1-灌装项目背景介绍" class="headerlink" title="1. 灌装项目背景介绍"></a>1. 灌装项目背景介绍</h3><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/4.png"></p><h3 id="2-灌装检测设备工作流程"><a href="#2-灌装检测设备工作流程" class="headerlink" title="2. 灌装检测设备工作流程"></a>2. 灌装检测设备工作流程</h3><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/1.png"></p><h3 id="3-灌装检测内容和指标"><a href="#3-灌装检测内容和指标" class="headerlink" title="3. 灌装检测内容和指标"></a>3. 灌装检测内容和指标</h3><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/2.png"></p><h3 id="4-罐装检测硬件布局"><a href="#4-罐装检测硬件布局" class="headerlink" title="4. 罐装检测硬件布局"></a>4. 罐装检测硬件布局</h3><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/3.png"></p><h3 id="5-罐装检测光学方案"><a href="#5-罐装检测光学方案" class="headerlink" title="5. 罐装检测光学方案"></a>5. 罐装检测光学方案</h3><h4 id="5-1-瓶盖检测"><a href="#5-1-瓶盖检测" class="headerlink" title="5.1 瓶盖检测"></a>5.1 瓶盖检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/5.png"></p><h4 id="5-2-单提环检测"><a href="#5-2-单提环检测" class="headerlink" title="5.2 单提环检测"></a>5.2 单提环检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/6.png"></p><h4 id="5-3-标贴检测"><a href="#5-3-标贴检测" class="headerlink" title="5.3 标贴检测"></a>5.3 标贴检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/7.png"></p><h4 id="5-4-装箱点数"><a href="#5-4-装箱点数" class="headerlink" title="5.4 装箱点数"></a>5.4 装箱点数</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/8.png"></p><h4 id="5-5-喷码检测"><a href="#5-5-喷码检测" class="headerlink" title="5.5 喷码检测"></a>5.5 喷码检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/9.png"></p><h4 id="5-6-贴标4检测"><a href="#5-6-贴标4检测" class="headerlink" title="5.6 贴标4检测"></a>5.6 贴标4检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/10.png"></p><h4 id="5-7-把手检测"><a href="#5-7-把手检测" class="headerlink" title="5.7 把手检测"></a>5.7 把手检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/11.png"></p><h3 id="6-二维码检测"><a href="#6-二维码检测" class="headerlink" title="6. 二维码检测"></a>6. 二维码检测</h3><p>二维码识别</p><h4 id="6-1-光学方案"><a href="#6-1-光学方案" class="headerlink" title="6.1 光学方案"></a>6.1 光学方案</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/12.png"></p><h4 id="6-2-图像效果"><a href="#6-2-图像效果" class="headerlink" title="6.2 图像效果"></a>6.2 图像效果</h4><p><img src="/2023/03/24/gong-zuo-jing-li/7-shen-du-xue-xi-que-xian-jian-ce/13.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作经历 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习缺陷检测 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6-OLED圆形手表屏幕缺陷检测</title>
+      <link href="/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/"/>
+      <url>/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-项目背景"><a href="#1-项目背景" class="headerlink" title="1. 项目背景"></a>1. 项目背景</h3><p><img src="/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/1.png"></p><h3 id="2-OLED屏幕工艺"><a href="#2-OLED屏幕工艺" class="headerlink" title="2. OLED屏幕工艺"></a>2. OLED屏幕工艺</h3><p><img src="/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/2.png"></p><p>OLED，LCD区别：</p><ol><li>LCD：被动发光，由背光，偏光片，TFT玻璃基板，液晶，偏光片，CG组成</li><li>OLED：自发光，由TFT ，有机自发光层，偏光片组成</li></ol><p><img src="/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/3.png"></p><p>产品组成：客户主要为贴敷2部分产品</p><p>底部有机发光层：此部分在客户现场存在AOI检测，只检测发光亮度，电流，颜色等</p><p>上部盖板玻璃偏光片部分：此部分是一个客户外购的一个整体。</p><h3 id="3-检测缺陷"><a href="#3-检测缺陷" class="headerlink" title="3. 检测缺陷"></a>3. 检测缺陷</h3><p><img src="/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/4.png"></p><p>缺陷种类：暗线，亮线，断线，暗点（大于2个像素点），亮点，黄团，分屏，画面异常，碎亮点，麻点斑，PS漏光，PT不良</p><h3 id="4-项目光学方案"><a href="#4-项目光学方案" class="headerlink" title="4.项目光学方案"></a>4.项目光学方案</h3><p><img src="/2023/03/24/gong-zuo-jing-li/6-oled-yuan-xing-shou-biao-ping-mu-que-xian-jian-ce/5.png"></p><ol><li>A(9M彩色)：亮度/色彩缺陷（45度视角），贴合偏移</li><li>B(5M黑白)：底部漏光，贴合偏移，背光缺陷</li><li>C(5M黑白)：贴合偏移</li><li>D(5M黑白)：顶部漏光，贴合偏移，背光缺陷</li><li>E(9M彩色)：亮度/色彩缺陷（90度视角），贴合偏移，亮度/色温/色坐标计算</li><li>F(9M黑白)：过滤灰尘，显示偏移，亮度缺陷（黑色画面）</li><li>G(1.3M黑白)：亮度缺陷（极低对比度），屏闪</li></ol><h3 id="5-项目总结"><a href="#5-项目总结" class="headerlink" title="5. 项目总结"></a>5. 项目总结</h3><ol><li>第一次设计验证了 7 相机 OLED 屏幕检测方案，为公司开拓了OLED-AOI屏幕检测市场</li><li>修改圆形检测分割算法，为以后做圆形屏幕检测做了铺垫</li><li>检测小尺寸手表屏幕，了解了凌云高士的检测方案，为之后做小尺寸屏幕检测，修改检测方案，提供了经验。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作经历 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 屏幕AOI视觉检测 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>5-屏幕AOI视觉检测项目</title>
+      <link href="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/"/>
+      <url>/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-LCD手机屏幕结构"><a href="#1-LCD手机屏幕结构" class="headerlink" title="1. LCD手机屏幕结构"></a>1. LCD手机屏幕结构</h3><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/1.png"></p><h4 id="1-1-CG-盖板玻璃"><a href="#1-1-CG-盖板玻璃" class="headerlink" title="1.1 CG 盖板玻璃"></a>1.1 CG 盖板玻璃</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/2.png"></p><ol><li><p>形状划分：2D 2.5D 3D</p><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/3.png"></p></li><li><p>工艺划分：白玻璃和丝印玻璃</p></li></ol><h4 id="1-2-CELL-液晶"><a href="#1-2-CELL-液晶" class="headerlink" title="1.2 CELL 液晶"></a>1.2 CELL 液晶</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/4.png"></p><ol><li>一个液晶屏是两片玻璃对合而成的，上面的CF负责色彩显示，下面的TFT负责电路控制， TFT上面印刷有<br>电路</li><li>TFT和CF门电路开关控制每个像素点的RGB灯亮暗程度</li><li>PI导向膜是mura主要成因之一</li></ol><h4 id="1-3-BM-背光模组"><a href="#1-3-BM-背光模组" class="headerlink" title="1.3 BM 背光模组"></a>1.3 BM 背光模组</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/5.png"></p><ol><li>侧光式BM容易出现漏光缺陷</li><li>即使品质过关的手机屏幕边缘均匀性也不好</li><li>部分手机使用OLED（有机自发光，不需要背光）</li></ol><h3 id="2-手机子项目与检测需求"><a href="#2-手机子项目与检测需求" class="headerlink" title="2. 手机子项目与检测需求"></a>2. 手机子项目与检测需求</h3><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/6.png"></p><p>各检测项目在工艺中的流程顺序：</p><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/7.png"></p><h3 id="3-Cell检测"><a href="#3-Cell检测" class="headerlink" title="3. Cell检测"></a>3. Cell检测</h3><h4 id="3-1-Cell检测需求"><a href="#3-1-Cell检测需求" class="headerlink" title="3.1 Cell检测需求"></a>3.1 Cell检测需求</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/8.png"></p><h4 id="3-2-Cell检测原理"><a href="#3-2-Cell检测原理" class="headerlink" title="3.2 Cell检测原理"></a>3.2 Cell检测原理</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/18.png"></p><h3 id="4-背光检测"><a href="#4-背光检测" class="headerlink" title="4. 背光检测"></a>4. 背光检测</h3><h4 id="4-1-背光检测需求"><a href="#4-1-背光检测需求" class="headerlink" title="4.1 背光检测需求"></a>4.1 背光检测需求</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/9.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/17.png"></p><h4 id="4-2-背光检测原理"><a href="#4-2-背光检测原理" class="headerlink" title="4.2 背光检测原理"></a>4.2 背光检测原理</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/12.png"></p><ol><li>工位1：上料工位</li><li>工位2：为按压工位，用于检测按压下的白点</li><li>工位3：为主检测工位，在不撕膜的状态下进行背光模组的点亮后缺陷检测 </li><li>工位四：下料工位</li></ol><p>注：由于外表面灰尘不判定为缺陷，因此检测时需要考虑过滤灰尘，在工位3上实现</p><h4 id="4-3-工位2按压检测"><a href="#4-3-工位2按压检测" class="headerlink" title="4.3 工位2按压检测"></a>4.3 工位2按压检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/20.png"></p><p>此工位主要利用透明薄膜，依靠下部气体抽真空来进行吸附按压，实现按压检测。现在按压检测是各背光模组厂要求的必检项目，主要检测按压下才可见的缺陷。相机距离背光模组依然为300~400mm可调。</p><h4 id="4-4-工位3主检测"><a href="#4-4-工位3主检测" class="headerlink" title="4.4 工位3主检测"></a>4.4 工位3主检测</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/21.png"></p><p>此工位为主检测工位，在不撕膜状态下进行背光模组的点亮后缺陷检测。主要包括正上方A相机与四个侧面45°相机，以及平行于长边的两个条形光源。</p><h3 id="5-LCM外观检测"><a href="#5-LCM外观检测" class="headerlink" title="5. LCM外观检测"></a>5. LCM外观检测</h3><h4 id="5-1-LCM外观检测需求"><a href="#5-1-LCM外观检测需求" class="headerlink" title="5.1 LCM外观检测需求"></a>5.1 LCM外观检测需求</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/10.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/19.png"></p><h4 id="5-2-LCM外观检测原理"><a href="#5-2-LCM外观检测原理" class="headerlink" title="5.2 LCM外观检测原理"></a>5.2 LCM外观检测原理</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/13.png"></p><h3 id="6-LCM模组检测"><a href="#6-LCM模组检测" class="headerlink" title="6. LCM模组检测"></a>6. LCM模组检测</h3><h4 id="6-1-LCM模组检测需求"><a href="#6-1-LCM模组检测需求" class="headerlink" title="6.1 LCM模组检测需求"></a>6.1 LCM模组检测需求</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/11.png"></p><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/16.png"></p><h4 id="6-2-LCM模组检测方案与原理"><a href="#6-2-LCM模组检测方案与原理" class="headerlink" title="6.2 LCM模组检测方案与原理"></a>6.2 LCM模组检测方案与原理</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/14.png"></p><h4 id="6-3-LCM模组硬件组成"><a href="#6-3-LCM模组硬件组成" class="headerlink" title="6.3 LCM模组硬件组成"></a>6.3 LCM模组硬件组成</h4><p><img src="/2023/03/24/gong-zuo-jing-li/5-ping-mu-aoi-shi-jue-jian-ce-xiang-mu/15.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作经历 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 屏幕AOI视觉检测 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>4-FPC曝光机4相机UVW平台对位项目</title>
       <link href="/2023/03/23/gong-zuo-jing-li/4-fpc-pu-guang-ji-4-xiang-ji-uvw-ping-tai-dui-wei-xiang-mu/"/>
       <url>/2023/03/23/gong-zuo-jing-li/4-fpc-pu-guang-ji-4-xiang-ji-uvw-ping-tai-dui-wei-xiang-mu/</url>
@@ -20,7 +120,7 @@
       
         <tags>
             
-            <tag> 对位案例 </tag>
+            <tag> 对位 </tag>
             
         </tags>
       
@@ -45,7 +145,7 @@
       
         <tags>
             
-            <tag> 对位案例 </tag>
+            <tag> 对位 </tag>
             
         </tags>
       
@@ -70,7 +170,7 @@
       
         <tags>
             
-            <tag> 对位精度 </tag>
+            <tag> 对位 </tag>
             
         </tags>
       
@@ -83,7 +183,7 @@
       <link href="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/"/>
       <url>/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/</url>
       
-        <content type="html"><![CDATA[<h3 id="1-摄像机标定概述"><a href="#1-摄像机标定概述" class="headerlink" title="1. 摄像机标定概述"></a>1. 摄像机标定概述</h3><p>标定过程就是确定摄像机的几何和光学参数，摄像机相对于世界坐标系的方位。标定精度的高低，直接影响着计算机视觉的精度。因此，只有做好了摄像机标定工作，后续工作才能正常展开。</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/1.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/2.png"></p><h3 id="2-摄像机标定的分类"><a href="#2-摄像机标定的分类" class="headerlink" title="2. 摄像机标定的分类"></a>2. 摄像机标定的分类</h3><h4 id="2-1-根据是否需要标定参照物来看"><a href="#2-1-根据是否需要标定参照物来看" class="headerlink" title="2.1 根据是否需要标定参照物来看"></a>2.1 根据是否需要标定参照物来看</h4><ol><li>传统的摄像机标定方法：在一定的摄像机模型下，基于特定的实验条件，如形状、尺寸已知的标定物，经过对其进行图像处理，利用一系列数学变换和计算方法，求取摄像机模型的内部参数和外部参数 。<br>特点：利用已知的景物结构信息。常用到标定块。<br>优点：可以使用于任意的摄像机模型，标定精度高<br>不足：标定过程复杂，需要高精度的已知结构信息。在实际应用中很多情况下无法使用标定块。</li><li>摄像机自标定方法：不依赖于标定参照物的摄像机标定方法，仅利用摄像机在运动过程中周围环境的图像与图像之间的对应关系对摄像机进行的标定称为摄像机自标定方法 。<br>  优点：仅依靠建立图像之间的对应，灵活性强，潜在应用范围广。<br>  不足：并不是很成熟。因为未知参数太多,很难得到稳定的结果。</li></ol><p>  一般来说，当应用场合所要求的精度很高且摄像机的参数不经常变化时，传统标定方法为首选。而自标定方法主要应用于精度要求不高的场合，如通讯、虚拟现实等。</p><h4 id="2-2-从所用模型不同来分"><a href="#2-2-从所用模型不同来分" class="headerlink" title="2.2 从所用模型不同来分"></a>2.2 从所用模型不同来分</h4><ol><li>线性：线性模型摄像机标定, 用线性方程求解，简单快速，已成为计算机视觉领域的研究热点之一，目前已有大量研究成果。但线性模型不考虑镜头畸变，准确性欠佳。 </li><li>非线性：对于非线性模型摄像机标定，考虑了畸变参数，引入了非线性优化，但方法较繁，速度慢，对初值选择和噪声比较敏感，而且非线性搜索并不能保证参数收敛到全局最优解。</li></ol><h4 id="2-3-视觉系统所用的摄像机个数分"><a href="#2-3-视觉系统所用的摄像机个数分" class="headerlink" title="2.3 视觉系统所用的摄像机个数分"></a>2.3 视觉系统所用的摄像机个数分</h4><ol><li>单摄像机</li><li>多摄像机</li></ol><h4 id="2-4-从求解参数的结果来分"><a href="#2-4-从求解参数的结果来分" class="headerlink" title="2.4 从求解参数的结果来分"></a>2.4 从求解参数的结果来分</h4><ol><li>隐式：隐参数标定是以一个转换矩阵表示空间物点与二维像点的对应关系，并以转换矩阵元素作为标定参数，由于这些参数没有具体的物理意义，所以称为隐参数定标。在精度要求不高的情况下，因为只需要求解线性方程，此可以获得较高的效率。比较典型的是直接线性标定 (DLT)，用一个3×4阶矩阵表示空间物点与二维像点的直接对应关系。</li><li>显式：为了提高标定精度，就需要通过精确分析摄像机成像的中间过程，构造精密的几何模型，设置具有物理意义的参数(一般包括镜头畸变参数、图像中心偏差、帧存扫描水平比例因子和有效焦距偏差)，然后确定这些未知参数，实现摄像机的显参数标定。</li></ol><h4 id="2-5-从解题方法来分"><a href="#2-5-从解题方法来分" class="headerlink" title="2.5 从解题方法来分"></a>2.5 从解题方法来分</h4><ol><li>解析法：解析方法是用足够多的点的世界坐标和相应的图像坐标，通过解析公式来确定摄像机的内参数、外参数以及畸变参数，然后根据得到的内外参数及畸变系数，再将图像中的点通过几何关系得到空间点的世界坐标。解析方法不能囊括上述的所有非线性因素，只能选择几种主要的畸变，而忽略其它不确定因素。</li><li>神经网络法：神经网络法能够以任意的精度逼近任何非线性关系，跳过求取各参数的繁琐过程，利用图像坐标点和相应的空间点作为输入输出样本集进行训练，使网络实现给定的输入输出映射关系，对于不是样本集中的图像坐标点也能得到合适的空间点的世界坐标。</li></ol><h4 id="2-6-根据标定块不同"><a href="#2-6-根据标定块不同" class="headerlink" title="2.6 根据标定块不同"></a>2.6 根据标定块不同</h4><ol><li>立体：标定通过拍摄一个事先已经确定了三维几何形状的物体来进行，也就是在一定的摄像机模型下，基于特定的实验条件如形状、尺寸已知的定标参照物(标定物)，经过对其图像进行处理，利用一系列数学变换和计算方法，求取摄像机模型的内部参数和外部参数。这种定标方法的精度很高。用于定标的物体一般是由两到三个相互正交的平面组成。但这些方法需要昂贵的标定设备，而且事前要精确地设置。</li><li>平面：平面模板(作为标定物)，对于每个视点获得图像,提取图像上的网格角点，平面模板与图像间的网格角点对应关系，确定了单应性矩阵，平面模板可以用硬纸板，上面张贴激光打印机打印的棋盘格。模板图案常采用矩形和二次曲线（圆和椭圆）。</li></ol><h3 id="3-摄像机成像模型"><a href="#3-摄像机成像模型" class="headerlink" title="3. 摄像机成像模型"></a>3. 摄像机成像模型</h3><ol><li>图像是空间物体通过成像系统在像平面上的反映，即空间物体在像平面上的投影。</li><li>该点在图像上的位置则与空间物体表面对应点的几何位置有关。这些位置的相互关系，由摄像机成像系统的几何投影模型所决定。</li><li>三维空间中的物体到像平面的投影关系即为成像模型，理想的投影成像模型是小孔模型。</li></ol><h4 id="3-1-小孔模型"><a href="#3-1-小孔模型" class="headerlink" title="3.1 小孔模型"></a>3.1 小孔模型</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/3.png"></p><ol><li>假设物体表面的反射光都经过一个针孔而投影到像平面上。</li><li>小孔模型主要由光心（投影中心）、成像面和光轴组成。</li><li>小孔成像由于透光量太小，因此需要很长的曝光时间，并且很难得到清晰的图像。</li><li>实际摄像系统通常都由透镜或者透镜组组成。两种模型具有相同的成像关系，即像点是物点和光心的连线与图像平面的交点。</li><li>因此，可以用小孔模型作为摄像机成像模型。</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/4.png"></p><ol><li>空间点 O 是投影中心，它到平面Π的距离是 f 。空间点 M 在平面Π上的投影(或像) m 是以点 O 为端点并经过点 M 的射线与平面Π的交点。</li><li>平面Π ：摄像机的像平面。</li><li>点O：摄像机中心(光心)。</li><li>f ：摄像机的焦距</li><li>以点 O 为端点且垂直于像平面的射线称为光轴或主轴，主轴与像平面的交点 p 称为摄像机的主点。</li></ol><h4 id="3-2-常用坐标系及其关系"><a href="#3-2-常用坐标系及其关系" class="headerlink" title="3.2 常用坐标系及其关系"></a>3.2 常用坐标系及其关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/5.png"></p><p>在摄像机标定中常用三个不同层次的坐标系统：</p><ol><li>世界坐标系(Xw，Yw，Zw)：也称真实或现实世界坐标系，或全局坐标系。它是客观世界的绝对坐标，由用户任意定义的三维空间坐标系。一般的3D场景都用这个坐标系来表示。</li><li>摄像机坐标系(Xc，Yc，Zc)：以小孔摄像机模型的聚焦中心为原点，以摄像机光轴为OZc 轴建立的三维直角坐标系。 Xc，Yc 一般与图像物理坐标系的X，Y 平行。</li><li>图像坐标系（图像像素坐标系和图像物理坐标系）：分为图像像素坐标系和图像物理坐标系两种：<br>图像物理坐标系（ Xu，Yu ）：其原点为透镜光轴与成像平面的交点，Xu 与Yu 轴分别平行于摄像机坐标系的Xc，Yc 轴，是平面直角坐标系，单位为毫米。<br>图像像素坐标系(u，v)：固定在图像上的以像素为单位的平面直角坐标系，其原点位于图像左上角， u，v 平行于图像物理坐标系的X 和Y轴。对于数字图像，分别为行列方向。</li></ol><h4 id="3-3-世界坐标与摄像机坐标之间的转换关系"><a href="#3-3-世界坐标与摄像机坐标之间的转换关系" class="headerlink" title="3.3 世界坐标与摄像机坐标之间的转换关系"></a>3.3 世界坐标与摄像机坐标之间的转换关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/6.png"></p><h4 id="3-4-图像坐标系与摄像机坐标系变换关系"><a href="#3-4-图像坐标系与摄像机坐标系变换关系" class="headerlink" title="3.4 图像坐标系与摄像机坐标系变换关系"></a>3.4 图像坐标系与摄像机坐标系变换关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/7.png"></p><h4 id="3-5-世界坐标系与图像坐标系变换关系"><a href="#3-5-世界坐标系与图像坐标系变换关系" class="headerlink" title="3.5 世界坐标系与图像坐标系变换关系"></a>3.5 世界坐标系与图像坐标系变换关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/8.png"></p><h3 id="4-透镜畸变模型"><a href="#4-透镜畸变模型" class="headerlink" title="4. 透镜畸变模型"></a>4. 透镜畸变模型</h3><h4 id="4-1-成因"><a href="#4-1-成因" class="headerlink" title="4.1 成因"></a>4.1 成因</h4><p>由于摄像机物镜系统设计、制作、装配所引起的像点偏离其理想位置点位误差称为光学畸变，如下图所示：</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/9.png"></p><h4 id="4-2-径向畸变和切向畸变"><a href="#4-2-径向畸变和切向畸变" class="headerlink" title="4.2 径向畸变和切向畸变"></a>4.2 径向畸变和切向畸变</h4><ol><li>光学畸变分为径向畸变和切向畸变两种。径向畸变像点沿径向方向偏离标准理想位置；垂直径向方向的畸变称为切向畸变。</li><li>对一般低精度要求的场合，只考虑径向畸变就可以，因为切向畸变的影响远小于径向畸变。</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/10.png"></p><h5 id="4-2-1-径向畸变"><a href="#4-2-1-径向畸变" class="headerlink" title="4.2.1 径向畸变"></a>4.2.1 径向畸变</h5><ol><li>径向畸变就是沿着透镜半径方向分布的畸变，产生原因是光线在原理透镜中心的地方比靠近中心的地方更加弯曲，这种畸变在普通廉价的镜头中表现更加明显，径向畸变主要包括桶形畸变和枕形畸变两种。以下分别是枕形和桶形畸变示意图：</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/11.png"></p><ol start="2"><li>径向畸变数学模型：成像仪光轴中心的畸变为0，沿着镜头半径方向向边缘移动，畸变越来越严重。畸变的数学模型可以用主点周围的泰勒级数展开式的前几项进行描述，通常使用前两项，即k1和k2，对于畸变很大的镜头，如鱼眼镜头，可以增加使用第三项k3来进行描述，成像仪上某点根据其在径向方向上的分布位置，调节公式为：</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/12.png"></p><ol start="3"><li>径向畸变数学模型：公式里(x0，y0)是畸变点在成像器件上的原始位置，(x，y)是畸变校正后新的位置，下图是距离光心不同距离上的点经过透镜径向畸变后点位的偏移示意图，可以看到，距离光心越远，径向位移越大，表示畸变也越大，在光心附近，几乎没有偏移。</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/13.png"></p><h5 id="4-2-2-切向畸变数学模型"><a href="#4-2-2-切向畸变数学模型" class="headerlink" title="4.2.2 切向畸变数学模型"></a>4.2.2 切向畸变数学模型</h5><p>切向畸变是由于透镜本身与相机传感器平面（成像平面）或图像平面不平行而产生的，这种情况多是由于透镜被粘贴到镜头模组上的安装偏差导致。畸变模型可以用两个额外的参数p1和p2来描述：</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/14.png"></p><p>切向畸变数学模型：显示某个透镜的切向畸变示意图，大体上畸变位移相对于左下—右上角的连线是对称的，说明该镜头在垂直于该方向上有一个旋转角度。</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/15.png"></p><h4 id="4-3-畸变校正"><a href="#4-3-畸变校正" class="headerlink" title="4.3 畸变校正"></a>4.3 畸变校正</h4><ol><li>径向畸变和切向畸变模型中一共有5个畸变参数</li><li>在OpenCV中他们被排列成一个5*1的矩阵，依次包含k1、k2、p1、p2、k3，经常被定义为Mat矩阵的形式，如Mat distCoeffs=Mat(1, 5, CV_32FC1, Scalar::all(0))；</li><li>求得这5个参数后，就可以校正由于镜头畸变引起的图像的变形失真，下图显示根据镜头畸变系数校正后的效果：</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/16.jpg"></p><h3 id="5-摄像机标定方法"><a href="#5-摄像机标定方法" class="headerlink" title="5. 摄像机标定方法"></a>5. 摄像机标定方法</h3><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/16.png"></p><h4 id="5-1-线性标定方法"><a href="#5-1-线性标定方法" class="headerlink" title="5.1 线性标定方法"></a>5.1 线性标定方法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/17.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/18.png"></p><h4 id="5-2-非线性标定方法"><a href="#5-2-非线性标定方法" class="headerlink" title="5.2 非线性标定方法"></a>5.2 非线性标定方法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/19.png"></p><h4 id="5-3-两步标定法"><a href="#5-3-两步标定法" class="headerlink" title="5.3 两步标定法"></a>5.3 两步标定法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/20.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/21.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/22.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/23.png"></p><h4 id="5-4-张正友标定法"><a href="#5-4-张正友标定法" class="headerlink" title="5.4 张正友标定法"></a>5.4 张正友标定法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/23.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/24.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/25.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/26.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/27.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/28.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/29.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/30.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/31.png"></p><h4 id="5-5-摄像机标定结果"><a href="#5-5-摄像机标定结果" class="headerlink" title="5.5 摄像机标定结果"></a>5.5 摄像机标定结果</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/32.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/33.png"></p><h3 id="6-机器人手眼标定"><a href="#6-机器人手眼标定" class="headerlink" title="6. 机器人手眼标定"></a>6. 机器人手眼标定</h3><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/34.png"></p><ol><li>机器人视觉应用中，手眼标定是一个非常基础且关键的问题。简单来说手眼标定的目的就是获取机器人坐标系和相机坐标系的关系，最后将视觉识别的结果转移到机器人坐标系下。</li><li>手眼标定分为两种形式，根据相机固定的地方不同，如果相机和机器人末端固定在一起，就称之为“眼在手”(eye in hand)，如果相机固定在机器人外面的底座上，则称之为“眼在外”(eye to hand)。</li></ol><h4 id="6-1-eye-in-hand"><a href="#6-1-eye-in-hand" class="headerlink" title="6.1 eye in hand"></a>6.1 eye in hand</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/35.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/36.png"></p><h4 id="6-2-eye-to-hand"><a href="#6-2-eye-to-hand" class="headerlink" title="6.2 eye to hand"></a>6.2 eye to hand</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/37.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/38.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/39.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/40.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/41.png"></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="1-摄像机标定概述"><a href="#1-摄像机标定概述" class="headerlink" title="1. 摄像机标定概述"></a>1. 摄像机标定概述</h3><p>标定过程就是确定摄像机的几何和光学参数，摄像机相对于世界坐标系的方位。标定精度的高低，直接影响着计算机视觉的精度。因此，只有做好了摄像机标定工作，后续工作才能正常展开。</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/1.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/2.png"></p><h3 id="2-摄像机标定的分类"><a href="#2-摄像机标定的分类" class="headerlink" title="2. 摄像机标定的分类"></a>2. 摄像机标定的分类</h3><h4 id="2-1-根据是否需要标定参照物来看"><a href="#2-1-根据是否需要标定参照物来看" class="headerlink" title="2.1 根据是否需要标定参照物来看"></a>2.1 根据是否需要标定参照物来看</h4><ol><li>传统的摄像机标定方法：在一定的摄像机模型下，基于特定的实验条件，如形状、尺寸已知的标定物，经过对其进行图像处理，利用一系列数学变换和计算方法，求取摄像机模型的内部参数和外部参数 。<br>特点：利用已知的景物结构信息。常用到标定块。<br>优点：可以使用于任意的摄像机模型，标定精度高<br>不足：标定过程复杂，需要高精度的已知结构信息。在实际应用中很多情况下无法使用标定块。</li><li>摄像机自标定方法：不依赖于标定参照物的摄像机标定方法，仅利用摄像机在运动过程中周围环境的图像与图像之间的对应关系对摄像机进行的标定称为摄像机自标定方法 。<br> 优点：仅依靠建立图像之间的对应，灵活性强，潜在应用范围广。<br> 不足：并不是很成熟。因为未知参数太多,很难得到稳定的结果。</li></ol><p>  一般来说，当应用场合所要求的精度很高且摄像机的参数不经常变化时，传统标定方法为首选。而自标定方法主要应用于精度要求不高的场合，如通讯、虚拟现实等。</p><h4 id="2-2-从所用模型不同来分"><a href="#2-2-从所用模型不同来分" class="headerlink" title="2.2 从所用模型不同来分"></a>2.2 从所用模型不同来分</h4><ol><li>线性：线性模型摄像机标定, 用线性方程求解，简单快速，已成为计算机视觉领域的研究热点之一，目前已有大量研究成果。但线性模型不考虑镜头畸变，准确性欠佳。 </li><li>非线性：对于非线性模型摄像机标定，考虑了畸变参数，引入了非线性优化，但方法较繁，速度慢，对初值选择和噪声比较敏感，而且非线性搜索并不能保证参数收敛到全局最优解。</li></ol><h4 id="2-3-视觉系统所用的摄像机个数分"><a href="#2-3-视觉系统所用的摄像机个数分" class="headerlink" title="2.3 视觉系统所用的摄像机个数分"></a>2.3 视觉系统所用的摄像机个数分</h4><ol><li>单摄像机</li><li>多摄像机</li></ol><h4 id="2-4-从求解参数的结果来分"><a href="#2-4-从求解参数的结果来分" class="headerlink" title="2.4 从求解参数的结果来分"></a>2.4 从求解参数的结果来分</h4><ol><li>隐式：隐参数标定是以一个转换矩阵表示空间物点与二维像点的对应关系，并以转换矩阵元素作为标定参数，由于这些参数没有具体的物理意义，所以称为隐参数定标。在精度要求不高的情况下，因为只需要求解线性方程，此可以获得较高的效率。比较典型的是直接线性标定 (DLT)，用一个3×4阶矩阵表示空间物点与二维像点的直接对应关系。</li><li>显式：为了提高标定精度，就需要通过精确分析摄像机成像的中间过程，构造精密的几何模型，设置具有物理意义的参数(一般包括镜头畸变参数、图像中心偏差、帧存扫描水平比例因子和有效焦距偏差)，然后确定这些未知参数，实现摄像机的显参数标定。</li></ol><h4 id="2-5-从解题方法来分"><a href="#2-5-从解题方法来分" class="headerlink" title="2.5 从解题方法来分"></a>2.5 从解题方法来分</h4><ol><li>解析法：解析方法是用足够多的点的世界坐标和相应的图像坐标，通过解析公式来确定摄像机的内参数、外参数以及畸变参数，然后根据得到的内外参数及畸变系数，再将图像中的点通过几何关系得到空间点的世界坐标。解析方法不能囊括上述的所有非线性因素，只能选择几种主要的畸变，而忽略其它不确定因素。</li><li>神经网络法：神经网络法能够以任意的精度逼近任何非线性关系，跳过求取各参数的繁琐过程，利用图像坐标点和相应的空间点作为输入输出样本集进行训练，使网络实现给定的输入输出映射关系，对于不是样本集中的图像坐标点也能得到合适的空间点的世界坐标。</li></ol><h4 id="2-6-根据标定块不同"><a href="#2-6-根据标定块不同" class="headerlink" title="2.6 根据标定块不同"></a>2.6 根据标定块不同</h4><ol><li>立体：标定通过拍摄一个事先已经确定了三维几何形状的物体来进行，也就是在一定的摄像机模型下，基于特定的实验条件如形状、尺寸已知的定标参照物(标定物)，经过对其图像进行处理，利用一系列数学变换和计算方法，求取摄像机模型的内部参数和外部参数。这种定标方法的精度很高。用于定标的物体一般是由两到三个相互正交的平面组成。但这些方法需要昂贵的标定设备，而且事前要精确地设置。</li><li>平面：平面模板(作为标定物)，对于每个视点获得图像,提取图像上的网格角点，平面模板与图像间的网格角点对应关系，确定了单应性矩阵，平面模板可以用硬纸板，上面张贴激光打印机打印的棋盘格。模板图案常采用矩形和二次曲线（圆和椭圆）。</li></ol><h3 id="3-摄像机成像模型"><a href="#3-摄像机成像模型" class="headerlink" title="3. 摄像机成像模型"></a>3. 摄像机成像模型</h3><ol><li>图像是空间物体通过成像系统在像平面上的反映，即空间物体在像平面上的投影。</li><li>该点在图像上的位置则与空间物体表面对应点的几何位置有关。这些位置的相互关系，由摄像机成像系统的几何投影模型所决定。</li><li>三维空间中的物体到像平面的投影关系即为成像模型，理想的投影成像模型是小孔模型。</li></ol><h4 id="3-1-小孔模型"><a href="#3-1-小孔模型" class="headerlink" title="3.1 小孔模型"></a>3.1 小孔模型</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/3.png"></p><ol><li>假设物体表面的反射光都经过一个针孔而投影到像平面上。</li><li>小孔模型主要由光心（投影中心）、成像面和光轴组成。</li><li>小孔成像由于透光量太小，因此需要很长的曝光时间，并且很难得到清晰的图像。</li><li>实际摄像系统通常都由透镜或者透镜组组成。两种模型具有相同的成像关系，即像点是物点和光心的连线与图像平面的交点。</li><li>因此，可以用小孔模型作为摄像机成像模型。</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/4.png"></p><ol><li>空间点 O 是投影中心，它到平面Π的距离是 f 。空间点 M 在平面Π上的投影(或像) m 是以点 O 为端点并经过点 M 的射线与平面Π的交点。</li><li>平面Π ：摄像机的像平面。</li><li>点O：摄像机中心(光心)。</li><li>f ：摄像机的焦距</li><li>以点 O 为端点且垂直于像平面的射线称为光轴或主轴，主轴与像平面的交点 p 称为摄像机的主点。</li></ol><h4 id="3-2-常用坐标系及其关系"><a href="#3-2-常用坐标系及其关系" class="headerlink" title="3.2 常用坐标系及其关系"></a>3.2 常用坐标系及其关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/5.png"></p><p>在摄像机标定中常用三个不同层次的坐标系统：</p><ol><li>世界坐标系(Xw，Yw，Zw)：也称真实或现实世界坐标系，或全局坐标系。它是客观世界的绝对坐标，由用户任意定义的三维空间坐标系。一般的3D场景都用这个坐标系来表示。</li><li>摄像机坐标系(Xc，Yc，Zc)：以小孔摄像机模型的聚焦中心为原点，以摄像机光轴为OZc 轴建立的三维直角坐标系。 Xc，Yc 一般与图像物理坐标系的X，Y 平行。</li><li>图像坐标系（图像像素坐标系和图像物理坐标系）：分为图像像素坐标系和图像物理坐标系两种：<br>图像物理坐标系（ Xu，Yu ）：其原点为透镜光轴与成像平面的交点，Xu 与Yu 轴分别平行于摄像机坐标系的Xc，Yc 轴，是平面直角坐标系，单位为毫米。<br>图像像素坐标系(u，v)：固定在图像上的以像素为单位的平面直角坐标系，其原点位于图像左上角， u，v 平行于图像物理坐标系的X 和Y轴。对于数字图像，分别为行列方向。</li></ol><h4 id="3-3-世界坐标与摄像机坐标之间的转换关系"><a href="#3-3-世界坐标与摄像机坐标之间的转换关系" class="headerlink" title="3.3 世界坐标与摄像机坐标之间的转换关系"></a>3.3 世界坐标与摄像机坐标之间的转换关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/6.png"></p><h4 id="3-4-图像坐标系与摄像机坐标系变换关系"><a href="#3-4-图像坐标系与摄像机坐标系变换关系" class="headerlink" title="3.4 图像坐标系与摄像机坐标系变换关系"></a>3.4 图像坐标系与摄像机坐标系变换关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/7.png"></p><h4 id="3-5-世界坐标系与图像坐标系变换关系"><a href="#3-5-世界坐标系与图像坐标系变换关系" class="headerlink" title="3.5 世界坐标系与图像坐标系变换关系"></a>3.5 世界坐标系与图像坐标系变换关系</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/8.png"></p><h3 id="4-透镜畸变模型"><a href="#4-透镜畸变模型" class="headerlink" title="4. 透镜畸变模型"></a>4. 透镜畸变模型</h3><h4 id="4-1-成因"><a href="#4-1-成因" class="headerlink" title="4.1 成因"></a>4.1 成因</h4><p>由于摄像机物镜系统设计、制作、装配所引起的像点偏离其理想位置点位误差称为光学畸变，如下图所示：</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/9.png"></p><h4 id="4-2-径向畸变和切向畸变"><a href="#4-2-径向畸变和切向畸变" class="headerlink" title="4.2 径向畸变和切向畸变"></a>4.2 径向畸变和切向畸变</h4><ol><li>光学畸变分为径向畸变和切向畸变两种。径向畸变像点沿径向方向偏离标准理想位置；垂直径向方向的畸变称为切向畸变。</li><li>对一般低精度要求的场合，只考虑径向畸变就可以，因为切向畸变的影响远小于径向畸变。</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/10.png"></p><h5 id="4-2-1-径向畸变"><a href="#4-2-1-径向畸变" class="headerlink" title="4.2.1 径向畸变"></a>4.2.1 径向畸变</h5><ol><li>径向畸变就是沿着透镜半径方向分布的畸变，产生原因是光线在原理透镜中心的地方比靠近中心的地方更加弯曲，这种畸变在普通廉价的镜头中表现更加明显，径向畸变主要包括桶形畸变和枕形畸变两种。以下分别是枕形和桶形畸变示意图：</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/11.png"></p><ol start="2"><li>径向畸变数学模型：成像仪光轴中心的畸变为0，沿着镜头半径方向向边缘移动，畸变越来越严重。畸变的数学模型可以用主点周围的泰勒级数展开式的前几项进行描述，通常使用前两项，即k1和k2，对于畸变很大的镜头，如鱼眼镜头，可以增加使用第三项k3来进行描述，成像仪上某点根据其在径向方向上的分布位置，调节公式为：</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/12.png"></p><ol start="3"><li>径向畸变数学模型：公式里(x0，y0)是畸变点在成像器件上的原始位置，(x，y)是畸变校正后新的位置，下图是距离光心不同距离上的点经过透镜径向畸变后点位的偏移示意图，可以看到，距离光心越远，径向位移越大，表示畸变也越大，在光心附近，几乎没有偏移。</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/13.png"></p><h5 id="4-2-2-切向畸变数学模型"><a href="#4-2-2-切向畸变数学模型" class="headerlink" title="4.2.2 切向畸变数学模型"></a>4.2.2 切向畸变数学模型</h5><p>切向畸变是由于透镜本身与相机传感器平面（成像平面）或图像平面不平行而产生的，这种情况多是由于透镜被粘贴到镜头模组上的安装偏差导致。畸变模型可以用两个额外的参数p1和p2来描述：</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/14.png"></p><p>切向畸变数学模型：显示某个透镜的切向畸变示意图，大体上畸变位移相对于左下—右上角的连线是对称的，说明该镜头在垂直于该方向上有一个旋转角度。</p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/15.png"></p><h4 id="4-3-畸变校正"><a href="#4-3-畸变校正" class="headerlink" title="4.3 畸变校正"></a>4.3 畸变校正</h4><ol><li>径向畸变和切向畸变模型中一共有5个畸变参数</li><li>在OpenCV中他们被排列成一个5*1的矩阵，依次包含k1、k2、p1、p2、k3，经常被定义为Mat矩阵的形式，如Mat distCoeffs=Mat(1, 5, CV_32FC1, Scalar::all(0))；</li><li>求得这5个参数后，就可以校正由于镜头畸变引起的图像的变形失真，下图显示根据镜头畸变系数校正后的效果：</li></ol><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/16.jpg"></p><h3 id="5-摄像机标定方法"><a href="#5-摄像机标定方法" class="headerlink" title="5. 摄像机标定方法"></a>5. 摄像机标定方法</h3><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/16.png"></p><h4 id="5-1-线性标定方法"><a href="#5-1-线性标定方法" class="headerlink" title="5.1 线性标定方法"></a>5.1 线性标定方法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/17.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/18.png"></p><h4 id="5-2-非线性标定方法"><a href="#5-2-非线性标定方法" class="headerlink" title="5.2 非线性标定方法"></a>5.2 非线性标定方法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/19.png"></p><h4 id="5-3-两步标定法"><a href="#5-3-两步标定法" class="headerlink" title="5.3 两步标定法"></a>5.3 两步标定法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/20.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/21.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/22.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/23.png"></p><h4 id="5-4-张正友标定法"><a href="#5-4-张正友标定法" class="headerlink" title="5.4 张正友标定法"></a>5.4 张正友标定法</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/23.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/24.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/25.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/26.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/27.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/28.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/29.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/30.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/31.png"></p><h4 id="5-5-摄像机标定结果"><a href="#5-5-摄像机标定结果" class="headerlink" title="5.5 摄像机标定结果"></a>5.5 摄像机标定结果</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/32.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/33.png"></p><h3 id="6-机器人手眼标定"><a href="#6-机器人手眼标定" class="headerlink" title="6. 机器人手眼标定"></a>6. 机器人手眼标定</h3><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/34.png"></p><ol><li>机器人视觉应用中，手眼标定是一个非常基础且关键的问题。简单来说手眼标定的目的就是获取机器人坐标系和相机坐标系的关系，最后将视觉识别的结果转移到机器人坐标系下。</li><li>手眼标定分为两种形式，根据相机固定的地方不同，如果相机和机器人末端固定在一起，就称之为“眼在手”(eye in hand)，如果相机固定在机器人外面的底座上，则称之为“眼在外”(eye to hand)。</li></ol><h4 id="6-1-eye-in-hand"><a href="#6-1-eye-in-hand" class="headerlink" title="6.1 eye in hand"></a>6.1 eye in hand</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/35.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/36.png"></p><h4 id="6-2-eye-to-hand"><a href="#6-2-eye-to-hand" class="headerlink" title="6.2 eye to hand"></a>6.2 eye to hand</h4><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/37.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/38.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/39.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/40.png"></p><p><img src="/2023/03/23/gong-zuo-jing-li/1-biao-ding-dui-wei-ji-chu-zong-jie/41.png"></p>]]></content>
       
       
       <categories>
@@ -96,8 +196,6 @@
         <tags>
             
             <tag> 对位 </tag>
-            
-            <tag> 标定 </tag>
             
         </tags>
       
@@ -668,10 +766,6 @@
           
           <category> 知识总结 </category>
           
-          <category> 机器学习 </category>
-          
-          <category> 深度学习 </category>
-          
       </categories>
       
       
@@ -695,10 +789,6 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
-          <category> 深度学习 </category>
-          
           <category> 知识总结 </category>
           
       </categories>
@@ -706,9 +796,13 @@
       
         <tags>
             
+            <tag> 机器学习 </tag>
+            
             <tag> 统计学 </tag>
             
             <tag> 数理统计 </tag>
+            
+            <tag> 深度学习 </tag>
             
         </tags>
       
@@ -726,10 +820,6 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
-          <category> 深度学习 </category>
-          
           <category> 知识总结 </category>
           
       </categories>
@@ -737,7 +827,11 @@
       
         <tags>
             
+            <tag> 机器学习 </tag>
+            
             <tag> 支持向量机 </tag>
+            
+            <tag> 深度学习 </tag>
             
         </tags>
       
@@ -784,10 +878,6 @@
       
       <categories>
           
-          <category> 机器学习 </category>
-          
-          <category> 深度学习 </category>
-          
           <category> 知识总结 </category>
           
       </categories>
@@ -795,11 +885,15 @@
       
         <tags>
             
+            <tag> 机器学习 </tag>
+            
             <tag> 卷积神经网络 </tag>
             
             <tag> 图卷积神经网络 </tag>
             
             <tag> 图神经网络 </tag>
+            
+            <tag> 深度学习 </tag>
             
         </tags>
       
@@ -816,12 +910,6 @@
       
       
       <categories>
-          
-          <category> 目标检测 </category>
-          
-          <category> 机器学习 </category>
-          
-          <category> 深度学习 </category>
           
           <category> 知识总结 </category>
           
@@ -942,8 +1030,6 @@
       
       
       <categories>
-          
-          <category> 知识总结 </category>
           
           <category> 笔试算法 </category>
           
@@ -2522,7 +2608,7 @@
       
       <categories>
           
-          <category> C++编程环境搭建教程 </category>
+          <category> 环境搭建 </category>
           
       </categories>
       
