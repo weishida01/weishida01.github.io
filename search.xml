@@ -829,9 +829,9 @@
             
             <tag> 机器学习 </tag>
             
-            <tag> 支持向量机 </tag>
-            
             <tag> 深度学习 </tag>
+            
+            <tag> 支持向量机 </tag>
             
         </tags>
       
@@ -887,13 +887,13 @@
             
             <tag> 机器学习 </tag>
             
+            <tag> 深度学习 </tag>
+            
             <tag> 卷积神经网络 </tag>
             
             <tag> 图卷积神经网络 </tag>
             
             <tag> 图神经网络 </tag>
-            
-            <tag> 深度学习 </tag>
             
         </tags>
       
