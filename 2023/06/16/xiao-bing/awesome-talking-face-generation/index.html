@@ -1,0 +1,3006 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Awesome Talking Face Generation, WSD">
+    <meta name="description" content="Papers for Talking Head Generation, released codes collections.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Awesome Talking Face Generation | WSD</title>
+    <link rel="icon" type="image/png" href="/wsd.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WSD" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">WSD</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">WSD</div>
+        <div class="logo-desc">
+            
+            Emotion defines life, data quantifies the world, and models predict the future.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/weishida01" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/weishida01" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/xiaobing/xiaobing.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Awesome Talking Face Generation</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%B0%8F%E5%86%B0/">
+                                <span class="chip bg-color">小冰</span>
+                            </a>
+                        
+                            <a href="/tags/talking-face-generation/">
+                                <span class="chip bg-color">talking face generation</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%B0%8F%E5%86%B0/" class="post-category">
+                                小冰
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-06-16
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-06-16
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    17 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Awesome-Talking-Face-Generation"><a href="#Awesome-Talking-Face-Generation" class="headerlink" title="Awesome Talking Face Generation "></a>Awesome Talking Face Generation <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a></h1><p>Papers for Talking Head Generation, released codes collections.</p>
+<h1 id="papers-amp-codes"><a href="#papers-amp-codes" class="headerlink" title="papers &amp; codes"></a>papers &amp; codes</h1><h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><table>
+<thead>
+<tr>
+<th>title</th>
+<th>accept</th>
+<th>paper</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Critical review of human face reenactment methods</td>
+<td>JIG 2022</td>
+<td><a target="_blank" rel="noopener" href="http://www.cjig.cn/jig/ch/reader/view_abstract.aspx?file_no=20220906">paper</a></td>
+</tr>
+<tr>
+<td>Deep Learning for Visual Speech Analysis: A Survey</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2205.10839">paper</a></td>
+</tr>
+<tr>
+<td>Handbook of Digital Face Manipulation and Detection</td>
+<td>2022</td>
+<td><a target="_blank" rel="noopener" href="https://library.oapen.org/bitstream/handle/20.500.12657/52835/978-3-030-87664-7.pdf?sequence=1">paper</a></td>
+</tr>
+<tr>
+<td>Deep Person Generation: A Survey from the Perspective of Face, Pose and Cloth Synthesis</td>
+<td>Arxiv2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2109.02081">paper</a></td>
+</tr>
+<tr>
+<td>The Creation and Detection of Deepfakes: A Survey</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2004.11138">paper</a></td>
+</tr>
+<tr>
+<td>DeepFakes and Beyond: A Survey of Face Manipulation and Fake Detection</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2001.00179">paper</a></td>
+</tr>
+<tr>
+<td>What comprises a good talking-head video generation?: A Survey and Benchmark</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2005.03201">paper</a></td>
+</tr>
+<tr>
+<td>Deep Audio-Visual Learning: A Survey</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2001.04758">paper</a></td>
+</tr>
+<tr>
+<td>What comprises a good talking-head video generation?: A survey and benchmark</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2005.03201.pdf">paper</a></td>
+</tr>
+<tr>
+<td>A Review on Face Reenactment Techniques</td>
+<td>I4Tech 2020</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9102668">paper</a></td>
+</tr>
+</tbody></table>
+<h2 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h2><table>
+<thead>
+<tr>
+<th>title</th>
+<th>accept</th>
+<th>paper</th>
+<th>code</th>
+<th>web/proj</th>
+<th>keywords</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DiffTalk: Crafting Diffusion Models for Generalized Talking Head Synthesis</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.03786.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://sstzal.github.io/DiffTalk/">proj</a></td>
+<td>Diffusion</td>
+</tr>
+<tr>
+<td>Diffused Heads: Diffusion Models Beat GANs on Talking-Face Generation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://mstypulkowski.github.io/diffusedheads/diffused_heads.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://mstypulkowski.github.io/diffusedheads/">proj</a></td>
+<td>Diffusion</td>
+</tr>
+<tr>
+<td>Emotionally Enhanced Talking Face Generation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2303.11548.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sahilg06/EmoGen">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://midas.iiitd.edu.in/emo/">webpage</a></td>
+<td>emotion</td>
+</tr>
+<tr>
+<td>Avatar Fingerprinting for Authorized Use of Synthetic Talking-Head Videos</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.03713">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://research.nvidia.com/labs/nxp/avatar-fingerprinting/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Multimodal-driven Talking Face Generation, Face Swapping, Diffusion Model</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.02594">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>StyleLipSync: Style-based Personalized Lip-sync Video Generation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.00521">Paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/TaekyungKi/StyleLipSync">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://stylelipsync.github.io/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GeneFace++: Generalized and Stable Real-Time Audio-Driven 3D Talking Face Generation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.00787">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://genefaceplusplus.github.io/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Audio-Driven Talking Face Generation with Diverse yet Realistic Facial Animations</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.08945">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>That’s What I Said: Fully-Controllable Talking Face Generation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.03275">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://mm.kaist.ac.kr/projects/FC-TFG/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>TalkCLIP: Talking Head Generation with Text-Guided Expressive Speaking Styles</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.00334v1">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DAE-Talker: High Fidelity Speech-Driven Talking Face Generation with Diffusion Autoencoder</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.17550">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://daetalker.github.io/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Style Transfer for 2D Talking Head Animation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.09799">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>READ Avatars: Realistic Emotion-controllable Audio Driven Avatars</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.00744">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>On the Audio-visual Synchronization for Lip-to-Speech Synthesis</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.00502">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>EmoTalk: Speech-driven emotional disentanglement for 3D face animation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.11089">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://ziqiaopeng.github.io/emotalk/">ProjectPage</a></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>FaceXHuBERT: Text-less Speech-driven E(X)pressive 3D Facial Animation Synthesis Using Self-Supervised Speech Representation Learning</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.05416">Paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/galib360/FaceXHuBERT">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://galib360.github.io/FaceXHuBERT/">ProjectPage</a></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>Pose-Controllable 3D Facial Animation Synthesis using Hierarchical Audio-Vertices Attention</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2302.12532">Paper</a></td>
+<td></td>
+<td></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>Learning Audio-Driven Viseme Dynamics for 3D Face Animation</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.06059">Paper</a> <a target="_blank" rel="noopener" href="https://linchaobao.github.io/viseme2023/">ProjectPage</a></td>
+<td></td>
+<td></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>CodeTalker: Speech-Driven 3D Facial Animation with Discrete Motion Prior</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.02379.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Doubiiu/CodeTalker">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://doubiiu.github.io/projects/codetalker/">ProjectPage</a></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>Expressive Speech-driven Facial Animation with controllable emotions</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.02008">Paper</a></td>
+<td></td>
+<td></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>Speech Driven Video Editing via an Audio-Conditioned Diffusion Model</td>
+<td>Arxiv2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.04474.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/DanBigioi/DiffusionVideoEditing">code</a></td>
+<td></td>
+<td>Diffusion</td>
+</tr>
+<tr>
+<td>Progressive Disentangled Representation Learning for Fine-Grained Controllable Talking Head Synthesis</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2211.14506">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://dorniwang.github.io/PD-FGC/">webpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>One-Shot High-Fidelity Talking-Head Synthesis with Deformable Neural Radiance Field</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.05097">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://waytron.net/hidenerf/">webpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Seeing What You Said: Talking Face Generation Guided by a Lip Reading Expert</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_Seeing_What_You_Said_Talking_Face_Generation_Guided_by_a_CVPR_2023_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Sxjdwang/TalkLip">Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LipFormer: High-Fidelity and Generalizable Talking Face Generation With a Pre-Learned Facial Codebook</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_LipFormer_High-Fidelity_and_Generalizable_Talking_Face_Generation_With_a_Pre-Learned_CVPR_2023_paper.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>High-Fidelity and Freely Controllable Talking Head Video Generation</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_High-Fidelity_and_Freely_Controllable_Talking_Head_Video_Generation_CVPR_2023_paper.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://yuegao.me/PECHead/">Project Page</a></td>
+<td></td>
+</tr>
+<tr>
+<td>High-fidelity Generalized Emotional Talking Face Generation with Multi-modal Emotion Space Learning</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.02572">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>OTAvatar : One-shot Talking Face Avatar with Controllable Tri-plane Rendering</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.14662">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/theEricMa/OTAvatar">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>IP_LAP: Identity-Preserving Talking Face Generation with Landmark and Appearance Priors</td>
+<td>CVPR2023</td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Weizhi-Zhong/IP_LAP">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2211.12194">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Winfredy/SadTalker">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://sadtalker.github.io/">webpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>DPE: Disentanglement of Pose and Expression for General Video Portrait Editing</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.06281">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Carlyx/DPE">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://carlyx.github.io/DPE/">webpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>MetaPortrait: Identity-Preserving Talking Head Generation with Fast Personalized Adaptation</td>
+<td>CVPR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2212.08062">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Meta-Portrait/MetaPortrait">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://meta-portrait.github.io/">webpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GENEFACE: GENERALIZED AND HIGH-FIDELITY AUDIO-DRIVEN 3D TALKING FACE SYNTHESIS</td>
+<td>ICLR2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.13430.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yerfor/GeneFace">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://geneface.github.io/">ProjectPage</a></td>
+<td>NeRF</td>
+</tr>
+<tr>
+<td>DINet: Deformation Inpainting Network for Realistic Face Visually Dubbing on High Resolution Video</td>
+<td>AAAI2023</td>
+<td><a target="_blank" rel="noopener" href="https://fuxivirtualhuman.github.io/pdf/AAAI2023_FaceDubbing.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/MRzzm/DINet">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>StyleTalk: One-shot Talking Head Generation with Controllable Speaking Styles</td>
+<td>AAAI2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.01081.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FuxiVirtualHuman/styletalk">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>StyleTalk: One-shot Talking Head Generation with Controllable Speaking Styles</td>
+<td>AAAI2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.01081.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FuxiVirtualHuman/styletalk">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Audio-Visual Face Reenactment</td>
+<td>WACV2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2210.02755.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mdv3101/AVFR-Gan">code</a></td>
+<td><a target="_blank" rel="noopener" href="http://cvit.iiit.ac.in/research/projects/cvit-projects/avfr">webpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Towards Generating Ultra-High Resolution Talking-Face Videos With Lip Synchronization</td>
+<td>WACV2023</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/WACV2023/papers/Gupta_Towards_Generating_Ultra-High_Resolution_Talking-Face_Videos_With_Lip_Synchronization_WACV_2023_paper.pdf">paper</a></td>
+<td>-</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cross-identity Video Motion Retargeting with Joint Transformation and Synthesis</td>
+<td>WACV2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2210.01559.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nihaomiao/WACV23_TSNet">Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DisCoHead: Audio-and-Video-Driven Talking Head Generation by Disentangled Control of Head Pose and Facial Expressions</td>
+<td>ICASSP2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.07697">Paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/deepbrainai-research/discohead">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://deepbrainai-research.github.io/discohead/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>OPT: ONE-SHOT POSE-CONTROLLABLE TALKING HEAD GENERATION</td>
+<td>ICASSP2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.08197.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FONT: Flow-guided One-shot Talking Head Generation with Natural Head Motions</td>
+<td>ICME 2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.17789">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Compact Temporal Trajectory Representation for Talking Face Video Compression</td>
+<td>TCSVT2023</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/10109861/">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HR-Net: a landmark based high realistic face reenactment network</td>
+<td>TCSVT2023</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/10103929/">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A Unified Compression Framework for Efficient Speech-Driven Talking-Face Generation</td>
+<td>MLSysWorkshop2023</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.00471v1">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h2><table>
+<thead>
+<tr>
+<th>title</th>
+<th>accept</th>
+<th>paper</th>
+<th>code</th>
+<th>web/proj</th>
+<th>keywords</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Talking Head Generation with Probabilistic Audio-to-Visual Diffusion Priors</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2212.04248v1.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://zxyin.github.io/TH-PAD/">proj</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Face-Dubbing++: Lip-Synchronous, Voice Preserving Translation of Videos</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2206.04523.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DialogueNeRF: Towards Realistic Avatar Face-to-face Conversation Video Generation</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2203.07931.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Head Generation Driven by Speech-Related Facial Action Units and Audio- Based on Multimodal Representation Fusion</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2204.12756.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AUTOLV: AUTOMATIC LECTURE VIDEO GENERATOR</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.08795v1.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SPACE: Speech-driven Portrait Animation with Controllable Expression</td>
+<td>Arxiv2022</td>
+<td></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://deepimagination.cc/SPACEx/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Synthesizing Photorealistic Virtual Humans Through Cross-modal Disentanglement</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.01320v1.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>StyleTalker: One-shot Style-based Audio-driven Talking Head Video Generation</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2208.10922">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Free-HeadGAN: Neural Talking Head Synthesis with Explicit Gaze Control</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2208.02210.pdf">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>StableFace: Analyzing and Improving Motion Stability for Talking Face Generation</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2208.13717">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://stable-face.github.io/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>StyleHEAT: One-Shot High-Resolution Editable Talking Face Generation via Pre-trained StyleGAN</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2203.04036">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FeiiYin/StyleHEAT">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://feiiyin.github.io/StyleHEAT/">project page</a></td>
+<td>stylegan</td>
+</tr>
+<tr>
+<td>DFA-NeRF: Personalized Talking Head Generation via Disentangled Face Attributes Neural Rendering</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2201.00791">paper</a></td>
+<td></td>
+<td></td>
+<td>NeRF</td>
+</tr>
+<tr>
+<td>Dynamic Neural Textures: Generating Talking-Face Videos with Continuously Controllable Expressions</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2204.06180.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Imitator: Personalized Speech-driven 3D Facial Animation</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.00023">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://balamuruganthambiraja.github.io/Imitator/">ProjectPage</a></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>PV3D: A 3D Generative Model for Portrait Video Generation</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2212.06384">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://showlab.github.io/pv3d/">ProjectPage</a></td>
+<td>3D</td>
+</tr>
+<tr>
+<td>Memories are One-to-Many Mapping Alleviators in Talking Face Generation</td>
+<td>Arxiv2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2212.05005">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://memoryface.github.io/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>AniFaceGAN: Animatable 3D-Aware Face Image Generation for Video Avatars</td>
+<td>NeurIPS2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2210.05825.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://yuewuhkust.github.io/AniFaceGAN/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>VideoReTalking: Audio-based Lip Synchronization for Talking Head Video Editing In the Wild</td>
+<td>SIGGRAPHASIA2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2211.14758">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vinthony/video-retalking">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Masked Lip-Sync Prediction by Audio-Visual Contextual Exploitation in Transformers</td>
+<td>SIGGRAPHASIA2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2212.04970">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>EAMM: One-Shot Emotional Talking Face via Audio-Based Emotion-Aware Motion Model</td>
+<td>SIGGRAPH2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2205.15278.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td>emotion</td>
+</tr>
+<tr>
+<td>FSGANv2: Improved Subject Agnostic Face Swapping and Reenactment</td>
+<td>PAMI2022</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2202.12972">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2211.12194v1.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Winfredy/SadTalker">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Expressive Talking Head Generation with Granular Audio-Visual Control</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liang_Expressive_Talking_Head_Generation_With_Granular_Audio-Visual_Control_CVPR_2022_paper.pdf">paper</a></td>
+<td>-</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Face Generation With Multilingual TTS</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2205.06421">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/spaces/CVPR/ml-talking-face">code</a></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Dual-Generator Face Reenactment</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Hsu_Dual-Generator_Face_Reenactment_CVPR_2022_paper.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Depth-Aware Generative Adversarial Network for Talking Head Video Generation</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2203.06605">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/harlanhong/CVPR2022-DaGAN">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://harlanhong.github.io/publications/dagan.html">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>HeadNeRF: A Real-time NeRF-based Parametric Head Model</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Grassal_Neural_Head_Avatars_From_Monocular_RGB_Videos_CVPR_2022_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/CrisHY1995/headnerf">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://hy1995.top/HeadNeRF-Project/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>I M Avatar: Implicit Morphable Head Avatars from Videos</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Zheng_I_M_Avatar_Implicit_Morphable_Head_Avatars_From_Videos_CVPR_2022_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://ait.ethz.ch/projects/2022/IMavatar/">Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Neural Emotion Director: Speech-preserving semantic control of facial expressions in “in-the-wild” videos</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2112.00585.pdf">Paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/foivospar/NED">Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show Me What and Tell Me How: Video Synthesis via Multimodal Conditioning</td>
+<td>CVPR2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2203.02573.pdf">Paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/snap-research/MMVID">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://snap-research.github.io/MMVID/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Learning Dynamic Facial Radiance Fields for Few-Shot Talking Head Synthesis</td>
+<td>ECCV2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2207.11770">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sstzal/DFRF">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://sstzal.github.io/DFRF/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Semantic-Aware Implicit Neural Audio-Driven Video Portrait Generation</td>
+<td>ECCV2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2201.07786.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/alvinliu0/SSP-NeRF">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://alvinliu0.github.io/projects/SSP-NeRF">ProjectPage</a></td>
+<td>NeRF</td>
+</tr>
+<tr>
+<td>StyleHEAT: One-Shot High-Resolution Editable Talking Face Generation via Pretrained StyleGAN</td>
+<td>ECCV2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2203.04036.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FeiiYin/StyleHEAT/">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://feiiyin.github.io/StyleHEAT/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Realistic One-shot Mesh-based Head Avatars</td>
+<td>ECCV2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2206.08343.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Latent Image Animator: Learning to Animate Images via Latent Space Navigation</td>
+<td>ICLR2022</td>
+<td><a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=7r6kDq0mK_">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/wyhsirius/LIA">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://wyhsirius.github.io/LIA-project/">ProjectPage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>MegaPortraits: One-shot Megapixel Neural Head Avatars</td>
+<td>ACMMM2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2207.07621">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://samsunglabs.github.io/MegaPortraits/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Head from Speech Audio using a Pre-trained Image Generator</td>
+<td>ACMMM2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.04252.pdf">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Compressing Video Calls using Synthetic Talking Heads</td>
+<td>BMVC2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2210.03692.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://cvit.iiit.ac.in/research/projects/cvit-projects/talking-video-compression">webpage</a></td>
+<td>application</td>
+</tr>
+<tr>
+<td>Finding Directions in GAN’s Latent Space for Neural Face Reenactment</td>
+<td>BMVC2022</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2202.00046.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/StelaBou/stylegan_directions_face_reenactment">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://stelabou.github.io/stylegan-directions-reenactment/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Emotion-Controllable Generalized Talking Face Generation</td>
+<td>IJCAI2022</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2205.01155">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HifiHead: One-Shot High Fidelity Neural Head Synthesis with 3D Control]</td>
+<td>IJCAI2022</td>
+<td><a target="_blank" rel="noopener" href="https://www.ijcai.org/proceedings/2022/0244.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cross-Modal Mutual Learning for Audio-Visual Speech Recognition and Manipulation</td>
+<td>AAAI2022</td>
+<td><a target="_blank" rel="noopener" href="https://www.aaai.org/AAAI22Papers/AAAI-6163.YangC.pdf">paper</a></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SyncTalkFace: Talking Face Generation with Precise Lip-syncing via Audio-Lip Memory</td>
+<td>AAAI2022</td>
+<td><a target="_blank" rel="noopener" href="https://www.aaai.org/AAAI22Papers/AAAI-7528.ParkS.pdf">paper(temp)</a></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td>One-shot Talking Face Generation from Single-speaker Audio-Visual Correlation Learning</td>
+<td>AAAI2022</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2112.02749">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FuxiVirtualHuman/AAAI22-one-shot-talking-face">projectpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Audio-Driven Talking Face Video Generation with Dynamic Convolution Kernels</td>
+<td>TMM2022</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2201.05986">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Audio-driven Dubbing for User Generated Contents via Style-aware Semi-parametric Synthesis</td>
+<td>TCSVT2022</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/9903679/">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h2><table>
+<thead>
+<tr>
+<th>title</th>
+<th>accept</th>
+<th>paper</th>
+<th>code</th>
+<th>web/proj</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AnyoneNet: Synchronized Speech and Talking Head Generation for Arbitrary Person</td>
+<td>Arxiv2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2108.04325v2.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LandmarkGAN: Synthesizing Faces from Landmarks</td>
+<td>Arxiv2021</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2011.00269">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3D-TalkEmo: Learning to Synthesize 3D Emotional Talking Head</td>
+<td>Arxiv2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.12051.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Voice2Mesh: Cross-Modal 3D Face Model Generation from Voices</td>
+<td>Arxiv2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.10299v1.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/choyingw/Voice2Mesh">code</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Parallel and High-Fidelity Text-to-Lip Generation</td>
+<td>Arxiv2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2107.06831v2.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Live Speech Portraits: Real-Time Photorealistic Talking-Head Animation</td>
+<td>SIGGRAPHASIA2021</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2109.10595">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/YuanxunLu/LiveSpeechPortraits">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/YuanxunLu/LiveSpeechPortraits">project page</a></td>
+</tr>
+<tr>
+<td>FaceFormer: Speech-Driven 3D Facial Animation with Transformers</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.05329">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/EvelynFan/FaceFormer">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/EvelynFan/FaceFormer">projectpage</a></td>
+</tr>
+<tr>
+<td>Audio-Driven Emotional Video Portraits</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.07452.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jixinya/EVP/">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jixinya/EVP">projectpage</a></td>
+</tr>
+<tr>
+<td>LipSync3D: Data-Efficient Learning of Personalized 3D Talking Faces from Video using Pose and Lighting Normalization</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2021/papers/Lahiri_LipSync3D_Data-Efficient_Learning_of_Personalized_3D_Talking_Faces_From_Video_CVPR_2021_paper.pdf">paper</a></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhou_Pose-Controllable_Talking_Face_Generation_by_Implicitly_Modularized_Audio-Visual_Representation_CVPR_2021_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS">project page</a></td>
+</tr>
+<tr>
+<td>Flow-guided One-shot Talking Face Generation with a High-resolution Audio-visual Dataset</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_Flow-Guided_One-Shot_Talking_Face_Generation_With_a_High-Resolution_Audio-Visual_Dataset_CVPR_2021_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/MRzzm/HDTF">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/MRzzm/HDTF">projectpage</a></td>
+</tr>
+<tr>
+<td>Everything’s Talkin’: Pareidolia Face Reenactment</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2104.03061">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NerFACE: Dynamic Neural Radiance Fields for Monocular 4D Facial Avatar Reconstruction</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2012.03065">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/gafniguy/4D-Facial-Avatars">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://gafniguy.github.io/4D-Facial-Avatars/">Project</a></td>
+</tr>
+<tr>
+<td>One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2011.15126">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NVlabs/imaginaire">code</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Audio-Driven Emotional Video Portraits</td>
+<td>CVPR2021</td>
+<td><a target="_blank" rel="noopener" href="https://jixinya.github.io/projects/evp/resources/evp.pdf">Paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jixinya/EVP/">Code</a></td>
+<td></td>
+</tr>
+<tr>
+<td>FACIAL: Synthesizing Dynamic Talking Face with Implicit Attribute Learning</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2108.07938v1.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhangchenxu528/FACIAL">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhangchenxu528/FACIAL">projectpage</a></td>
+</tr>
+<tr>
+<td>MeshTalk: 3D Face Animation from Speech using Cross-Modality Disentanglement</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Richard_MeshTalk_3D_Face_Animation_From_Speech_Using_Cross-Modality_Disentanglement_ICCV_2021_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/facebookresearch/meshtalk">code(coming soon)</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/facebookresearch/meshtalk">projectpage</a></td>
+</tr>
+<tr>
+<td>AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Guo_AD-NeRF_Audio_Driven_Neural_Radiance_Fields_for_Talking_Head_Synthesis_ICCV_2021_paper.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/YudongGuo/AD-NeRF">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/YudongGuo/AD-NeRF">projectpage</a></td>
+</tr>
+<tr>
+<td>Sparse to Dense Motion Transfer for Face Image Animation</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/ICCV2021W/AIM/papers/Zhao_Sparse_to_Dense_Motion_Transfer_for_Face_Image_Animation_ICCVW_2021_paper.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PIRenderer:PIRenderer: Controllable Portrait Image Generation via Semantic Neural Rendering</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2109.08379.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/RenYurui/PIRender">Code</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Learned Spatial Representations for Few-shot Talking-Head Synthesis</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Meshry_Learned_Spatial_Representations_for_Few-Shot_Talking-Head_Synthesis_ICCV_2021_paper.pdf">Paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HeadGAN: One-shot Neural Head Synthesis and Editing</td>
+<td>ICCV2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2012.08261.pdf">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://michaildoukas.github.io/HeadGAN/">Project</a></td>
+</tr>
+<tr>
+<td>S2D:Imitating Arbitrary Talking Style for Realistic Audio-Driven Talking Face Synthesis</td>
+<td>ACMMM2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2111.00203v1.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/wuhaozhe/style_avatar">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/wuhaozhe/style_avatar">project page</a></td>
+</tr>
+<tr>
+<td>Towards Realistic Visual Dubbing with Heterogeneous Sources</td>
+<td>ACMMM2021</td>
+<td><a target="_blank" rel="noopener" href="https://dl.acm.org/doi/abs/10.1145/3474085.3475318">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>One-shot Face Reenactment Using Appearance Adaptive Normalization</td>
+<td>AAAI2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2102.03984.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Write-a-speaker: Text-based Emotional and Rhythmic Talking-head Generation</td>
+<td>AAAI2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.07995.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FuxiVirtualHuman/Write-a-Speaker">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FuxiVirtualHuman/Write-a-Speaker">projectpage</a></td>
+</tr>
+<tr>
+<td>Visual Speech Enhancement Without A Real Visual Stream</td>
+<td>WACV2021</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/WACV2021/papers/Hegde_Visual_Speech_Enhancement_Without_a_Real_Visual_Stream_WACV_2021_paper.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A unified framework for high fidelity face swap and expression reenactment</td>
+<td>TCSVT2021</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/9517088/">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Head Generation with Audio and Speech Related Facial Action Units</td>
+<td>BMVC2021</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2110.09951">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LI-Net: Large-Pose Identity-Preserving Face Reenactment Network</td>
+<td>ICME2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.02850">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3D Talking Face with Personalized Pose Dynamics</td>
+<td>TVCG2021</td>
+<td><a target="_blank" rel="noopener" href="https://personal.utdallas.edu/~xxg061000/TVCG2021.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Audio2Head: Audio-driven One-shot Talking-head Generation with Natural Head Motion</td>
+<td>IJCAI2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2107.09293.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/wangsuzhen/Audio2Head">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/wangsuzhen/Audio2Head">projectpage</a></td>
+</tr>
+<tr>
+<td>Speech2Talking-Face: Inferring and Driving a Face with Synchronized Audio-Visual Representation</td>
+<td>IJCAI2021</td>
+<td><a target="_blank" rel="noopener" href="https://www.ijcai.org/proceedings/2021/0141.pdf">paper</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Text2Video: Text-driven Talking-head Video Synthesis with Phonetic Dictionary</td>
+<td>ICASSP2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.14631v1.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sibozhang/Text2Video">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sibozhang/Text2Video">projectpage</a></td>
+</tr>
+<tr>
+<td>APB2FaceV2: Real-Time Audio-Guided Multi-Face Reenactment</td>
+<td>ICASSP2021</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2010.13017v1">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhangzjn/APB2FaceV2">code</a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><table>
+<thead>
+<tr>
+<th>title</th>
+<th>accept</th>
+<th>paper</th>
+<th>code</th>
+<th>web/proj</th>
+<th>dataset</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Everybody’s Talkin’: Let Me Talk as You Want</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2001.05201">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Speech Driven Talking Face Generation from a Single Image and an Emotion Condition</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2008.03592.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/eeskimez/emotalkingface">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/eeskimez/emotalkingface">project page</a></td>
+<td>CREMA-D</td>
+</tr>
+<tr>
+<td>MakeItTalk: Speaker-Aware Talking Head Animation</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2004.12992.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/adobe-research/MakeItTalk">code</a>, <a target="_blank" rel="noopener" href="https://github.com/yzhou359/MakeItTalk">code</a></td>
+<td></td>
+<td>VoxCeleb2, VCTK</td>
+</tr>
+<tr>
+<td>HeadGAN:Video-and-Audio-Driven Talking Head Synthesis</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2012.08261v1.pdf">paper</a></td>
+<td>-</td>
+<td></td>
+<td>VoxCeleb2</td>
+</tr>
+<tr>
+<td>Photorealistic Lip Sync with Adversarial Temporal Convolutional Networks</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2002.08700.pdf">paper</a></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Audio-driven Talking Face Video Generation with Learning-based Personalized Head Pose</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2002.10137.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yiranran/Audio-driven-TalkingFace-HeadPose">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yiranran/Audio-driven-TalkingFace-HeadPose">projectpage</a></td>
+<td>ImageNet,  FaceWarehouse,  LRW</td>
+</tr>
+<tr>
+<td>SPEECH-DRIVEN FACIAL ANIMATION USING POLYNOMIAL FUSION OF FEATURES</td>
+<td>Arxiv2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1912.05833.pdf">paper</a></td>
+<td>-</td>
+<td></td>
+<td>LRW</td>
+</tr>
+<tr>
+<td>MakeItTalk: Speaker-Aware Talking Head Animation</td>
+<td>SIGGRAPHASIA2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2004.12992">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yzhou359/MakeItTalk">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yzhou359/MakeItTalk">project page</a></td>
+<td></td>
+</tr>
+<tr>
+<td>FReeNet: Multi-Identity Face Reenactment</td>
+<td>CVPR2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1905.11805">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhangzjn/FReeNet">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Neural Head Reenactment with Latent Pose Descriptors</td>
+<td>CVPR2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2004.12000">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/shrubb/latent-pose-reenactment">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Learning Individual Speaking Styles for Accurate Lip to Speech Synthesis</td>
+<td>CVPR2020</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Prajwal_Learning_Individual_Speaking_Styles_for_Accurate_Lip_to_Speech_Synthesis_CVPR_2020_paper.pdf">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Robust One Shot Audio to Video Generation</td>
+<td>CVPRW2020</td>
+<td><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_CVPRW_2020/html/w45/Kumar_Robust_One_Shot_Audio_to_Video_Generation_CVPRW_2020_paper.html">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Learning Identity-Invariant Motion Representations for Cross-ID Face Reenactment</td>
+<td>CVPR2020</td>
+<td><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Huang_Learning_Identity-Invariant_Motion_Representations_for_Cross-ID_Face_Reenactment_CVPR_2020_paper.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking-head Generation with Rhythmic Head Motion</td>
+<td>ECCV2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2007.08547.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/lelechen63/Talking-head-Generation-with-Rhythmic-Head-Motion">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/lelechen63/Talking-head-Generation-with-Rhythmic-Head-Motion">projectpage</a></td>
+<td>Crema, Grid, Voxceleb, Lrs3</td>
+</tr>
+<tr>
+<td>MEAD: A Large-scale Audio-visual Dataset for Emotional Talking-face Generation</td>
+<td>ECCV2020</td>
+<td><a target="_blank" rel="noopener" href="https://wywu.github.io/projects/MEAD/support/MEAD.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/uniBruce/Mead">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://wywu.github.io/projects/MEAD/MEAD.html">Project</a></td>
+<td>VoxCeleb2, AffectNet</td>
+</tr>
+<tr>
+<td>Neural voice puppetry:Audio-driven facial reenactment</td>
+<td>ECCV2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1912.05566.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/JustusThies/NeuralVoicePuppetry">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/miu200521358/NeuralVoicePuppetryMMD">projectpage</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Fast Bi-layer Neural Synthesis of One-Shot Realistic Head Avatars</td>
+<td>ECCV2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2008.10174v1.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/saic-violet/bilayer-model">code</a></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Fast Bi-layer Neural Synthesis of One-Shot Realistic Head Avatars</td>
+<td>ECCV2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2008.10174">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/saic-violet/bilayer-model">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Realistic Face Reenactment via Self-Supervised Disentangling of Identity and Pose</td>
+<td>AAAI2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2003.12957">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A Lip Sync Expert Is All You Need for Speech to Lip Generation In The Wild</td>
+<td>ACMMM2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2008.10010.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Rudrabha/Wav2Lip">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Rudrabha/Wav2Lip">project page</a></td>
+<td>LRS2</td>
+</tr>
+<tr>
+<td>Mesh Guided One-shot Face Reenactment using Graph Convolutional Networks</td>
+<td>ACMMM2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2008.07783">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2008.07783">Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Face Generation with Expression-Tailored Generative Adversarial Network</td>
+<td>ACMMM2020</td>
+<td><a target="_blank" rel="noopener" href="https://dl.acm.org/doi/abs/10.1145/3394171.3413844">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Animating Face using Disentangled Audio Representations</td>
+<td>WACV2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1910.00726.pdf">paper</a></td>
+<td>-</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing</td>
+<td>WACV2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2011.15126">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://nvlabs.github.io/face-vid2vid/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>FACEGAN: Facial Attribute Controllable rEenactment GAN</td>
+<td>WACV2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2011.04439">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Arbitrary Talking Face Generation via Attentional Audio-Visual Coherence Learning</td>
+<td>IJCAI2020</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1812.06589">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>APB2Face: Audio-guided face reenactment with auxiliary pose and blink signals</td>
+<td>ICASSP2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2004.14569v1">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhangzjn/APB2Face">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Realistic Speech-Driven Facial Animation with GANs</td>
+<td>IJCV2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1906.06337.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Modality Dropout for Improved Performance-driven Talking Faces</td>
+<td>ICMI2020</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2005.13616">Paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Multimodal inputs driven talking face generation with spatial–temporal dependency</td>
+<td>TCSVT2020</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/8995571/">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Multimodal Inputs Driven Talking Face Generation With Spatial-Temporal Dependency</td>
+<td>TCSVT2020</td>
+<td><a target="_blank" rel="noopener" href="https://www.researchgate.net/profile/Jun_Yu42/publication/339224051_Multimodal_Inputs_Driven_Talking_Face_Generation_With_Spatial-Temporal_Dependency/links/5eae2c6a92851cb2676fa016/Multimodal-Inputs-Driven-Talking-Face-Generation-With-Spatial-Temporal-Dependency.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><table>
+<thead>
+<tr>
+<th>title</th>
+<th>accept</th>
+<th>paper</th>
+<th>code</th>
+<th>web/proj</th>
+<th>dataset</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FOMM:First order motion model for image animation</td>
+<td>NeurIPS2019</td>
+<td><a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/AliaksandrSiarohin/first-order-model">Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Face Reconstruction from Voice using Generative Adversarial Networks</td>
+<td>NeurIPS2019</td>
+<td><a target="_blank" rel="noopener" href="https://papers.nips.cc/paper/8768-face-reconstruction-from-voice-using-generative-adversarial-networks.pdf">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fs-vid2vid:Few-shot Video-to-Video Synthesis</td>
+<td>NeurIPS2019</td>
+<td><a target="_blank" rel="noopener" href="https://nvlabs.github.io/few-shot-vid2vid/main.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NVlabs/few-shot-vid2vid">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://nvlabs.github.io/few-shot-vid2vid/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Hierarchical Cross-Modal Talking Face Generation with Dynamic Pixel-Wise Loss</td>
+<td>CVPR2019</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1905.03820.pdf">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/lelechen63/ATVGnet">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/lelechen63/ATVGnet">project page</a></td>
+<td>VGG Face, LRW</td>
+</tr>
+<tr>
+<td>Learning the Face Behind a Voice</td>
+<td>CVPR2019</td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8953196/">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/saiteja-talluri/Speech2Face">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hierarchical Cross-Modal Talking Face Generation with Dynamic Pixel-Wise Loss</td>
+<td>CVPR2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1905.03820">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/lelechen63/ATVGnet">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Capture, Learning, and Synthesis of 3D Speaking Styles</td>
+<td>CVPR2019</td>
+<td><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2019/html/Cudeiro_Capture_Learning_and_Synthesis_of_3D_Speaking_Styles_CVPR_2019_paper.html">Paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/TimoBolkart/voca">projectpage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Monkey-Net:Animating Arbitrary Objects via Deep Motion Transfer</td>
+<td>CVPR2019</td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/AliaksandrSiarohin/monkey-net">Code</a></td>
+<td><a target="_blank" rel="noopener" href="http://www.stulyakov.com/papers/monkey-net.html">Project</a>]</td>
+<td></td>
+</tr>
+<tr>
+<td>Few-Shot Adversarial Learning of Realistic Neural Talking Head Models</td>
+<td>ICCV2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1905.08233">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Make a Face: Towards Arbitrary High Fidelity Face Manipulation</td>
+<td>ICCV2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1908.07191">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Face Generation by Adversarially Disentangled Audio-Visual Representation</td>
+<td>AAAI2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1807.07860">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Hangz-nju-cuhk/Talking-Face-Generation-DAVS">Code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Hangz-nju-cuhk/Talking-Face-Generation-DAVS">project page</a></td>
+<td></td>
+</tr>
+<tr>
+<td>FLNet: Landmark Driven Fetching and Learning Network for Faithful Talking Facial Animation Synthesis</td>
+<td>AAAI2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1911.09224">paper</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MarioNETte: Few-shot Face Reenactment Preserving Identity of Unseen Targets</td>
+<td>AAAI2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1911.08139">paper</a></td>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://hyperconnect.github.io/MarioNETte/">Project</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Towards Automatic Face-to-Face Translation</td>
+<td>ACMMM2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/2003.00418">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Rudrabha/LipGAN">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wav2Pix: Speech-conditioned Face Generation using Generative Adversarial Networks</td>
+<td>ICASSP2019</td>
+<td><a target="_blank" rel="noopener" href="http://arxiv.org/abs/1903.10195">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/miqueltubau/Wav2Pix">code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Talking Face Generation by Conditional Recurrent Adversarial Network</td>
+<td>IJCAI2019</td>
+<td><a href="%5Bhttps://papers.nips.cc/paper/8768-face-reconstruction-from-voice-using-generative-adversarial-networks.pdf%5D(https://arxiv.org/pdf/1804.04786.pdf)">paper</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/susanqq/Talking_Face_Generation">code</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/susanqq/Talking_Face_Generation">project page</a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="datasets"><a href="#datasets" class="headerlink" title="datasets"></a>datasets</h2><ul>
+<li>BIWI <a target="_blank" rel="noopener" href="https://data.vision.ee.ethz.ch/cvl/datasets/b3dac2.en.html">project page</a></li>
+<li>CelebV [<a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1jQ6d76T5GQuvQH4dq8_Wq1T0cxvN0_xp/view">project page</a>].</li>
+<li>CelebV-HQ [<a target="_blank" rel="noopener" href="https://github.com/CelebV-HQ/CelebV-HQ">project page</a>].</li>
+<li>CREMA-D <a target="_blank" rel="noopener" href="https://github.com/CheyneyComputerScience/CREMA-D">project page</a></li>
+<li>CREMA-D 2014 <a target="_blank" rel="noopener" href="https://github.com/CheyneyComputerScience/CREMA-D">project page</a></li>
+<li>DPCD <a target="_blank" rel="noopener" href="https://github.com/Metaverse-AI-Lab-THU/Deep-Personalized-Character-Dataset-DPCD">Link</a> <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.11093">Paper</a></li>
+<li>Faceforensics++ [<a target="_blank" rel="noopener" href="https://github.com/ondyari/FaceForensics"><code>Download link</code></a>]</li>
+<li>GRID 2006 <a target="_blank" rel="noopener" href="http://spandh.dcs.shef.ac.uk/avlombard/">project page</a></li>
+<li>HIT Bi-CAV 2005 </li>
+<li>HDTF 2020 <a target="_blank" rel="noopener" href="https://github.com/MRzzm/HDTF">project page</a></li>
+<li>LRS2 <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html">project page</a></li>
+<li>LRS2-BBC 2018 <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html">project page</a></li>
+<li>LRS3-TED 2018 <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs3.html">project page</a></li>
+<li>LRW 2016 <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrw1.html">project page</a></li>
+<li>LRW-1000 2018 <a target="_blank" rel="noopener" href="https://github.com/VIPL-Audio-Visual-Speech-Understanding/Lipreading-DenseNet3D">project page</a></li>
+<li>MSP-IMPROV 2016 <a target="_blank" rel="noopener" href="https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Improv.html">project page</a></li>
+<li>MELD 2018 <a target="_blank" rel="noopener" href="https://affective-meld.github.io/">project page</a></li>
+<li>MEAD 2020 <a target="_blank" rel="noopener" href="https://wywu.github.io/projects/MEAD/MEAD.html">project page</a></li>
+<li>MODALITY 2017 <a target="_blank" rel="noopener" href="http://www.modality-corpus.org/">project page</a></li>
+<li>MMFace4D <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.09797">project page</a></li>
+<li>ObamaSet 2017</li>
+<li>RAVDESS 2018 <a target="_blank" rel="noopener" href="https://sites.psychlabs.ryerson.ca/smartlab/resources/speech-song-database-ravdess/">project page</a></li>
+<li>SAVEE <a target="_blank" rel="noopener" href="http://kahlan.eps.surrey.ac.uk/savee/Download.html">project page</a></li>
+<li>TalkingHead-1KH [<a target="_blank" rel="noopener" href="https://github.com/deepimagination/TalkingHead-1KH"><code>Download link</code></a>].</li>
+<li>TCD-TIMIT 2015 <a target="_blank" rel="noopener" href="https://sigmedia.tcd.ie/">project page</a></li>
+<li>VoxCeleb <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">project page</a></li>
+<li>Voxceleb1 2017 <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">project page</a></li>
+<li>Voxceleb2 2018 <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb2/">project page</a></li>
+</ul>
+<h2 id="metrics"><a href="#metrics" class="headerlink" title="metrics"></a>metrics</h2><table>
+<thead>
+<tr>
+<th>Metrics</th>
+<th>Paper</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PSNR (peak signal-to-noise  ratio)</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>SSIM (structural similarity  index measure)</td>
+<td>Image quality  assessment: from error visibility to structural similarity.</td>
+<td></td>
+</tr>
+<tr>
+<td>CPBD(cumulative probability of  blur detection)</td>
+<td>A no-reference image  blur metric based on the cumulative probability of blur detection</td>
+<td></td>
+</tr>
+<tr>
+<td>LPIPS (Learned Perceptual  Image Patch Similarity) -</td>
+<td>The Unreasonable Effectiveness of Deep Features as  a Perceptual Metric</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1801.03924.pdf">paper</a></td>
+</tr>
+<tr>
+<td>NIQE (Natural Image Quality  Evaluator)</td>
+<td>Making a ‘Completely  Blind’ Image Quality Analyzer</td>
+<td><a target="_blank" rel="noopener" href="http://live.ece.utexas.edu/research/Quality/niqe_spl.pdf">paper</a></td>
+</tr>
+<tr>
+<td>FID (Fréchet inception  distance)</td>
+<td>GANs trained by a two  time-scale update rule converge to a local nash equilibrium</td>
+<td></td>
+</tr>
+<tr>
+<td>LMD (landmark distance error)</td>
+<td>Lip Movements Generation at a Glance</td>
+<td></td>
+</tr>
+<tr>
+<td>LRA (lip-reading  accuracy)</td>
+<td>Talking Face Generation by Conditional Recurrent  Adversarial Network</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1804.04786.pdf">paper</a></td>
+</tr>
+<tr>
+<td>WER(word error rate)</td>
+<td>Lipnet: end-to-end sentencelevel lipreading.</td>
+<td></td>
+</tr>
+<tr>
+<td>LSE-D (Lip Sync Error -  Distance)</td>
+<td>Out of time: automated lip sync in the wild</td>
+<td></td>
+</tr>
+<tr>
+<td>LSE-C (Lip Sync Error -  Confidence)</td>
+<td>Out of time: automated lip sync in the wild</td>
+<td></td>
+</tr>
+<tr>
+<td>ACD(Average  content distance)</td>
+<td>Facenet: a unified embedding for face recognition  and clustering.</td>
+<td></td>
+</tr>
+<tr>
+<td>CSIM(cosine similarity)</td>
+<td>Arcface: additive angular margin loss for deep face  recognition.</td>
+<td></td>
+</tr>
+<tr>
+<td>EAR(eye aspect ratio)</td>
+<td>Real-time eye blink  detection using facial landmarks. In: Computer Vision Winter Workshop</td>
+<td></td>
+</tr>
+<tr>
+<td>ESD(emotion similarity  distance)</td>
+<td>What comprises a good talking-head video  generation?: A Survey and Benchmark</td>
+<td></td>
+</tr>
+</tbody></table>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">wsd</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://weishida01.github.io/2023/06/16/xiao-bing/awesome-talking-face-generation/">https://weishida01.github.io/2023/06/16/xiao-bing/awesome-talking-face-generation/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">wsd</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%B0%8F%E5%86%B0/">
+                                    <span class="chip bg-color">小冰</span>
+                                </a>
+                            
+                                <a href="/tags/talking-face-generation/">
+                                    <span class="chip bg-color">talking face generation</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>Comment</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'KhLsMNUiVO3V9QNfhUC0dO0c-gzGzoHsz',
+        appKey: 'chKUzpKCcT52zvQBUZjplIIa',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/06/16/xiao-bing/awesome-talking-face-generation/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/xiaobing/xiaobing.jpg" class="responsive-img" alt="Awesome Talking Face Generation">
+                        
+                        <span class="card-title">Awesome Talking Face Generation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Papers for Talking Head Generation, released codes collections.
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B0%8F%E5%86%B0/" class="post-category">
+                                    小冰
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B0%8F%E5%86%B0/">
+                        <span class="chip bg-color">小冰</span>
+                    </a>
+                    
+                    <a href="/tags/talking-face-generation/">
+                        <span class="chip bg-color">talking face generation</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/06/16/xiao-bing/xiao-bing/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/xiaobing/xiaobing.jpg" class="responsive-img" alt="小冰">
+                        
+                        <span class="card-title">小冰</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            小冰的实习
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B0%8F%E5%86%B0/" class="post-category">
+                                    小冰
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B0%8F%E5%86%B0/">
+                        <span class="chip bg-color">小冰</span>
+                    </a>
+                    
+                    <a href="/tags/talking-face-generation/">
+                        <span class="chip bg-color">talking face generation</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B7%A5%E4%BD%9C/">
+                        <span class="chip bg-color">工作</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%9E%E4%B9%A0/">
+                        <span class="chip bg-color">实习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('3'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Shida Wei</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">194.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2023";
+                    var startMonth = "1";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffDays + " day " + diffHours +
+                            " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "This site has been running safely for " + diffYears + " year " + diffDays +
+                            " day " + diffHours + " hour " + diffMinutes + " minute " + diffSeconds + " second";
+                    }
+                    // if (startYear == todayYear) {
+                    //     document.getElementById("year").innerHTML = todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                    //         " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // } else {
+                    //     document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                    //     document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                    //         " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    // }
+                }
+                setInterval(siteTime, 1000);
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/weishida01" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:weishida01@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3058668859" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3058668859" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
